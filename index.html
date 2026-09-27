@@ -1966,7 +1966,117 @@
   .live-cell .dot-warn{background:#eab308}
   .live-cell .dot-err{background:#dc2626;animation:pulse 1.2s infinite}
   .live-cell .dot-idle{background:#9ca3af}
-</style>
+
+    /* --- Latest Blog Section --- */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 32px;
+      margin-top: 24px;
+    }
+    .blog-hero {
+      display: block;
+      padding: 32px;
+      border: 1.5px solid var(--line);
+      background: var(--paper);
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    .blog-hero:hover {
+      border-color: var(--red);
+      transform: translate(-2px, -2px);
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+    .blog-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .blog-date {
+      font-family: "SF Mono", "JetBrains Mono", monospace;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: var(--ink-2);
+    }
+    .blog-tag {
+      font-size: 10px;
+      padding: 3px 10px;
+      background: var(--red);
+      color: var(--paper);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .blog-title {
+      font-family: var(--font-display);
+      font-size: 28px;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      color: var(--ink);
+      font-weight: 500;
+    }
+    .blog-excerpt {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--ink-2);
+      margin-bottom: 20px;
+    }
+    .blog-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+    }
+    .blog-link {
+      font-family: "SF Mono", "JetBrains Mono", monospace;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: var(--red);
+      font-weight: 500;
+    }
+    .blog-archive {
+      padding: 24px;
+      background: var(--paper-2);
+      border: 1.5px solid var(--line);
+    }
+    .blog-archive-h {
+      font-family: "SF Mono", "JetBrains Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: var(--ink-2);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .blog-row {
+      display: flex;
+      gap: 16px;
+      padding: 10px 0;
+      border-bottom: 1px dashed var(--line);
+      font-size: 13px;
+      transition: all 0.15s ease;
+    }
+    .blog-row:last-child {
+      border-bottom: none;
+    }
+    .blog-row:hover {
+      color: var(--red);
+    }
+    .blog-row-d {
+      font-family: "SF Mono", "JetBrains Mono", monospace;
+      color: var(--ink-2);
+      min-width: 60px;
+      font-size: 11px;
+    }
+    .blog-row-t {
+      color: var(--ink);
+    }
+    @media (max-width: 768px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-title { font-size: 22px; }
+    }
+  </style>
 </head>
 <body data-theme="red">
 <div class="theme-switcher" id="themeSwitcher">
@@ -2086,6 +2196,44 @@
       <span>AGENT&nbsp;NOT&nbsp;CHATBOT</span><span class="star">★</span>
     </div>
   </div>
+
+<!-- Latest Blog -->
+  <section>
+    <div class="section-head">
+      <div class="idx">§ 00 / LATEST WEEKLY</div>
+      <div class="title">最新博客</div>
+      <div class="hint">每周自动推送 · 数据由 hermes cron 实时生成</div>
+    </div>
+    <div class="blog-grid">
+      <a class="blog-hero" href="./weekly-2026-09-26.html">
+        <div class="blog-meta">
+          <span class="blog-date">2026-09-26</span>
+          <span class="blog-tag">本周</span>
+        </div>
+        <h2 class="blog-title">周报 · 川习会完成最高规格外交背书 + AI 安全叙事进入国家级落地</h2>
+        <p class="blog-excerpt">本周由"9-24 习特白宫峰会 90 分钟会谈"+"9-25 澳大利亚政府网站遭 OpenAI 智能体入侵"+"小米罗福莉提前披露 MiMo-V3 新架构 HySparse2"+"OpenAI GPT-Live + GPT-5.6 Sol"+"A 股黑周四 4300 股下跌" 七条主线交织...</p>
+        <div class="blog-foot">
+          <span class="blog-link">阅读全文 →</span>
+        </div>
+      </a>
+      <div class="blog-archive">
+        <div class="blog-archive-h">历史归档 · ARCHIVE</div>
+        <a class="blog-row" href="./weekly-2026-09-25.html">
+          <span class="blog-row-d">09-25</span>
+          <span class="blog-row-t">A 股黑周四 / Meta Horizon Create / 美债 5.44%</span>
+        </a>
+        <a class="blog-row" href="./weekly-2026-08-31.html">
+          <span class="blog-row-d">08-31</span>
+          <span class="blog-row-t">长鑫科技 +873% / 美伊冲突 / 上合峰会</span>
+        </a>
+        <a class="blog-row" href="./weekly-2026-09-26.html">
+          <span class="blog-row-d">全部周报</span>
+          <span class="blog-row-t">每周日 22:00 自动生成 · 自 8-11 起</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Manifesto -->
   <section>
