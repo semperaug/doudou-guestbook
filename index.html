@@ -2076,6 +2076,229 @@
       .blog-grid { grid-template-columns: 1fr; }
       .blog-title { font-size: 22px; }
     }
+  
+    /* --- Live Data Section --- */
+    .live-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 32px;
+      margin-top: 24px;
+    }
+    .live-weekly, .live-daily {
+      padding: 28px;
+      border: 1.5px solid var(--line);
+      background: var(--paper);
+      position: relative;
+    }
+    .live-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .live-tag {
+      font-family: "SF Mono", "JetBrains Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      color: var(--paper);
+      background: var(--red);
+      padding: 4px 10px;
+      text-transform: uppercase;
+    }
+    .live-date {
+      font-family: "SF Mono", "JetBrains Mono", monospace;
+      font-size: 12px;
+      color: var(--ink-2);
+      letter-spacing: 0.08em;
+    }
+    .live-title {
+      font-family: var(--font-display);
+      font-size: 26px;
+      line-height: 1.3;
+      margin-bottom: 14px;
+      color: var(--ink);
+      font-weight: 500;
+    }
+    .live-excerpt {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--ink-2);
+      margin-bottom: 18px;
+      max-height: 200px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+    }
+    .live-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+    }
+    .live-themes {
+      font-size: 11px;
+      color: var(--ink-2);
+      letter-spacing: 0.05em;
+    }
+    .live-link {
+      font-family: "SF Mono", "JetBrains Mono", monospace;
+      font-size: 12px;
+      color: var(--red);
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .live-link:hover { text-decoration: underline; }
+    .daily-headline {
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--ink);
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed var(--line);
+    }
+    .daily-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 14px 0;
+    }
+    .daily-list li {
+      display: flex;
+      gap: 10px;
+      padding: 6px 0;
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--ink);
+      border-bottom: 1px dotted var(--line);
+    }
+    .daily-list li:last-child { border-bottom: none; }
+    .daily-list .num {
+      font-family: "SF Mono", "JetBrains Mono", monospace;
+      color: var(--red);
+      min-width: 22px;
+      font-size: 11px;
+    }
+    .daily-list .tag {
+      font-family: "SF Mono", "JetBrains Mono", monospace;
+      font-size: 10px;
+      color: var(--ink-2);
+      background: var(--paper-2);
+      padding: 1px 6px;
+      min-width: 50px;
+      text-align: center;
+    }
+    .daily-meta {
+      font-size: 11px;
+      color: var(--ink-2);
+      letter-spacing: 0.05em;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+    }
+    /* Cron Status */
+    .live-cron {
+      margin-top: 32px;
+      padding: 24px;
+      border: 1.5px solid var(--line);
+      background: var(--paper-2);
+    }
+    .cron-stats {
+      font-family: "SF Mono", "JetBrains Mono", monospace;
+      font-size: 11px;
+      color: var(--ink-2);
+      letter-spacing: 0.05em;
+    }
+    .cron-ok { color: #4ade80; }
+    .cron-fail { color: var(--red); }
+    .cron-weixin { color: #fbbf24; }
+    .cron-local { color: var(--ink-2); }
+    .cron-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .cron-item {
+      padding: 10px 12px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cron-item .ci-name {
+      font-weight: 500;
+      flex: 1;
+      margin-right: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .cron-item .ci-status {
+      font-family: "SF Mono", "JetBrains Mono", monospace;
+      font-size: 10px;
+      padding: 2px 6px;
+      letter-spacing: 0.05em;
+    }
+    .cron-item .ci-status.ok { color: #4ade80; }
+    .cron-item .ci-status.failed { color: var(--red); }
+    .cron-item .ci-sched {
+      font-family: "SF Mono", "JetBrains Mono", monospace;
+      color: var(--ink-2);
+      font-size: 10px;
+      margin-left: 6px;
+    }
+    /* GitHub */
+    .live-github {
+      margin-top: 24px;
+      padding: 24px;
+      border: 1.5px solid var(--line);
+      background: var(--paper);
+    }
+    .github-link {
+      font-family: "SF Mono", "JetBrains Mono", monospace;
+      font-size: 11px;
+      color: var(--red);
+      text-decoration: none;
+    }
+    .github-list {
+      margin-top: 12px;
+    }
+    .github-item {
+      display: grid;
+      grid-template-columns: 70px 1fr 80px;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px dotted var(--line);
+      font-size: 12px;
+      align-items: center;
+    }
+    .github-item:last-child { border-bottom: none; }
+    .github-item .gi-sha {
+      font-family: "SF Mono", "JetBrains Mono", monospace;
+      color: var(--red);
+      font-size: 11px;
+    }
+    .github-item .gi-msg {
+      color: var(--ink);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .github-item .gi-date {
+      font-family: "SF Mono", "JetBrains Mono", monospace;
+      color: var(--ink-2);
+      font-size: 10px;
+      text-align: right;
+    }
+    @media (max-width: 768px) {
+      .live-grid { grid-template-columns: 1fr; }
+      .cron-list { grid-template-columns: 1fr; }
+      .live-title { font-size: 22px; }
+    }
   </style>
 </head>
 <body data-theme="red">
@@ -2197,43 +2420,70 @@
     </div>
   </div>
 
-<!-- Latest Blog -->
-  <section>
+
+
+  <!-- Live Data: Weekly + Daily + Cron + GitHub (auto from data.json) -->
+  <section id="live-data">
     <div class="section-head">
-      <div class="idx">§ 00 / LATEST WEEKLY</div>
-      <div class="title">最新博客</div>
-      <div class="hint">每周自动推送 · 数据由 hermes cron 实时生成</div>
+      <div class="idx">§ 00 / LIVE</div>
+      <div class="title">实时数据</div>
+      <div class="hint" id="live-update-time">加载中...</div>
     </div>
-    <div class="blog-grid">
-      <a class="blog-hero" href="./weekly-2026-09-26.html">
-        <div class="blog-meta">
-          <span class="blog-date">2026-09-26</span>
-          <span class="blog-tag">本周</span>
+
+    <div class="live-grid">
+      <!-- Weekly Hero -->
+      <div class="live-weekly" id="live-weekly">
+        <div class="live-label">
+          <span class="live-tag">周报 · WEEKLY</span>
+          <span class="live-date" id="lw-date">—</span>
         </div>
-        <h2 class="blog-title">周报 · 川习会完成最高规格外交背书 + AI 安全叙事进入国家级落地</h2>
-        <p class="blog-excerpt">本周由"9-24 习特白宫峰会 90 分钟会谈"+"9-25 澳大利亚政府网站遭 OpenAI 智能体入侵"+"小米罗福莉提前披露 MiMo-V3 新架构 HySparse2"+"OpenAI GPT-Live + GPT-5.6 Sol"+"A 股黑周四 4300 股下跌" 七条主线交织...</p>
-        <div class="blog-foot">
-          <span class="blog-link">阅读全文 →</span>
+        <h2 class="live-title" id="lw-title">加载中...</h2>
+        <p class="live-excerpt" id="lw-excerpt">—</p>
+        <div class="live-foot">
+          <span class="live-themes" id="lw-themes"></span>
+          <a class="live-link" id="lw-link" href="#">阅读全文 →</a>
         </div>
-      </a>
-      <div class="blog-archive">
-        <div class="blog-archive-h">历史归档 · ARCHIVE</div>
-        <a class="blog-row" href="./weekly-2026-09-25.html">
-          <span class="blog-row-d">09-25</span>
-          <span class="blog-row-t">A 股黑周四 / Meta Horizon Create / 美债 5.44%</span>
-        </a>
-        <a class="blog-row" href="./weekly-2026-08-31.html">
-          <span class="blog-row-d">08-31</span>
-          <span class="blog-row-t">长鑫科技 +873% / 美伊冲突 / 上合峰会</span>
-        </a>
-        <a class="blog-row" href="./weekly-2026-09-26.html">
-          <span class="blog-row-d">全部周报</span>
-          <span class="blog-row-t">每周日 22:00 自动生成 · 自 8-11 起</span>
-        </a>
+      </div>
+
+      <!-- Daily Brief -->
+      <div class="live-daily" id="live-daily">
+        <div class="live-label">
+          <span class="live-tag">早报 · DAILY</span>
+          <span class="live-date" id="ld-date">—</span>
+        </div>
+        <div class="daily-headline" id="ld-headline">—</div>
+        <ul class="daily-list" id="ld-list"></ul>
+        <div class="daily-meta">
+          <span id="ld-count">0</span> 条 ·
+          <span id="ld-tags"></span>
+        </div>
       </div>
     </div>
-  </section>
 
+    <!-- Cron Status -->
+    <div class="live-cron">
+      <div class="live-label">
+        <span class="live-tag">Cron · 任务状态</span>
+        <span class="cron-stats">
+          <span id="cron-total">0</span> 个 · 
+          <span class="cron-ok"><span id="cron-ok">0</span> ok</span> · 
+          <span class="cron-fail"><span id="cron-fail">0</span> failed</span> ·
+          <span class="cron-weixin">微信 <span id="cron-weixin">0</span></span> ·
+          <span class="cron-local">本地 <span id="cron-local">0</span></span>
+        </span>
+      </div>
+      <div class="cron-list" id="cron-list"></div>
+    </div>
+
+    <!-- GitHub Commits -->
+    <div class="live-github">
+      <div class="live-label">
+        <span class="live-tag">GitHub · 最近提交</span>
+        <a class="github-link" href="https://github.com/semperaug/doudou-guestbook/commits/main">→ 仓库</a>
+      </div>
+      <div class="github-list" id="github-list"></div>
+    </div>
+  </section>
 
   <!-- Manifesto -->
   <section>
@@ -3432,5 +3682,92 @@
   })();
 })();
 </script>
+
+<script>
+(async function() {
+  try {
+    const r = await fetch('./data.json?_=' + Date.now());
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+
+    // 更新提示时间
+    document.getElementById('live-update-time').textContent = 
+      '自动更新 · ' + (data.updated_at_human || data.updated_at);
+
+    // === Weekly Hero ===
+    if (data.weekly && data.weekly.length) {
+      const w = data.weekly[0];
+      document.getElementById('lw-date').textContent = w.date + (w.beta ? ' (beta)' : '');
+      document.getElementById('lw-title').textContent = w.title;
+      document.getElementById('lw-excerpt').textContent = w.one_line || w.title;
+      document.getElementById('lw-link').href = w.url;
+      const themes = (w.themes || []).slice(0, 3).join(' · ');
+      document.getElementById('lw-themes').textContent = themes || w.section_count + ' 章节';
+    }
+
+    // === Daily Brief ===
+    if (data.daily && data.daily.length) {
+      const d = data.daily[0];
+      document.getElementById('ld-date').textContent = d.date;
+      document.getElementById('ld-headline').textContent = d.headline || '(无今日热议)';
+      const list = document.getElementById('ld-list');
+      list.innerHTML = '';
+      (d.items || []).forEach(it => {
+        const li = document.createElement('li');
+        li.innerHTML = '<span class="num">' + it.num + '</span>' +
+                        '<span class="tag">' + it.tag + '</span>' +
+                        '<span class="title">' + it.title + '</span>';
+        list.appendChild(li);
+      });
+      document.getElementById('ld-count').textContent = d.items_count;
+      document.getElementById('ld-tags').textContent = (d.tags || []).slice(0, 5).join(' / ');
+    }
+
+    // === Cron Status ===
+    if (data.cron && data.cron.jobs) {
+      const c = data.cron;
+      document.getElementById('cron-total').textContent = c.total;
+      document.getElementById('cron-ok').textContent = c.ok_count;
+      document.getElementById('cron-fail').textContent = c.failed_count;
+      document.getElementById('cron-weixin').textContent = c.weixin_count;
+      document.getElementById('cron-local').textContent = c.local_count;
+      const list = document.getElementById('cron-list');
+      list.innerHTML = '';
+      (c.jobs || []).forEach(j => {
+        const div = document.createElement('div');
+        div.className = 'cron-item';
+        const status = j.last_status || '?';
+        const statusClass = status === 'ok' ? 'ok' : (status === 'failed' ? 'failed' : '');
+        div.innerHTML = '<span class="ci-name">' + j.name + '</span>' +
+                        '<span class="ci-status ' + statusClass + '">' + status + '</span>' +
+                        '<span class="ci-sched">' + (j.schedule || '?') + '</span>';
+        list.appendChild(div);
+      });
+    }
+
+    // === GitHub ===
+    if (data.github && data.github.length) {
+      const list = document.getElementById('github-list');
+      list.innerHTML = '';
+      data.github.forEach(c => {
+        const div = document.createElement('div');
+        div.className = 'github-item';
+        if (c.error) {
+          div.innerHTML = '<span class="gi-sha">ERR</span><span class="gi-msg">' + c.error + '</span><span></span>';
+        } else {
+          div.innerHTML = '<span class="gi-sha">' + c.sha + '</span>' +
+                          '<a class="gi-msg" href="' + c.url + '" target="_blank">' + c.message + '</a>' +
+                          '<span class="gi-date">' + c.date + '</span>';
+        }
+        list.appendChild(div);
+      });
+    }
+  } catch (e) {
+    document.getElementById('live-update-time').textContent = 
+      '数据加载失败: ' + e.message;
+  }
+})();
+</script>
+
 </body>
 </html>

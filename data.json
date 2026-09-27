@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-27T13:56:50.165500",
-  "updated_at_human": "2026-09-27 13:56 CST",
+  "updated_at": "2026-09-27T13:57:23.125948",
+  "updated_at_human": "2026-09-27 13:57 CST",
   "weekly": [
     {
       "date": "2026-09-26",
@@ -151,14 +151,14 @@
         }
       ],
       "tags": [
-        "科技/医疗",
-        "体育",
         "社会",
-        "AI",
         "AI/科技",
+        "AI",
         "时政",
         "财经",
-        "科技"
+        "科技",
+        "体育",
+        "科技/医疗"
       ],
       "size": 6191
     },
@@ -259,9 +259,15 @@
     "failed_count": 0,
     "weixin_count": 3,
     "local_count": 6,
-    "last_collected_at": "2026-09-27T13:56:50.508729"
+    "last_collected_at": "2026-09-27T13:57:23.473433"
   },
   "github": [
+    {
+      "sha": "aeb65f8",
+      "message": "sync: weekly 2026-09-26 + data update",
+      "date": "2026-09-27",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/aeb65f88cb63213be8a688ca49fa3ba23c7dc3e9"
+    },
     {
       "sha": "ffae7cf",
       "message": "weekly sync: 2026-09-26",
