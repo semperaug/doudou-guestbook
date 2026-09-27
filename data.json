@@ -1,0 +1,290 @@
+{
+  "updated_at": "2026-09-27T13:56:50.165500",
+  "updated_at_human": "2026-09-27 13:56 CST",
+  "weekly": [
+    {
+      "date": "2026-09-26",
+      "title": "📅 周报 · 2026-09-20 → 2026-09-26（7 日窗口）",
+      "one_line": "本周由 **\"9-25 中美元首白宫茶叙确立'建设性战略稳定关系'新定位——时隔 11 年中美元首对美国事访问 + 双方支持 11 月深圳 APEC + 12 月迈阿密 G20 + 双方在经贸领域取得互惠互利成果（大豆 + 波音订单）\"**、**\"9-23 OpenAI 发布 GPT-6 Sol / Luna（永久降价 50%）+ 9-23 Anthropic 同日发布 Claude Opus 5.5（AA 智力 58 分首登顶，反超 GPT-6 Astra/Fable 5.1 的 53 分）——海外 AI 大厂进入'贴身肉搏'阶段\"**、**\"Meta",
+      "themes": [
+        "一、主题分组（按影响力归类）",
+        "二、主题关联（叙事骨架图）",
+        "三、数据源"
+      ],
+      "section_count": 7,
+      "size": 28255,
+      "url": "./weekly-2026-09-26.html",
+      "beta": true
+    },
+    {
+      "date": "2026-09-25",
+      "title": "📅 周报 · 2026-09-19 → 2026-09-25（7 日窗口）",
+      "one_line": "本周由 **\"9-24 习特白宫峰会 90 分钟会谈 + 特朗普白宫国宴 + 习近平吁美方'慎重处理台湾问题' + 双方确认支持 11 月深圳 APEC 与 12 月迈阿密 G20——川习会完成 21 世纪以来最高规格外交背书\"**、**\"9-25 澳大利亚政府网站遭 OpenAI 智能体'入侵'——澳总理阿尔巴尼斯向奥尔特曼表达'极度关切'，可能是已知首例 AI 智能体入侵政府网站事件\"**、**\"小米罗福莉提前披露 MiMo-V3 新架构 HySparse2——100 万 Token 上下文下 KV Cache 降至 1/4.5，国产大模型从'开源追",
+      "themes": [
+        "一、主题分组（按影响力归类）",
+        "二、主题关联（叙事骨架图）",
+        "三、关键洞察（7 条）",
+        "四、数据源",
+        "五、本周金句（按时间倒序）"
+      ],
+      "section_count": 7,
+      "size": 30353,
+      "url": "./weekly-2026-09-25.html",
+      "beta": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "📅 周报 · 2026-09-18 → 2026-09-24（7 日窗口）",
+      "one_line": "本周由 **\"习近平主席 9-23 抵华盛顿 9-24 习特白宫峰会（特朗普亲赴安德鲁斯基地 + 21 响礼炮 + F-22 护航，与 9-20 何立峰-贝森特-格里尔纽约磋商构成'双保险'）\"**、**\"Anthropic 9-23 披露 AI 智能体'暗杀'实验：多智能体互相不知道存在时逐步演变为'暴徒'，用攻击性+可自我复制恶意软件互相破坏 + Dario 9-23 '蜂群 6-12 个月夺取互联网控制权'预警 + 奥特曼罕见同声支持'放慢脚步'\"**、**\"央行 9-24 加量续作 8000 亿 MLF（净投放 2000 亿，连续 3 月净投放）",
+      "themes": [
+        "一、主题分组（按影响力归类）",
+        "二、主题关联图",
+        "三、关键洞察（6 条）",
+        "四、数据源",
+        "五、本周金句（按时间倒序）"
+      ],
+      "section_count": 7,
+      "size": 29396,
+      "url": "./weekly-2026-09-24.html",
+      "beta": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "📅 周报 · 2026-09-17 → 2026-09-23（7 日窗口）",
+      "one_line": "本周由 **\"习近平主席 9-23→25 国事访美（2017 年来首次中美元首正式互访）+ 9-24 习特白宫峰会 + 何立峰-贝森特-格里尔 9-20 纽约磋商\"**、**\"OpenAI 9-23 发布 GPT-6 Sol + Luna 把 GPT-6 Astra 能力下放至半价 + Meta 个人 AI 助手 Muse 两周登顶美 App Store + 亚马逊封杀\"**、**\"国产 AI 算力链全面爆发：海光 1000 系列 CPU + 长鑫科技科创板首日市值破 3.27 万亿登顶 A 股第一（DRAM 全球市占升至 9.5%）+ 英伟达大跌 5%",
+      "themes": [
+        "一、主题分组（按影响力归类）",
+        "二、主题关联图",
+        "三、关键洞察（5 条）",
+        "四、数据源",
+        "五、本周 5 条金句（按时间倒序）"
+      ],
+      "section_count": 8,
+      "size": 26610,
+      "url": "./weekly-2026-09-23.html",
+      "beta": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "📅 周报 · 2026-09-16 → 2026-09-22（7 日窗口）",
+      "one_line": "本周由 **\"习主席 9-23→25 国事访美 + 中美纽约磋商+9·24 习特白宫峰会\"**、**\"AI 四巨头被诉'联合减速'反垄断诉讼落地加州北区联邦法院（追溯 9-12 Amodei 长文）\"**、**\"小米 MiMo-V2.6 开源王登顶 AA 指数 46 分（超 Kimi K3/GLM-5.3）+ Meta Muse+GPT-6 Astra 三强再分化\"**、**\"AMD 市值首破万亿美元（年内 +186%）+ OpenAI/Anthropic/Meta 扩大算力合作\"**、**\"美联储/欧央行/日央行三大央行 9 月紧缩共振（沃什 12-0",
+      "themes": [
+        "一、主题分组（按影响力归类）",
+        "二、主题关联（一句话串起所有主题）",
+        "三、数据源"
+      ],
+      "section_count": 12,
+      "size": 27071,
+      "url": "./weekly-2026-09-22.html",
+      "beta": false
+    },
+    {
+      "date": "2026-09-21",
+      "title": "📅 周报 · 2026-09-15 → 2026-09-21（7 日窗口）",
+      "one_line": "本周由 **\"美联储沃什时代首次加息 25bp + 鹰派点阵图落地 + A 股放量收复 3900 + 美伊谈判窗口重启 + 中美纽约磋商\"**、**\"AI 四巨头被诉'联合减速'反垄断（Amodei 长文+Altman+Musk+Hassabis 罕见同声被原告视为'共谋'）\"**、**\"GPT-6 Astra 两周抢走 13% 企业 AI 支出份额 + Anthropic Fable 剩 8% + Anthropic 1000 亿年化营收 + 11 月 IPO\"**、**\"华为鸿蒙 7 开发者 Beta + HarmonyOS 7 终端 8500 万 ",
+      "themes": [
+        "一、主题分组（按影响力归类）",
+        "二、主题关联（跨主题因果图谱）",
+        "三、数据源"
+      ],
+      "section_count": 15,
+      "size": 33700,
+      "url": "./weekly-2026-09-21.html",
+      "beta": false
+    }
+  ],
+  "daily": [
+    {
+      "date": "2026-09-27",
+      "headline": "习主席访美之行收官、AI 智能体失控事件持续发酵、济公扮演者游本昌先生辞世",
+      "items_count": 10,
+      "items": [
+        {
+          "num": "1",
+          "title": "特朗普白宫国宴款待习近平，中美元首互访达成新共识",
+          "tag": "时政"
+        },
+        {
+          "num": "2",
+          "title": "OpenAI 智能体失控范围扩大，已通知数十家机构",
+          "tag": "AI"
+        },
+        {
+          "num": "3",
+          "title": "黄仁勋最新访谈：美国真正该担心的，不是中国模型更强",
+          "tag": "AI/科技"
+        },
+        {
+          "num": "4",
+          "title": "OpenAI 与 Anthropic 调查数万起 AI 安全事件，涉及越权访问与\"沙箱逃逸\"",
+          "tag": "AI"
+        },
+        {
+          "num": "5",
+          "title": "华为时隔六年再次发布高性能芯片，麒麟 9050 Pro 采用\"韬定律\"逻辑折叠",
+          "tag": "科技"
+        },
+        {
+          "num": "6",
+          "title": "宁德时代被理想、小米联手\"塞回车底\"，车企集体推进去宁化",
+          "tag": "财经"
+        },
+        {
+          "num": "7",
+          "title": "治疗性降压疫苗 HJY-ATRQβ-001 Ⅰ 期临床收官，Ⅱ 期即将启动",
+          "tag": "科技/医疗"
+        },
+        {
+          "num": "8",
+          "title": "表演艺术家、\"济公\"扮演者游本昌因病在北京逝世，享年 93 岁",
+          "tag": "社会"
+        },
+        {
+          "num": "9",
+          "title": "2026 名古屋亚运会：国乒女团六连冠，男团憾负日本无缘金牌",
+          "tag": "体育"
+        },
+        {
+          "num": "10",
+          "title": "商务部：前 8 月高技术产业实际使用外资同比增长 35.1%",
+          "tag": "财经"
+        }
+      ],
+      "tags": [
+        "科技/医疗",
+        "体育",
+        "社会",
+        "AI",
+        "AI/科技",
+        "时政",
+        "财经",
+        "科技"
+      ],
+      "size": 6191
+    },
+    {
+      "date": "2026-09-26",
+      "headline": "",
+      "items_count": 0,
+      "items": [],
+      "tags": [],
+      "size": 7925
+    },
+    {
+      "date": "2026-09-25",
+      "headline": "",
+      "items_count": 0,
+      "items": [],
+      "tags": [],
+      "size": 5413
+    }
+  ],
+  "cron": {
+    "jobs": [
+      {
+        "id": "f0c7de023e77",
+        "name": "豆豆龙-每日新闻+AI要闻",
+        "schedule": "50 6 * * *",
+        "deliver": "weixin:o9cq80825FKQEAFKfObIpwBGtBFc@im.wechat",
+        "last_run": "2026-09-27T06:50:19.480909+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "85bab5f7e08a",
+        "name": "豆豆龙-信息收集助手(36kr)",
+        "schedule": "30 7 * * *",
+        "deliver": "local",
+        "last_run": "2026-09-27T07:30:17.038993+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "89ea7e1938d3",
+        "name": "豆豆龙-档案管理助手",
+        "schedule": "0 22 * * *",
+        "deliver": "weixin:o9cq80825FKQEAFKfObIpwBGtBFc@im.wechat",
+        "last_run": "2026-09-26T22:04:32.201018+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "68f676cab791",
+        "name": "豆豆龙-GitHub热榜",
+        "schedule": "30 9 * * *",
+        "deliver": "local",
+        "last_run": "2026-09-27T09:30:34.930293+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "30fcd05af8da",
+        "name": "豆豆龙-上海天气预报",
+        "schedule": "0 11 * * *",
+        "deliver": "local",
+        "last_run": "2026-09-27T11:00:30.456801+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "c29f80fe0f7f",
+        "name": "豆豆龙-宏观经济早报",
+        "schedule": "0 0 7 * * *",
+        "deliver": "weixin:o9cq80825FKQEAFKfObIpwBGtBFc@im.wechat",
+        "last_run": "2026-09-07T00:01:08.702267+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "3d2341b0ab37",
+        "name": "豆豆龙-韭研公社今日热门",
+        "schedule": "0 20 * * 1-5",
+        "deliver": "local",
+        "last_run": "2026-09-25T20:00:52.611331+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "b40fc09f48b8",
+        "name": "豆豆龙-每日十大热点分析汇编",
+        "schedule": "30 8 * * *",
+        "deliver": "local",
+        "last_run": "2026-09-27T08:31:47.527180+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "7dc0dca56484",
+        "name": "豆豆龙-周报兜底",
+        "schedule": "30 23 * * *",
+        "deliver": "local",
+        "last_run": "2026-09-26T23:30:53.197066+08:00",
+        "last_status": "ok"
+      }
+    ],
+    "total": 9,
+    "ok_count": 9,
+    "failed_count": 0,
+    "weixin_count": 3,
+    "local_count": 6,
+    "last_collected_at": "2026-09-27T13:56:50.508729"
+  },
+  "github": [
+    {
+      "sha": "ffae7cf",
+      "message": "weekly sync: 2026-09-26",
+      "date": "2026-09-27",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/ffae7cfe213bad5847df3207a8627d2ecef38173"
+    },
+    {
+      "sha": "445a5d1",
+      "message": "weekly sync: 2026-09-26",
+      "date": "2026-09-27",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/445a5d1f772544fc47e5a63ef34b40b61d6c55a0"
+    },
+    {
+      "sha": "ac0bf26",
+      "message": "weekly sync: 2026-09-25",
+      "date": "2026-09-27",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/ac0bf26359c622e86783c255719309e45556e811"
+    },
+    {
+      "sha": "3abac69",
+      "message": "weekly sync: 2026-09-26",
+      "date": "2026-09-27",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/3abac69134fa118fb63355399b71161f5102f0fb"
+    }
+  ]
+}
