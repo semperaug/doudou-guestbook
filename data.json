@@ -1,0 +1,146 @@
+{
+  "updated_at": "2026-10-25T23:14:08.025086",
+  "updated_at_human": "2026-10-25 23:14 CST",
+  "weekly": [
+    {
+      "date": "2026-10-25",
+      "title": "周报汇总 · 2026-10-25",
+      "one_line": "# 周报汇总 · 2026-10-25 > 📅 7 日窗口版（2026-10-19 → 2026-10-25）｜cron 链路断档 19 天后首次恢复产出 > 📚 数据源：daily-brief/2026-10-25.md（1 份 / 8195 字节 / 10 条新闻） > 📝 编辑：豆豆龙 · 档案管理助手 · 22:00 cron（deliver: local） > ⚠️ 本窗口内 10-06 → 10-24 共 19 天素材缺失，仅 10-25 一份可用；本周报以单日素材为基线生成，并在末章给出链路修复清单。 --- ## 📊 一句话总结 **AI 泡沫在挤，但挤的是估值不是能力",
+      "themes": [
+        "📊 一句话总结",
+        "🧭 主题分组（4 大主线）",
+        "🔗 主题关联图",
+        "📊 数据源",
+        "⚠️ 素材链路诊断（7 日窗口无实质增量，已定位根因）"
+      ],
+      "section_count": 5,
+      "size": 16819,
+      "url": "./weekly-2026-10-25.html",
+      "beta": true
+    }
+  ],
+  "daily": [
+    {
+      "date": "2026-10-25",
+      "headline": "",
+      "items_count": 0,
+      "items": [],
+      "tags": [],
+      "size": 8195
+    }
+  ],
+  "cron": {
+    "jobs": [
+      {
+        "id": "f0c7de023e77",
+        "name": "豆豆龙-每日新闻+AI要闻",
+        "schedule": "50 6 * * *",
+        "deliver": "weixin:o9cq80825FKQEAFKfObIpwBGtBFc@im.wechat",
+        "last_run": "2026-10-25T23:10:56.318605+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "85bab5f7e08a",
+        "name": "豆豆龙-信息收集助手(36kr)",
+        "schedule": "30 7 * * *",
+        "deliver": "local",
+        "last_run": "2026-10-25T23:10:32.530910+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "89ea7e1938d3",
+        "name": "豆豆龙-档案管理助手",
+        "schedule": "0 22 * * *",
+        "deliver": "local",
+        "last_run": "2026-10-25T23:13:27.030399+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "68f676cab791",
+        "name": "豆豆龙-GitHub热榜",
+        "schedule": "30 9 * * *",
+        "deliver": "local",
+        "last_run": "2026-10-25T23:11:05.614423+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "30fcd05af8da",
+        "name": "豆豆龙-上海天气预报",
+        "schedule": "0 11 * * *",
+        "deliver": "local",
+        "last_run": "2026-10-25T23:10:35.260518+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "c29f80fe0f7f",
+        "name": "豆豆龙-宏观经济早报",
+        "schedule": "0 0 7 * * *",
+        "deliver": "weixin:o9cq80825FKQEAFKfObIpwBGtBFc@im.wechat",
+        "last_run": "2026-10-25T23:10:28.545207+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "3d2341b0ab37",
+        "name": "豆豆龙-韭研公社今日热门",
+        "schedule": "0 20 * * 1-5",
+        "deliver": "local",
+        "last_run": "2026-10-25T23:10:46.958826+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "b40fc09f48b8",
+        "name": "豆豆龙-每日十大热点分析汇编",
+        "schedule": "30 8 * * *",
+        "deliver": "local",
+        "last_run": "2026-10-25T23:11:25.920080+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "7dc0dca56484",
+        "name": "豆豆龙-周报兜底",
+        "schedule": "30 23 * * *",
+        "deliver": "local",
+        "last_run": "2026-10-25T23:10:20.362754+08:00",
+        "last_status": "ok"
+      }
+    ],
+    "total": 9,
+    "ok_count": 9,
+    "failed_count": 0,
+    "weixin_count": 2,
+    "local_count": 7,
+    "last_collected_at": "2026-10-25T23:14:08.407787"
+  },
+  "github": [
+    {
+      "sha": "70de7c1",
+      "message": "sync: weekly 2026-09-26 + data update",
+      "date": "2026-09-27",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/70de7c12b719bcbf4eee7506f518ce847246223e"
+    },
+    {
+      "sha": "aeb65f8",
+      "message": "sync: weekly 2026-09-26 + data update",
+      "date": "2026-09-27",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/aeb65f88cb63213be8a688ca49fa3ba23c7dc3e9"
+    },
+    {
+      "sha": "ffae7cf",
+      "message": "weekly sync: 2026-09-26",
+      "date": "2026-09-27",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/ffae7cfe213bad5847df3207a8627d2ecef38173"
+    },
+    {
+      "sha": "445a5d1",
+      "message": "weekly sync: 2026-09-26",
+      "date": "2026-09-27",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/445a5d1f772544fc47e5a63ef34b40b61d6c55a0"
+    },
+    {
+      "sha": "ac0bf26",
+      "message": "weekly sync: 2026-09-25",
+      "date": "2026-09-27",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/ac0bf26359c622e86783c255719309e45556e811"
+    }
+  ]
+}
