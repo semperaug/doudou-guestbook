@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-18T15:08:17.824242",
-  "updated_at_human": "2026-11-18 15:08 CST",
+  "updated_at": "2026-11-18T15:09:36.786982",
+  "updated_at_human": "2026-11-18 15:09 CST",
   "weekly": [
     {
       "date": "2026-11-17",
@@ -669,9 +669,15 @@
     "failed_count": 0,
     "weixin_count": 1,
     "local_count": 15,
-    "last_collected_at": "2026-11-18T15:08:18.441774"
+    "last_collected_at": "2026-11-18T15:09:37.422316"
   },
   "github": [
+    {
+      "sha": "ab883f6",
+      "message": "sync: weekly 2026-11-17 + data update",
+      "date": "2026-11-18",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/ab883f6a62ce1063aeda509e6289dda8f33ef887"
+    },
     {
       "sha": "6ea1afc",
       "message": "sync: weekly 2026-11-17 + data update",
@@ -695,12 +701,6 @@
       "message": "ui: remove hero preview mock frame + cron 任务状态 panel",
       "date": "2026-11-18",
       "url": "https://github.com/semperaug/doudou-guestbook/commit/8d8f50a10759f43196c0ce1e45557b384eb572f4"
-    },
-    {
-      "sha": "084b61e",
-      "message": "sync: weekly 2026-11-17 + data update",
-      "date": "2026-11-18",
-      "url": "https://github.com/semperaug/doudou-guestbook/commit/084b61e634fb4fc781a4958481d51743676cd094"
     }
   ]
 }

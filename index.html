@@ -1413,9 +1413,19 @@
     align-items:baseline;
   }
   .kb-card .social-top .st-item a{
+    flex:0 0 auto;
+    font-weight:500;
+    white-space:nowrap;
+  }
+  .kb-card .social-top .st-summary{
     flex:1 1 auto;
     min-width:0;
-    font-weight:500;
+    color:var(--ink-3);
+    line-height:1.5;
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
   }
   .kb-card .social-top .st-meta{
     flex:0 0 auto;
@@ -3358,24 +3368,25 @@
           const div = document.createElement('div');
           div.className = 'kb-card';
           const sec = (t.section || '').toUpperCase();
-          const when = t.date ? t.date.slice(5) : '';
+          const no = (idx + 1 < 10 ? '0' : '') + (idx + 1);
           let body = '';
           if (t.url) {
-            body = '<div class="social-top"><div class="st-item">' +
-                   '<a href="' + t.url + '" target="_blank" rel="noopener">' +
-                   (idx + 1) + '. ' + t.title + '</a>' +
-                   '<span class="st-meta">' + (t.summary || t.date || '') + '</span></div></div>';
-          } else {
-            body = '<div class="social-top"><div class="st-item">' +
-                   (idx + 1) + '. ' + t.title + '</div></div>';
+            // 标题已在上方 kc-title 显示，这里只放链接 + 摘要
+            body = '<div class="social-top">' +
+                   '<div class="st-item"><a href="' + t.url + '" target="_blank" rel="noopener">' +
+                   '打开链接 →</a>' +
+                   '<span class="st-meta">' + (t.summary || '') + '</span></div></div>';
+          } else if (t.summary) {
+            body = '<div class="social-top"><div class="st-item"><span class="st-summary">' +
+                   t.summary + '</span></div></div>';
           }
           div.innerHTML =
-            '<div class="kc-no">' + (idx + 1 < 10 ? '0' : '') + (idx + 1) + ' / ' + sec + '</div>' +
+            '<div class="kc-no">' + no + ' / ' + sec + '</div>' +
             '<div class="kc-title">' + t.title + '</div>' +
             body +
             '<div class="kc-foot">' +
-              '<span class="size">' + (when || '') + '</span>' +
-              '<span class="tag">' + (t.date || '') + '</span>' +
+              '<span class="size">' + (t.date || '') + '</span>' +
+              '<span class="tag">' + (t.section || '') + '</span>' +
             '</div>';
           tlist.appendChild(div);
         });
