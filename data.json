@@ -1,7 +1,23 @@
 {
-  "updated_at": "2026-11-18T15:09:36.786982",
-  "updated_at_human": "2026-11-18 15:09 CST",
+  "updated_at": "2026-11-18T17:49:14.435866",
+  "updated_at_human": "2026-11-18 17:49 CST",
   "weekly": [
+    {
+      "date": "2026-11-18",
+      "title": "Weekly · 2026-11-18",
+      "one_line": "# Weekly · 2026-11-18 > 豆豆龙档案管理助手 · 7 日窗口版（11-12 → 11-18） > 生成时间：2026-11-18 17:43 CST ｜ 素材范围：`~/openclaw-kb/原始素材/` 最近 7 天新增 .md + cron 输出存档补录 --- ## 一句话总结 **本周的定价权交给了「算力的稀缺」而不是「算力的增长」——SemiAnalysis 把 2028 年 AI 加速器资本开支预测砍掉 28% 之后，英伟达用一份超预期的财报（1158 亿美元营收 + 1500 亿回购）证明「需求还在」，但费半同期两月跌近 24% 创 2008 年来",
+      "themes": [
+        "一句话总结",
+        "主题分组",
+        "主题关联图",
+        "数据源",
+        "链路诊断（本窗口最重要的结构性变化）"
+      ],
+      "section_count": 16,
+      "size": 35332,
+      "url": "./weekly-2026-11-18.html",
+      "beta": true
+    },
     {
       "date": "2026-11-17",
       "title": "AI 周报 · 2026-11-17",
@@ -596,7 +612,7 @@
         "name": "豆豆龙-每日推送重试兜底",
         "schedule": "17 */2 * * *",
         "deliver": "local",
-        "last_run": "2026-11-18T14:17:10.730070+08:00",
+        "last_run": "2026-11-18T16:17:10.717265+08:00",
         "last_status": "ok"
       },
       {
@@ -604,7 +620,7 @@
         "name": "豆豆龙-微信token保活",
         "schedule": "every 360m",
         "deliver": "local",
-        "last_run": "2026-11-18T09:11:11.134858+08:00",
+        "last_run": "2026-11-18T15:12:10.938275+08:00",
         "last_status": "ok"
       },
       {
@@ -669,9 +685,15 @@
     "failed_count": 0,
     "weixin_count": 1,
     "local_count": 15,
-    "last_collected_at": "2026-11-18T15:09:37.422316"
+    "last_collected_at": "2026-11-18T17:49:15.374635"
   },
   "github": [
+    {
+      "sha": "d13f9bc",
+      "message": "sync: weekly 2026-11-17 + data update",
+      "date": "2026-11-18",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/d13f9bc4fa6e926edb57bbff07d85b1b018f04ab"
+    },
     {
       "sha": "ab883f6",
       "message": "sync: weekly 2026-11-17 + data update",
@@ -695,12 +717,6 @@
       "message": "sync: weekly 2026-11-17 + data update",
       "date": "2026-11-18",
       "url": "https://github.com/semperaug/doudou-guestbook/commit/0bbb800aac7923fffcadf4932ff0b87e681fdb0d"
-    },
-    {
-      "sha": "8d8f50a",
-      "message": "ui: remove hero preview mock frame + cron 任务状态 panel",
-      "date": "2026-11-18",
-      "url": "https://github.com/semperaug/doudou-guestbook/commit/8d8f50a10759f43196c0ce1e45557b384eb572f4"
     }
   ]
 }
