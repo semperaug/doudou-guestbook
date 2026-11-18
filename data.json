@@ -1,0 +1,279 @@
+{
+  "updated_at": "2026-11-18T13:30:56.953639",
+  "updated_at_human": "2026-11-18 13:30 CST",
+  "weekly": [
+    {
+      "date": "2026-11-17",
+      "title": "AI 周报 · 2026-11-17",
+      "one_line": "# AI 周报 · 2026-11-17 > 7 日窗口版：**11-11 → 11-17**｜生成时间 2026-11-17 22:0x CST｜档案管理助手 cron（job_id `89ea7e1938d3`） --- ## 一句话总结 **AI 交易的本窗口主题从「治理危机的定价」走到「算力叙事本身被下调」——SemiAnalysis 11-13 把 2028 年全球 AI 加速器资本开支预测从 1.054 万亿美元砍到 7580 亿美元（-28%）、英伟达 2027—2030 年出货预测分别下调 22%/39%/56%/66%，叠加 11-16 董事会「并未讨论让黄仁勋回任」",
+      "themes": [
+        "一句话总结",
+        "主题分组",
+        "主题关联",
+        "数据源",
+        "链路诊断（采集侧 ✅ / 推送侧 🟡）"
+      ],
+      "section_count": 16,
+      "size": 39876,
+      "url": "./weekly-2026-11-17.html",
+      "beta": true
+    },
+    {
+      "date": "2026-11-16",
+      "title": "AI 周报 · 2026-11-16",
+      "one_line": "# AI 周报 · 2026-11-16 > 7 日窗口版：**11-10 → 11-16**｜生成时间 2026-11-16 22:00 CST｜档案管理助手 cron（job_id `89ea7e1938d3`） --- ## 一句话总结 **AI 交易的定价权在本窗口完成第四次换代：从「黄仁勋辞职后谁接班」走到「接班人本身就是答案——英伟达一周跌 13%、连续第六周下跌、市值单周蒸发逾 5730 亿美元并跌破 4 万亿美元；同时美联储 12 月加息 25BP 已被市场完全定价、10 月 PPI 同比创 2022 年 11 月以来最高 6.5%，中国侧则由「政策托底」转向「制度 +",
+      "themes": [
+        "一句话总结",
+        "主题分组",
+        "主题关联",
+        "数据源",
+        "链路诊断（采集侧 ✅ / 推送侧 🔴）"
+      ],
+      "section_count": 16,
+      "size": 45037,
+      "url": "./weekly-2026-11-16.html",
+      "beta": true
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Weekly AI-Trends · 2026-11-15（7 日窗口版 11-09 → 11-15）",
+      "one_line": "# Weekly AI-Trends · 2026-11-15（7 日窗口版 11-09 → 11-15） > 生成时间：2026-11-15 22:0x CST ｜ 档案管理助手 cron（job_id `89ea7e1938d3`）｜ local 模式，不推送微信 > 版本化：主本 `weekly-2026-11-15.md` + 副本 `weekly-2026-11-15_beta1.0.md`（md5 一致，不覆盖任何既有文件） --- ## 一句话总结 **本窗口 AI 定价的锚从「资产负债表重定价」再次位移到「组织的自证能力」——英伟达在 11-13 用 34.75 美元的",
+      "themes": [
+        "一句话总结",
+        "主题分组",
+        "主题关联",
+        "数据源",
+        "链路诊断（11-15）"
+      ],
+      "section_count": 14,
+      "size": 46404,
+      "url": "./weekly-2026-11-15.html",
+      "beta": true
+    },
+    {
+      "date": "2026-11-14",
+      "title": "Weekly AI-Trends · 2026-11-14（7 日窗口版 11-08 → 11-14）",
+      "one_line": "# Weekly AI-Trends · 2026-11-14（7 日窗口版 11-08 → 11-14） > 生成时间：2026-11-14 22:0x CST ｜ 档案管理助手 cron（job_id `89ea7e1938d3`）｜ local 模式，不推送微信 > 版本化：主本 `weekly-2026-11-14.md` + 副本 `weekly-2026-11-14_beta1.0.md`（md5 一致，不覆盖任何既有文件） --- ## 一句话总结 **AI 链的定价锚在本窗口完成了第三次换代：从「估值击穿→现金流→信用→领导权→IPO 定价」走到「治理危机后的资产负债表",
+      "themes": [
+        "一句话总结",
+        "主题分组",
+        "主题关联",
+        "数据源"
+      ],
+      "section_count": 12,
+      "size": 40802,
+      "url": "./weekly-2026-11-14.html",
+      "beta": true
+    },
+    {
+      "date": "2026-11-13",
+      "title": "AI 周报 · 2026-11-13（7 日窗口：11-07 → 11-13）",
+      "one_line": "# AI 周报 · 2026-11-13（7 日窗口：11-07 → 11-13） > 豆豆龙 · 档案管理助手｜生成时间：2026-11-13 22:0x CST > 窗口内 daily-brief 覆盖 **6/7（86%）**，11-07 缺失（采集侧断链，当日 6 个 agent 型任务全部 26900 秒超时）；累计空档仍 19 天（10-07→10-24 共 18 天 + 11-07 共 1 天） --- ## 一句话总结 **泡沫的审判庭第七次换庭：从「定价定案」走到「管理层出走」——11-12 黄仁勋辞去英伟达总裁/CEO/董事职务即刻生效、结束 33 年掌舵生涯，CF",
+      "themes": [
+        "一句话总结",
+        "主题分组",
+        "主题关联图",
+        "数据源",
+        "数据口径提醒（延续前序窗口）"
+      ],
+      "section_count": 18,
+      "size": 58206,
+      "url": "./weekly-2026-11-13.html",
+      "beta": true
+    },
+    {
+      "date": "2026-11-12",
+      "title": "AI 周报 · 2026-11-12（7 日窗口：11-06 → 11-12）",
+      "one_line": "# AI 周报 · 2026-11-12（7 日窗口：11-06 → 11-12） > 豆豆龙 · 档案管理助手｜生成时间：2026-11-12 22:0x CST > 窗口内 daily-brief 覆盖 **6/7（86%）**，11-07 缺失（采集侧断链）；累计空档仍 19 天（10-07→10-24 共 18 天 + 11-07 共 1 天） --- ## 一句话总结 **泡沫的审判庭第六次换庭：从「IPO 定价定案」走到「现金流审判的反身性」——同一天，美国 10 月 CPI 把定价从「降息交易」彻底翻成「连续加息交易」，CoreWeave 一纸财报又把 AI 基建情绪拉回",
+      "themes": [
+        "一句话总结",
+        "主题分组",
+        "主题关联图",
+        "数据源",
+        "数据口径提醒（延续前序窗口）"
+      ],
+      "section_count": 15,
+      "size": 42776,
+      "url": "./weekly-2026-11-12.html",
+      "beta": true
+    }
+  ],
+  "daily": [
+    {
+      "date": "2026-11-18",
+      "headline": "",
+      "items_count": 0,
+      "items": [],
+      "tags": [],
+      "size": 13434
+    },
+    {
+      "date": "2026-11-17",
+      "headline": "",
+      "items_count": 0,
+      "items": [],
+      "tags": [],
+      "size": 13048
+    },
+    {
+      "date": "2026-11-16",
+      "headline": "",
+      "items_count": 0,
+      "items": [],
+      "tags": [],
+      "size": 15041
+    }
+  ],
+  "cron": {
+    "jobs": [
+      {
+        "id": "f0c7de023e77",
+        "name": "豆豆龙-每日新闻+AI要闻",
+        "schedule": "20 5 * * *",
+        "deliver": "local",
+        "last_run": "2026-11-18T05:20:31.909388+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "85bab5f7e08a",
+        "name": "豆豆龙-信息收集助手(36kr)",
+        "schedule": "10 11 * * *",
+        "deliver": "local",
+        "last_run": "2026-11-18T11:10:27.954350+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "89ea7e1938d3",
+        "name": "豆豆龙-档案管理助手",
+        "schedule": "20 22 * * *",
+        "deliver": "local",
+        "last_run": "2026-11-17T22:23:54.591542+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "68f676cab791",
+        "name": "豆豆龙-GitHub热榜",
+        "schedule": "40 11 * * *",
+        "deliver": "local",
+        "last_run": "2026-11-18T11:40:41.719329+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "30fcd05af8da",
+        "name": "豆豆龙-上海天气预报",
+        "schedule": "10 12 * * *",
+        "deliver": "local",
+        "last_run": "2026-11-18T12:10:19.874876+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "c29f80fe0f7f",
+        "name": "豆豆龙-宏观经济早报",
+        "schedule": "20 6 * * *",
+        "deliver": "local",
+        "last_run": "2026-11-18T06:21:24.065803+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "3d2341b0ab37",
+        "name": "豆豆龙-韭研公社今日热门",
+        "schedule": "20 18 * * 1-5",
+        "deliver": "local",
+        "last_run": "2026-11-17T18:21:00.217715+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "7dc0dca56484",
+        "name": "豆豆龙-周报兜底",
+        "schedule": "50 22 * * *",
+        "deliver": "local",
+        "last_run": "2026-11-17T22:50:10.710163+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "0a6cebbf1418",
+        "name": "豆豆龙-每日推送重试兜底",
+        "schedule": "17 */2 * * *",
+        "deliver": "local",
+        "last_run": "2026-11-18T12:17:10.307211+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "2587c202fe16",
+        "name": "豆豆龙-微信token保活",
+        "schedule": "every 360m",
+        "deliver": "local",
+        "last_run": "2026-11-18T09:11:11.134858+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "edeedc6bbb9e",
+        "name": "豆豆龙-cron体检",
+        "schedule": "0 9 * * *",
+        "deliver": "origin",
+        "last_run": "2026-11-18T09:00:13.790355+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "3ba027383afb",
+        "name": "豆豆龙-SuperAgent观察期体检",
+        "schedule": "every day at 9:10am",
+        "deliver": "weixin:o9cq80825FKQEAFKfObIpwBGtBFc@im.wechat",
+        "last_run": "2026-11-18T09:10:15.934504+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "2225da48d1ed",
+        "name": "豆豆龙-每日汇总-早间",
+        "schedule": "40 7 * * *",
+        "deliver": "local",
+        "last_run": "2026-11-18T07:40:14.707158+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "d0604b227fa6",
+        "name": "豆豆龙-每日汇总-午间",
+        "schedule": "40 12 * * *",
+        "deliver": "local",
+        "last_run": "2026-11-18T12:40:14.834682+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "6fe19f605da5",
+        "name": "豆豆龙-每日汇总-晚间",
+        "schedule": "40 19 * * *",
+        "deliver": "local",
+        "last_run": "2026-11-17T19:40:14.705302+08:00",
+        "last_status": "ok"
+      },
+      {
+        "id": "55ed4082e67f",
+        "name": "豆豆龙-每日汇总-夜间",
+        "schedule": "40 23 * * *",
+        "deliver": "local",
+        "last_run": "2026-11-17T23:40:12.819298+08:00",
+        "last_status": "ok"
+      }
+    ],
+    "total": 16,
+    "ok_count": 16,
+    "failed_count": 0,
+    "weixin_count": 1,
+    "local_count": 14,
+    "last_collected_at": "2026-11-18T13:30:57.841853"
+  },
+  "github": [
+    {
+      "sha": "a4b0c8f",
+      "message": "backfill: weekly 10-01/10-03/10-04/10-05 + 10-25",
+      "date": "2026-10-25",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/a4b0c8f50b86ace309655a8007d622535ca51ce3"
+    },
+    {
+      "sha": "5f767a0",
+      "message": "sync: weekly 2026-10-25 + data update",
+      "date": "2026-10-25",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/5f767a01074b9042c50493648c9431f7ea89f91c"
+    }
+  ]
+}
