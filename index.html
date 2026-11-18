@@ -1409,6 +1409,22 @@
   .kb-card .social-top .st-item a:hover{
     border-bottom-color:var(--red);
   }
+  .kb-card .social-top .st-item{
+    align-items:baseline;
+  }
+  .kb-card .social-top .st-item a{
+    flex:1 1 auto;
+    min-width:0;
+    font-weight:500;
+  }
+  .kb-card .social-top .st-meta{
+    flex:0 0 auto;
+    max-width:45%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    text-align:right;
+  }
   .kb-card .social-top .st-meta{
     color:var(--ink-3);
     font-family:"SF Mono",monospace;
@@ -1988,6 +2004,34 @@
       text-decoration: none;
     }
     .live-link:hover { text-decoration: underline; }
+    .daily-headline.has-quote {
+      border-left: 2px solid var(--red);
+      padding-left: 12px;
+      font-family: "Source Han Serif SC", "Noto Serif SC", serif;
+      font-size: 14px;
+      color: var(--ink);
+      line-height: 1.7;
+    }
+    .daily-headline .quote-mark {
+      display: block;
+      font-family: "SF Mono", "JetBrains Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+    .daily-list li .title {
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .daily-list li:hover .title {
+      white-space: normal;
+    }
     .daily-headline {
       font-size: 13px;
       line-height: 1.6;
@@ -2150,7 +2194,7 @@
 
 
 
-  <!-- Live Data: Weekly + Daily + GitHub (auto from data.json) -->
+  <!-- Live Data: Weekly + Daily + Cron + GitHub (auto from data.json) -->
   <section id="live-data">
     <div class="section-head">
       <div class="idx">§ 00 / LIVE</div>
@@ -2535,151 +2579,11 @@
 <div class="kb-group">
         <div class="group-head">
           <div class="gname"><em>§ E</em>&nbsp;&nbsp;今日热榜</div>
-          <div class="gcount">11 SOURCES · 18.4 KB</div>
+          <div class="gcount" id="trending-count">加载中...</div>
         </div>
-        <div class="cards">
+        <div class="cards" id="trending-list">
           <div class="kb-card">
-            <div class="kc-no">E·01 / HN</div>
-            <div class="kc-title">Hacker News Top - 2026-08-07</div>
-            <div class="social-top">
-              <div class="st-item"><a href="https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344" target="_blank" rel="noopener">1. AMD acquires Taalas to boost inference performance</a> <span class="st-meta">328</span></div>
-              <div class="st-item"><a href="https://nso.edu/press-release/nsf-inouye-solar-telescope-enables-major-discovery-of-a-hidden-solar-process/" target="_blank" rel="noopener">2. Scientists discover Kelvin-Helmholtz Instability o</a> <span class="st-meta">132</span></div>
-              <div class="st-item"><a href="https://www.troyhunt.com/welcoming-the-nepalese-government-to-have-i-been-pwned/" target="_blank" rel="noopener">3. Welcoming the Nepalese Government to Have I Been P</a> <span class="st-meta">73</span></div>
-            </div>
-            <div class="kc-foot">
-              <span class="size">2.0 KB</span>
-              <span class="tag">HN · 今日</span>
-            </div>
-          </div>
-          <div class="kb-card">
-            <div class="kc-no">E·02 / B站</div>
-            <div class="kc-title">Bilibili 科技区排行榜 - 2026-08-07</div>
-            <div class="social-top">
-              <div class="st-item"><a href="https://www.bilibili.com/video/BV1soZJYUEKd" target="_blank" rel="noopener">1. 前8天：穿越罗布泊无人区  第9天：主角突然换人</a> <span class="st-meta">未知</span></div>
-              <div class="st-item"><a href="https://www.bilibili.com/video/BV1BtZJYBE4G" target="_blank" rel="noopener">2. 震撼世界的72天：巴黎公社为何爆发？又为何失败？【历史调研室71】</a> <span class="st-meta">未知</span></div>
-              <div class="st-item"><a href="https://www.bilibili.com/video/BV1uioXYEE9F" target="_blank" rel="noopener">3. 我被电视剧片头曲“模仿”了却无能为力</a> <span class="st-meta">未知</span></div>
-            </div>
-            <div class="kc-foot">
-              <span class="size">2.1 KB</span>
-              <span class="tag">B站 · 今日</span>
-            </div>
-          </div>
-          <div class="kb-card">
-            <div class="kc-no">E·03 / V2EX</div>
-            <div class="kc-title">V2EX 热榜 - 2026-08-07</div>
-            <div class="social-top">
-              <div class="st-item"><a href="https://v2ex.com/t/1232595" target="_blank" rel="noopener">1. 40 岁程序员大头兵，出来还能找到工作吗</a> <span class="st-meta">https://v2ex.com/t/1232595</span></div>
-              <div class="st-item"><a href="https://v2ex.com/t/1232596" target="_blank" rel="noopener">2. 我现在是在推广节点吗，推广一下</a> <span class="st-meta">https://v2ex.com/t/1232596</span></div>
-              <div class="st-item"><a href="https://v2ex.com/t/1232597" target="_blank" rel="noopener">3. Claude API 中转服务，新用户免费送 10 美元额度体验</a> <span class="st-meta">https://v2ex.com/t/1232597</span></div>
-            </div>
-            <div class="kc-foot">
-              <span class="size">0.7 KB</span>
-              <span class="tag">V2EX · 今日</span>
-            </div>
-          </div>
-          <div class="kb-card">
-            <div class="kc-no">E·04 / HN</div>
-            <div class="kc-title">Hacker News Top - 2026-08-06</div>
-            <div class="social-top">
-              <div class="st-item"><a href="https://www.discoveryloop.com/" target="_blank" rel="noopener">1. Discovery Loop</a> <span class="st-meta">568</span></div>
-              <div class="st-item"><a href="https://zed.dev/deltadb" target="_blank" rel="noopener">2. Zed DeltaDB</a> <span class="st-meta">286</span></div>
-              <div class="st-item"><a href="https://randsinrepose.com/archives/blade-runner-title-cards/" target="_blank" rel="noopener">3. The title cards in Blade Runner are amazing</a> <span class="st-meta">124</span></div>
-            </div>
-            <div class="kc-foot">
-              <span class="size">1.7 KB</span>
-              <span class="tag">HN · 1d 前</span>
-            </div>
-          </div>
-          <div class="kb-card">
-            <div class="kc-no">E·05 / B站</div>
-            <div class="kc-title">Bilibili 科技区排行榜 - 2026-08-06</div>
-            <div class="social-top">
-              <div class="st-item"><a href="https://www.bilibili.com/video/BV1soZJYUEKd" target="_blank" rel="noopener">1. 前8天：穿越罗布泊无人区  第9天：主角突然换人</a> <span class="st-meta">未知</span></div>
-              <div class="st-item"><a href="https://www.bilibili.com/video/BV1BtZJYBE4G" target="_blank" rel="noopener">2. 震撼世界的72天：巴黎公社为何爆发？又为何失败？【历史调研室71】</a> <span class="st-meta">未知</span></div>
-              <div class="st-item"><a href="https://www.bilibili.com/video/BV1uioXYEE9F" target="_blank" rel="noopener">3. 我被电视剧片头曲“模仿”了却无能为力</a> <span class="st-meta">未知</span></div>
-            </div>
-            <div class="kc-foot">
-              <span class="size">2.1 KB</span>
-              <span class="tag">B站 · 1d 前</span>
-            </div>
-          </div>
-          <div class="kb-card">
-            <div class="kc-no">E·06 / V2EX</div>
-            <div class="kc-title">V2EX 热榜 - 2026-08-06</div>
-            <div class="social-top">
-              <div class="st-item"><a href="https://v2ex.com/t/1232339" target="_blank" rel="noopener">1. [🎁送码] 维护了四年的今日热榜，我把它从零重写了一遍</a> <span class="st-meta">https://v2ex.com/t/1232339</span></div>
-              <div class="st-item"><a href="https://v2ex.com/t/1232338" target="_blank" rel="noopener">2. 楼下新开早餐店很快又要倒闭了</a> <span class="st-meta">https://v2ex.com/t/1232338</span></div>
-              <div class="st-item"><a href="https://v2ex.com/t/1232341" target="_blank" rel="noopener">3. 各位用银行卡支付的都用的哪家的卡？</a> <span class="st-meta">https://v2ex.com/t/1232341</span></div>
-            </div>
-            <div class="kc-foot">
-              <span class="size">0.9 KB</span>
-              <span class="tag">V2EX · 1d 前</span>
-            </div>
-          </div>
-          <div class="kb-card">
-            <div class="kc-no">E·07 / HN</div>
-            <div class="kc-title">Hacker News Top - 2026-08-05</div>
-            <div class="social-top">
-              <div class="st-item"><a href="https://blog.hartwork.org/posts/libexpat-city-of-munich-open-source-sabbatical/" target="_blank" rel="noopener">1. libexpat now funded by the City of Munich for up t</a> <span class="st-meta">88</span></div>
-              <div class="st-item"><a href="https://queue.acm.org/detail.cfm?id=3807963" target="_blank" rel="noopener">2. Eight Myths on Software Engineering and GenAI</a> <span class="st-meta">29</span></div>
-              <div class="st-item"><a href="https://twitter.com/gwern/status/2084739205071343837" target="_blank" rel="noopener">3. I am retiring from fulltime writing (&amp; pseudonymit</a> <span class="st-meta">136</span></div>
-            </div>
-            <div class="kc-foot">
-              <span class="size">1.9 KB</span>
-              <span class="tag">HN · 2d 前</span>
-            </div>
-          </div>
-          <div class="kb-card">
-            <div class="kc-no">E·08 / B站</div>
-            <div class="kc-title">Bilibili 科技区排行榜 - 2026-08-05</div>
-            <div class="social-top">
-              <div class="st-item"><a href="https://www.bilibili.com/video/BV1soZJYUEKd" target="_blank" rel="noopener">1. 前8天：穿越罗布泊无人区  第9天：主角突然换人</a> <span class="st-meta">未知</span></div>
-              <div class="st-item"><a href="https://www.bilibili.com/video/BV1BtZJYBE4G" target="_blank" rel="noopener">2. 震撼世界的72天：巴黎公社为何爆发？又为何失败？【历史调研室71】</a> <span class="st-meta">未知</span></div>
-              <div class="st-item"><a href="https://www.bilibili.com/video/BV1uioXYEE9F" target="_blank" rel="noopener">3. 我被电视剧片头曲“模仿”了却无能为力</a> <span class="st-meta">未知</span></div>
-            </div>
-            <div class="kc-foot">
-              <span class="size">2.1 KB</span>
-              <span class="tag">B站 · 2d 前</span>
-            </div>
-          </div>
-          <div class="kb-card">
-            <div class="kc-no">E·09 / V2EX</div>
-            <div class="kc-title">V2EX 热榜 - 2026-08-05</div>
-            <div class="social-top">
-              <div class="st-item"><a href="https://v2ex.com/t/1232147" target="_blank" rel="noopener">1. 有没有人觉得 gpt 太啰嗦？</a> <span class="st-meta">https://v2ex.com/t/1232147</span></div>
-              <div class="st-item"><a href="https://v2ex.com/t/1232146" target="_blank" rel="noopener">2. 甲骨文免费降到 2CPU， 12G</a> <span class="st-meta">https://v2ex.com/t/1232146</span></div>
-              <div class="st-item"><a href="https://v2ex.com/t/1232152" target="_blank" rel="noopener">3. 有人知道 aster 吗?</a> <span class="st-meta">https://v2ex.com/t/1232152</span></div>
-            </div>
-            <div class="kc-foot">
-              <span class="size">0.9 KB</span>
-              <span class="tag">V2EX · 2d 前</span>
-            </div>
-          </div>
-          <div class="kb-card">
-            <div class="kc-no">E·010 / HN</div>
-            <div class="kc-title">Hacker News Top - 2026-08-04</div>
-            <div class="social-top">
-              <div class="st-item"><a href="https://www.seangoedecke.com/llms-reward-expertise/" target="_blank" rel="noopener">1. LLMs reward expertise</a> <span class="st-meta">377</span></div>
-              <div class="st-item"><a href="https://openai.com/index/ten-advances-in-mathematics/" target="_blank" rel="noopener">2. Ten advances in mathematics and theoretical comput</a> <span class="st-meta">412</span></div>
-              <div class="st-item"><a href="https://blog.exe.dev/devtools-must-be-open-source" target="_blank" rel="noopener">3. Devtools must be open source</a> <span class="st-meta">492</span></div>
-            </div>
-            <div class="kc-foot">
-              <span class="size">1.9 KB</span>
-              <span class="tag">HN · 3d 前</span>
-            </div>
-          </div>
-          <div class="kb-card">
-            <div class="kc-no">E·011 / B站</div>
-            <div class="kc-title">Bilibili 科技区排行榜 - 2026-08-04</div>
-            <div class="social-top">
-              <div class="st-item"><a href="https://www.bilibili.com/video/BV1soZJYUEKd" target="_blank" rel="noopener">1. 前8天：穿越罗布泊无人区  第9天：主角突然换人</a> <span class="st-meta">未知</span></div>
-              <div class="st-item"><a href="https://www.bilibili.com/video/BV1BtZJYBE4G" target="_blank" rel="noopener">2. 震撼世界的72天：巴黎公社为何爆发？又为何失败？【历史调研室71】</a> <span class="st-meta">未知</span></div>
-              <div class="st-item"><a href="https://www.bilibili.com/video/BV1uioXYEE9F" target="_blank" rel="noopener">3. 我被电视剧片头曲“模仿”了却无能为力</a> <span class="st-meta">未知</span></div>
-            </div>
-            <div class="kc-foot">
-              <span class="size">2.1 KB</span>
-              <span class="tag">B站 · 3d 前</span>
-            </div>
+            <div class="kc-desc">正在从 data.json 读取最新榜单…</div>
           </div>
         </div>
       </div><!-- KB-GROUP-E-END -->
@@ -3422,18 +3326,64 @@
     if (data.daily && data.daily.length) {
       const d = data.daily[0];
       document.getElementById('ld-date').textContent = d.date;
-      document.getElementById('ld-headline').textContent = d.headline || '(无今日热议)';
+      const hd = document.getElementById('ld-headline');
+      if (d.headline) {
+        hd.innerHTML = '<b class="quote-mark">今日金句</b>' + d.headline;
+        hd.classList.add('has-quote');
+      } else {
+        hd.textContent = '（今日无金句）';
+        hd.classList.remove('has-quote');
+      }
       const list = document.getElementById('ld-list');
       list.innerHTML = '';
       (d.items || []).forEach(it => {
         const li = document.createElement('li');
+        const t = it.title || '';
         li.innerHTML = '<span class="num">' + it.num + '</span>' +
-                        '<span class="tag">' + it.tag + '</span>' +
-                        '<span class="title">' + it.title + '</span>';
+                        '<span class="tag">' + (it.tag || '—') + '</span>' +
+                        '<span class="title" title="' + (it.summary || t) + '">' + t + '</span>';
         list.appendChild(li);
       });
       document.getElementById('ld-count').textContent = d.items_count;
-      document.getElementById('ld-tags').textContent = (d.tags || []).slice(0, 5).join(' / ');
+      document.getElementById('ld-tags').textContent = (d.tags || []).slice(0, 6).join(' / ');
+    }
+
+    // === Trending / 今日热榜 ===
+    if (data.trending && data.trending.length) {
+      const tlist = document.getElementById('trending-list');
+      const tcount = document.getElementById('trending-count');
+      if (tlist) {
+        tlist.innerHTML = '';
+        data.trending.forEach((t, idx) => {
+          const div = document.createElement('div');
+          div.className = 'kb-card';
+          const sec = (t.section || '').toUpperCase();
+          const when = t.date ? t.date.slice(5) : '';
+          let body = '';
+          if (t.url) {
+            body = '<div class="social-top"><div class="st-item">' +
+                   '<a href="' + t.url + '" target="_blank" rel="noopener">' +
+                   (idx + 1) + '. ' + t.title + '</a>' +
+                   '<span class="st-meta">' + (t.summary || t.date || '') + '</span></div></div>';
+          } else {
+            body = '<div class="social-top"><div class="st-item">' +
+                   (idx + 1) + '. ' + t.title + '</div></div>';
+          }
+          div.innerHTML =
+            '<div class="kc-no">' + (idx + 1 < 10 ? '0' : '') + (idx + 1) + ' / ' + sec + '</div>' +
+            '<div class="kc-title">' + t.title + '</div>' +
+            body +
+            '<div class="kc-foot">' +
+              '<span class="size">' + (when || '') + '</span>' +
+              '<span class="tag">' + (t.date || '') + '</span>' +
+            '</div>';
+          tlist.appendChild(div);
+        });
+      }
+      if (tcount) {
+        const srcs = new Set(data.trending.map(t => t.section));
+        tcount.textContent = data.trending.length + ' ENTRIES · ' + srcs.size + ' SOURCES';
+      }
     }
 
     // === GitHub ===
