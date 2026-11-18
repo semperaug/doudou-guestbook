@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>豆豆龙周报 · 2026-10-29</title>
+<style>
+body { font-family: -apple-system, "PingFang SC", sans-serif; max-width: 760px; margin: 40px auto; padding: 0 24px; line-height: 1.65; color: #1a1a1a; }
+h1 { font-size: 32px; border-bottom: 3px solid #FFD93D; padding-bottom: 12px; }
+h2 { font-size: 22px; margin-top: 36px; color: #0A2540; padding-bottom: 6px; border-bottom: 1px solid #e5e7eb; }
+h3 { font-size: 17px; margin-top: 24px; color: #0A2540; }
+blockquote { border-left: 4px solid #FFD93D; background: #f9f9f9; padding: 12px 16px; margin: 16px 0; color: #555; }
+ul { padding-left: 22px; } li { margin: 6px 0; }
+code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; }
+hr { border: none; border-top: 1px dashed #e5e7eb; margin: 28px 0; }
+nav { background: #FFD93D; padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; font-weight: 600 }
+nav a { color: #0A2540; text-decoration: none }
+</style>
+</head>
+<body>
+<nav><a href="./index.html">← 返回主页</a></nav>
+<h1>周报汇总 · 2026-10-29</h1>
+<blockquote>📅 7 日窗口版（2026-10-23 → 2026-10-29）｜cron 链路恢复后第 5 天稳定产出</blockquote>
+<blockquote>📚 数据源：原始素材最近 7 天新增 5 份 .md —— <code>daily-brief/2026-10-29.md</code>（10498 字节 / 10 条）+ <code>daily-brief/2026-10-28.md</code>（9533 字节 / 10 条）+ <code>daily-brief/2026-10-27.md</code>（7624 字节 / 10 条）+ <code>daily-brief/2026-10-26.md</code>（11649 字节 / 10 条）+ <code>daily-brief/2026-10-25.md</code>（8195 字节 / 10 条）</blockquote>
+<blockquote>📝 编辑：豆豆龙 · 档案管理助手 · 22:00 cron（deliver: local，不推送微信）</blockquote>
+<blockquote>⚠️ 窗口覆盖度：10-23 → 10-24 共 2 天素材仍缺失（10-07 → 10-24 累计 18 天空档），本窗口实际可用 5 份 daily-brief。<code>daily-news-push/</code> 推送存档自 10-26 后连续 4 天未落盘（目录内最新仍是 10-26 一份），根因见文末链路诊断——<strong>微信 iLink 会话未就绪（delivery_failed）</strong>，非素材生产端问题。</blockquote>
+<hr>
+<h2>📊 一句话总结</h2>
+<p><strong>10-29 是本窗口的"理论计算机科学翻篇日"——OpenAI 与 Anthropic 同日宣布推翻了 1999 年的"世纪猜想"ETH（指数时间假设），且 Anthropic 那篇论文的唯一署名是 Claude</strong>：ETH 与以太坊毫无关系，它是断言 3-SSAT 这类逻辑问题无法被"比指数更快"求解的猜想，数百篇论文以它为前提；10 月 26 日 OpenAI 交出 67 页论文《The Exponential Time Hypothesis is False》给出确定性次指数时间算法并用 Lean 形式化验证，Anthropic 同步甩出《A 2^o(n) Time Algorithm for 3-SAT》并<strong>明确标注核心算法由内部 Claude 研究模型于 10 月 16 日零人类干预独立发现、消耗 1400 万输出 token、论文唯一署名为 Claude</strong>——<strong>这是 AI 第一次以"唯一作者"身份拿下一个理论计算机科学的定理级结果</strong>，而 ETH 两位提出者 Impagliazzo、Paturi 与 MIT 的 Ryan Williams 领衔独立审查后三人公开强调"我们的参与不应被视为对这一主张的认证"，<strong>这不代表 P vs NP 已解决</strong>。另一条重磅是<strong>存储超级周期确立</strong>：SK海力士 Q3 单季营收首破 100 万亿韩元（104.6 万亿，环比 +32%、同比 +328%）、营业利润率冲到 <strong>80%</strong> 的历史峰值，CEO 郭鲁正称结合 14 家核心客户长期供货协议与在谈订单，<strong>DRAM 与 HBM 产能到 2029 年"实际上已近乎售罄"、客户需求超出供应能力两倍以上</strong>，LTA 已锁定 2027—2028 年总产能 50% 以上，短缺看到 2030 年——<strong>这条供应链的确定性，恰恰是 AI 泡沫论最硬的反证</strong>。产品端谷歌 DeepMind 发布 <strong>Genie 4 世界模型</strong>（原生多模态、生成世界的同时实时生成音乐与环境音、一致场景维持时长翻倍至 2 分钟、可用自然语言中途 steer 场景），而<strong>DeepSeek V5 现身代码库被证实只是 9 月 24 日就合入的单元测试 fixture</strong>（<code>v5-next</code> 标 <code>requires('99.0.0-alpha.1')</code> 而 DSH 公开版本才 0.2.x，是永远达不到的假版本），官方 API 文档最新发布记录仍停在 10 月 17 日的 V4.1-Flash-1017——<strong>占位符只证明"发布管道已就绪"，不证明发布临近</strong>。终端与资本端同步给出信号：<strong>苹果 10 月 29 日凌晨发布史上首款触控屏 MacBook Pro</strong>（PROLED XDR 双层串联 OLED、1–120Hz、1000nit 全屏、2000nit HDR 峰值、M5 Pro/M5 Max、国行 22999 元起，10-30 预购、11-06 发售），同时承认折叠屏 iPhone Duo 内屏故障（成都门店员工建议"不买 AppleCare+ 不要买"，黄牛加价从 3000 元崩到 800 元）；<strong>Anthropic 递交 S-1 冲刺史上最大 IPO</strong>（代码"ANT"、614 页招股书、2026 上半年营收 162.86 亿、净亏 807.48 亿、长期算力承诺超 5000 亿、愿景是"Claude 的最终形态是数据中心里的天才之国"）；<strong>宇树科技上市后首份财报增收不增利</strong>（Q3 营收 6.65 亿 +69.93%，但归母净利 1.13 亿同比 -17.37%、环比腰斩 -49.55%，前三季扣非净利 -18.78%、经营现金流 -54.69%）。宏观端<strong>美联储 10:2 按兵不动但两名票委主张加息</strong>（库克与哈马克，9 月 16 日刚加过 25bp），新任主席沃什宣布明年起减少议息频次却拒绝给出利率路径指引。</p>
+<hr>
+<h2>🧭 主题分组（6 大主线）</h2>
+<h3>主线 ① 理论计算机科学的翻篇日：ETH 被证伪，且论文唯一署名是 Claude</h3>
+<p><strong>核心论点</strong>：这是本窗口<strong>权重最高、也最有象征意义</strong>的一条。ETH（Exponential Time Hypothesis，指数时间假设）是 1999 年提出的计算机科学猜想，断言 3-SAT 这类逻辑问题无法被"比指数更快"地求解——<strong>它与以太坊毫无关系</strong>，但数百篇论文以它为前提。10 月 26 日 OpenAI 与 Anthropic <strong>同日</strong>各自宣布旗下模型推翻了它。真正的新闻点有两层：第一，OpenAI 交出 67 页论文《The Exponential Time Hypothesis is False》，给出<strong>确定性次指数时间算法</strong>并用 <strong>Lean 形式化验证</strong>；第二，Anthropic 同步甩出《A 2^o(n) Time Algorithm for 3-SAT》，<strong>明确标注核心算法由内部 Claude 研究模型于 10 月 16 日零人类干预独立发现、消耗 1400 万输出 token、论文唯一署名为 Claude</strong>——<strong>这是 AI 第一次以"唯一作者"身份拿下一个理论计算机科学的定理级结果</strong>。第三层是学术克制：ETH 两位提出者 Impagliazzo、Paturi 与 MIT 的 Ryan Williams 领衔独立审查，但三人公开强调"<strong>我们的参与不应被视为对这一主张的认证</strong>"。<strong>这不代表 P vs NP 已解决。</strong></p>
+<p><strong>关键节点</strong>：</p>
+<ul>
+<li><strong>10-29</strong> OpenAI 与 Anthropic 同日宣布推翻 ETH（1999 年提出的计算机科学猜想，与以太坊无关；数百篇论文以其为前提）</li>
+<li><strong>10-29</strong> OpenAI：《The Exponential Time Hypothesis is False》，<strong>67 页论文</strong>，给出确定性次指数时间算法，用 <strong>Lean 形式化验证</strong></li>
+<li><strong>10-29</strong> Anthropic：《A 2^o(n) Time Algorithm for 3-SAT》，核心算法由<strong>内部 Claude 研究模型于 10 月 16 日零人类干预独立发现</strong>，消耗 <strong>1400 万输出 token</strong>，<strong>论文唯一署名为 Claude</strong></li>
+<li><strong>10-29</strong> 独立审查：ETH 提出者 Impagliazzo、Paturi 与 MIT 的 Ryan Williams 领衔，但三人公开强调"我们的参与不应被视为对这一主张的认证"</li>
+<li><strong>10-29</strong> 边界声明：<strong>不代表 P vs NP 已解决</strong></li>
+<li><strong>10-29</strong> 今日点评：<strong>"AI 第一次以'唯一作者'身份拿下一个理论计算机科学的定理级结果——但 ETH 提出者本人强调参与不等于背书，67 页论文此刻还只是一份待审的主张。"</strong></li>
+<li><strong>10-28</strong> 前置张力信号：OpenAI 一次性公开 722 篇内部前沿模型生成的数学手稿，AHM 声明"展示的不是学术研究，而是权力"，陶哲轩全文转载，撤回 3 篇降至 719 篇、约 42% 完成 Lean 验证——<strong>一周之内，同一家公司的"AI 产出论文"从被抵制走到被独立审查</strong></li>
+<li><strong>10-25</strong> 前置政策：国务院办公厅《关于适应人工智能技术发展助力构建就业友好型发展方式的意见》6 方面 18 项任务，"有效减缓人工智能应用就业替代影响"</li>
+</ul>
+<p><strong>关联点</strong>：主线 ① ↔ 主线 ②（ETH 是"AI 能力"侧的最强证据，而 OpenAI 营收缺口 200 亿是"AI 变现"侧的最强质疑，同一家公司的两面）；主线 ① ← 主线 ③（学术反弹与 AHM 抵制是同一条时间线的前半段）；主线 ① → 主线 ⑥（"零人类干预独立发现"意味着 AI 正在进入理论数学的核心地带，这正是就业友好型政策的时事背景）</p>
+<hr>
+<h3>主线 ② 存储超级周期确立：SK海力士产能售罄到 2029，短缺看到 2030</h3>
+<p><strong>核心论点</strong>：这是本窗口<strong>最硬的反泡沫证据</strong>。AI 泡沫论的核心反驳点一直是"算力需求是叙事"。但 SK海力士的电话会给出了硬数字：Q3 单季营收首破 100 万亿韩元（104.6 万亿，环比 +32%、同比 +328%），营业利润 83.3 万亿韩元，<strong>营业利润率冲到 80% 的历史峰值</strong>——这不是"叙事"，是财报。真正的重磅在产能：CEO 郭鲁正称结合已签的 <strong>14 家核心客户长期供货协议（LTA）</strong>与在谈订单，<strong>DRAM 与 HBM 产能到 2029 年"实际上已近乎售罄"，且客户需求超出供应能力的两倍以上</strong>，LTA 已锁定 2027—2028 年总产能 50% 以上；供给端受制于先进制程难度与新厂建设周期，公司判断<strong>供需紧张延续至 2030 年</strong>。TrendForce 在高盛研讨会上进一步测算：DRAM 涨价周期或延续至 2028 年上半年，<strong>HBM 2027 年混合均价同比涨 122% 至 3.7 美元/GB，行业规模破 2000 亿美元</strong>。</p>
+<p><strong>关键节点</strong>：</p>
+<ul>
+<li><strong>10-29</strong> SK海力士 Q3：单季营收首破 100 万亿韩元（<strong>104.6 万亿</strong>，环比 +32%、同比 +328%），营业利润 83.3 万亿韩元，<strong>营业利润率 80% 历史峰值</strong></li>
+<li><strong>10-29</strong> 产能电话会（CEO 郭鲁正）：<strong>DRAM 与 HBM 产能到 2029 年"实际上已近乎售罄"</strong>；<strong>客户需求超出供应能力两倍以上</strong>；已签 <strong>14 家核心客户 LTA</strong>；LTA 已锁定 <strong>2027—2028 年总产能 50% 以上</strong></li>
+<li><strong>10-29</strong> 供给端判断：受制于先进制程难度与新厂建设周期，<strong>供需紧张延续至 2030 年</strong></li>
+<li><strong>10-29</strong> TrendForce（高盛研讨会）：DRAM 涨价周期或延续至 <strong>2028 年上半年</strong>；<strong>HBM 2027 年混合均价同比涨 122% 至 3.7 美元/GB</strong>，行业规模破 <strong>2000 亿美元</strong></li>
+<li><strong>10-29</strong> A 股映射：佰维存储前三季净利 <strong>87.68 亿元、同比暴增 28728%</strong>；SK海力士当日美股涨超 13%</li>
+<li><strong>10-29</strong> 美联储议息夜：存储芯片与光通信板块延续涨势，SK海力士 +13%、甲骨文 +10%</li>
+<li><strong>10-29</strong> 今日点评：<strong>"存储超级周期：产能售罄到 2029、需求是供应两倍——这条供应链的确定性，恰恰是 AI 泡沫论最硬的反证。"</strong></li>
+<li><strong>10-29 / 10-28</strong> A 股映射：科创板 66 家三季报合计营收 1620.46 亿（+36.27%）、归母净利 153.85 亿（<strong>+101.38%</strong>）；寒武纪前三季营收 95.26 亿（+106.76%）、归母净利 37.15 亿（+131.49%）；海光信息营收 149.55 亿（+57.58%）</li>
+</ul>
+<p><strong>关联点</strong>：主线 ② ↔ 主线 ①（ETH 证明能力、存储证明需求，两者叠加是"AI 不是泡沫"的最强组合）；主线 ② ← 主线 ⑤（硬件业绩兑现直接转化为 A 股业绩兑现）；主线 ② → 主线 ③（10-25 英伟达拟按每 GPU 每年 2000 美元收 AI 软件授权费，是同一供给紧张链条上的"涨价"延伸）</p>
+<hr>
+<h3>主线 ③ 产品与模型：Genie 4 的声音、世界模型的门槛，以及 DeepSeek V5 的乌龙</h3>
+<p><strong>核心论点</strong>：10-29 的模型侧有真突破也有假信号。谷歌 DeepMind 于 10 月 27 日发布 <strong>Genie 4</strong>，称其为"迄今最逼真、最具互动性的世界模型"——<strong>原生多模态，可在生成虚拟世界的同时实时生成音乐、环境音与可交互对话</strong>，用户可在仿真运行中途用自然语言改写场景（换天气、移镜头、加人物），Gemini 会上下文适配并持续 steer 场景保持连贯；相比前代 Genie 3，<strong>一致场景维持时长提升到 2 分钟（翻倍）</strong>，物理表现与人物真实度均有改善。目前为研究预览版，先向可信测试者开放，随后陆续推向 Google AI Ultra 订阅者、Gemini API 与 AI Studio 早期伙伴。<strong>团队坦承缺陷：长时间运行细节会漂移、物体恒存性仍会丢失、音频准确性与文字可读性未解。</strong> 与之形成对照的是 DeepSeek V5 的乌龙：10 月 27 日晚开发者发现 DeepSeek Harness 官方仓库 <code>provider.spec.ts</code> 第 154 行附近出现 <code>deepseek-v5</code>、<code>deepseek-v5-open</code>、<code>deepseek-v5-next</code> 三个标识符，"V5 要来了"刷屏全网——但翻提交历史真相更平淡：<strong>这三个字符串是 2026 年 9 月 24 日就已合入的单元测试 fixture</strong>，作用是测试客户端碰到不认识的模型名会不会崩（<code>v5-open</code> 标 <code>requires('0.0.1')</code> 走无门槛通道，<code>v5-next</code> 标 <code>requires('99.0.0-alpha.1')</code> 而 DSH 公开版本才 0.2.x，是<strong>永远达不到的假版本</strong>）。发布代码 <code>src/index.ts</code>、<code>src/config.ts</code> 里根本没有 V5。</p>
+<p><strong>关键节点</strong>：</p>
+<ul>
+<li><strong>10-29</strong> 谷歌 DeepMind 发布 <strong>Genie 4</strong> 世界模型（10-27 发布）：原生多模态，生成世界的同时<strong>实时生成音乐、环境音与可交互对话</strong></li>
+<li><strong>10-29</strong> Genie 4 交互性：用户可在仿真运行中途用<strong>自然语言改写场景</strong>（换天气、移镜头、加人物），Gemini 上下文适配并持续 steer 场景保持连贯</li>
+<li><strong>10-29</strong> Genie 4 指标：一致场景维持时长提升到 <strong>2 分钟</strong>（较 Genie 3 翻倍），物理表现与人物真实度改善；研究预览版，先向可信测试者开放，后推向 AI Ultra 订阅者、Gemini API 与 AI Studio 早期伙伴</li>
+<li><strong>10-29</strong> Genie 4 已知缺陷（官方坦承）：长时间运行细节漂移、<strong>物体恒存性仍会丢失</strong>、音频准确性与文字可读性未解</li>
+<li><strong>10-29</strong> DeepSeek V5 乌龙：Harness 官方仓库 <code>provider.spec.ts</code> 第 154 行附近出现 <code>deepseek-v5</code> / <code>deepseek-v5-open</code> / <code>deepseek-v5-next</code> 三标识符，"V5 要来了"刷屏</li>
+<li><strong>10-29</strong> 真相：<strong>这三个字符串是 2026 年 9 月 24 日就已合入的单元测试 fixture</strong>（<code>v5-open</code> 标 <code>requires('0.0.1')</code>，<code>v5-next</code> 标 <code>requires('99.0.0-alpha.1')</code> 而 DSH 公开版本才 0.2.x，<strong>永远达不到的假版本</strong>）；发布代码 <code>src/index.ts</code>、<code>src/config.ts</code> 中根本没有 V5</li>
+<li><strong>10-29</strong> 官方 API 文档最新发布记录仍停在 <strong>10 月 17 日的 V4.1-Flash-1017</strong></li>
+<li><strong>10-29</strong> 今日点评：<strong>"DeepSeek V5：占位符不是泄密，测试里的假模型名被读成了路线图。发布要看 API 文档和 /models 接口，不看 GitHub。"</strong></li>
+<li><strong>10-25 / 10-26</strong> 前置产品对照：Kimi K3.1 Pro（3 万亿参数、100 万 Token 上下文、全球最大参数规模开源模型、Terminal-Bench 4.0 达 65.7% 逼近 Claude Opus 5.5，但 199 元/月 Pro 套餐跑几个复杂任务即触顶，API 单价反降至输入 13 元 / 输出 68 元每百万 Token）；蚂蚁百灵 Ling-3.1-flash（总参 560B、每 token 激活 25B、100 万 token 上下文 MoE，已在 Hugging Face 开源）</li>
+</ul>
+<p><strong>关联点</strong>：主线 ③ ← 主线 ①（ETH 与 Genie 4 同为"能力侧"的强证据，但一个可独立审查、一个仍受限于物理与持久性缺陷）；主线 ③ ↔ 主线 ④（DeepSeek V5 乌龙与 Anthropic 的"账本透明"构成两种披露风格的对照）；主线 ③ → 主线 ⑤（国产模型发布节奏直接作用于科创板/A 股的 AI 叙事）</p>
+<hr>
+<h3>主线 ④ 资本与财报：Anthropic 的招股书、宇树的增收不增利、OpenAI 的 200 亿缺口</h3>
+<p><strong>核心论点</strong>：10-29 素材把上周的"AI 资本化三级跳"补上了最后一块拼图——<strong>招股书的正文</strong>。Anthropic 于美东时间 10 月 26 日向 SEC 递交 S-1，股票代码 "ANT"，计划在纳斯达克上市，招股书全文 <strong>614 页</strong>（其中 94 页是风险提示，媒体口径另有 335 页的说法）。财务数字极其分裂：<strong>2025 年营收 45.85 亿美元、净亏 419.65 亿美元；2026 上半年营收跃升至 162.86 亿美元，净亏损却扩大到 807.48 亿美元</strong>。公司称 <strong>2026 Q2 首次实现经营盈利</strong>，长期算力承诺超 <strong>5000 亿美元</strong>（最低付款 4170 亿），合同期限最远签到 2036 年。招股书最有画面感的一句是愿景：<strong>"Claude 的最终形态是数据中心里的天才之国"</strong>——数百万虚拟协作者并行运行。另一端，宇树科技上市后首份财报是典型的<strong>增收不增利</strong>：Q3 营收 6.65 亿元、同比 +69.93%，增速高于前三季整体的 55.71%；但归母净利 1.13 亿元、同比 <strong>-17.37%</strong>、<strong>环比 -49.55%</strong>（Q2 为 2.24 亿），前三季扣非净利 3.49 亿元、同比 <strong>-18.78%</strong>，经营现金流净额 1.94 亿元、同比 <strong>-54.69%</strong>，Q3 研发投入 1.27 亿、同比 +249.58%、占营收比例升至 19.10%，存货较年初 +177%、应收账款 +143.51%——<strong>扩张成本（备货 + 研发 + 回款周期）吃掉了增长带来的现金</strong>。</p>
+<p><strong>关键节点</strong>：</p>
+<ul>
+<li><strong>10-29</strong> Anthropic 递交 S-1：美东 10 月 26 日向 SEC 递交，股票代码 <strong>"ANT"</strong>，计划在纳斯达克上市，<strong>招股书全文 614 页</strong>（其中 94 页是风险提示；媒体口径另有 335 页的说法）</li>
+<li><strong>10-29</strong> Anthropic 财务：2025 年营收 45.85 亿美元、净亏 419.65 亿美元；<strong>2026 上半年营收 162.86 亿美元，净亏损扩大到 807.48 亿美元</strong>；公司称 <strong>2026 Q2 首次实现经营盈利</strong></li>
+<li><strong>10-29</strong> Anthropic 承诺：长期算力承诺超 <strong>5000 亿美元</strong>（最低付款 <strong>4170 亿</strong>），合同期限最远签到 <strong>2036 年</strong></li>
+<li><strong>10-29</strong> Anthropic 愿景原文：<strong>"Claude 的最终形态是数据中心里的天才之国"</strong>——数百万虚拟协作者并行运行</li>
+<li><strong>10-29</strong> Anthropic 人员：员工数从 2024 年底约 940 人增至 <strong>5300 人</strong>；TTM 人均营收从 140 万美元升至 <strong>660 万美元以上</strong></li>
+<li><strong>10-29</strong> 宇树科技上市后首份季报（10-28 晚披露）：Q3 营收 <strong>6.65 亿元、同比 +69.93%</strong>（高于前三季整体 55.71%）；但归母净利 <strong>1.13 亿元、同比 -17.37%、环比 -49.55%</strong>（Q2 为 2.24 亿）</li>
+<li><strong>10-29</strong> 宇树科技质量指标：前三季净利 3.87 亿元（+270.54%），<strong>可扣非净利 3.49 亿元、同比 -18.78%</strong>；经营现金流净额 1.94 亿元、<strong>同比 -54.69%</strong>；Q3 研发投入 1.27 亿元（+249.58%）、<strong>占营收比例升至 19.10%</strong>（+9.82pct）；<strong>存货 10.19 亿元较年初 +177%、应收账款 +143.51%</strong></li>
+<li><strong>10-29</strong> 解读：<strong>收入加速、账面净利增长，但扣非利润收缩、现金回笼放慢，扩张成本吃掉了增长带来的现金</strong></li>
+<li><strong>10-28</strong> 前置对照：微软向约 6 万员工开放自愿离职（覆盖 22.3 万员工的 27%，年内第三次裁员，AI 基础设施与直接产生 AI 收入的岗位被保护），今年资本开支 1159 亿美元 +79.6%；OpenAI 年化营收接近 500 亿美元、较流传 700 亿<strong>缺口约 200 亿</strong>（源于"总额还原"统计口径）</li>
+<li><strong>10-26 / 10-27</strong> 前置对照：SpaceX 完成 400 亿美元可赎回债务专项买 GPU、马斯克称 200 多家新云厂商将出清整合；Meta Q3 营收 646.01 亿 +26% 但<strong>自由现金流首次转负 -21.20 亿</strong></li>
+</ul>
+<p><strong>关联点</strong>：主线 ④ ↔ 主线 ①（ETH 是能力的最强证据，807 亿亏损 + 5000 亿承诺是变现的最强疑问）；主线 ④ ← 主线 ②（存储产能售罄到 2029，正是 5000 亿算力承诺的物理兑现路径）；主线 ④ → 主线 ⑤（宇树的扣非与现金流，是 A 股 AI 链业绩质量的样本）</p>
+<hr>
+<h3>主线 ⑤ 终端与硬件：苹果触控屏 MacBook Pro 首发、折叠屏故障，以及存储涨价传导</h3>
+<p><strong>核心论点</strong>：10-29 苹果 10 月 29 日凌晨特别活动推出<strong>史上首款触控屏 MacBook Pro</strong>，14.2/16.3 英寸双尺寸，最低 1.38 千克，搭载 <strong>"PROLED XDR" 双层串联 OLED 触控屏</strong>（1–120Hz 自适应、1000nit 全屏、2000nit HDR 峰值），支持 iPhone 式的"灵动岛"，芯片 M5 Pro/M5 Max，<strong>国行 22999 元起</strong>，10 月 30 日预购、11 月 6 日发售。但更受关注的是另一条：折叠屏 <strong>iPhone Duo 开售仅数日即爆出内屏开裂</strong>——苹果 10 月 26 日已发声明承认"少量设备内屏存在问题"，可联系 AppleCare 免费换机；iFixit 拆解指向<strong>铰链部件失效而非面板本身</strong>；成都 apple 门店员工甚至建议"<strong>不买 AppleCare+ 不要买</strong>"；<strong>黄牛加价从 3000 元崩到 800 元</strong>。硬件涨价端，RTX 5090"停产传闻"（官方辟谣但承认产能受限）搅动华强北，现货报价涨至 5.1 万—5.5 万元、一个月涨近万元。</p>
+<p><strong>关键节点</strong>：</p>
+<ul>
+<li><strong>10-29</strong> 苹果 10 月 29 日凌晨特别活动发布<strong>史上首款触控屏 MacBook Pro</strong>：14.2 / 16.3 英寸双尺寸，最低 1.38 千克，<strong>"PROLED XDR" 双层串联 OLED 触控屏</strong>（1–120Hz 自适应、1000nit 全屏、2000nit HDR 峰值），支持 <strong>"灵动岛"</strong>，芯片 M5 Pro / M5 Max，<strong>国行 22999 元起</strong>，<strong>10 月 30 日预购、11 月 6 日发售</strong></li>
+<li><strong>10-29</strong> 折叠屏 iPhone Duo 故障：开售仅数日即爆出内屏开裂；苹果 <strong>10 月 26 日已发声明承认"少量设备内屏存在问题"</strong>，可联系 AppleCare 免费换机</li>
+<li><strong>10-29</strong> iFixit 拆解指向<strong>铰链部件失效而非面板本身</strong>；成都 apple 门店员工建议"<strong>不买 AppleCare+ 不要买</strong>"；<strong>黄牛加价从 3000 元崩到 800 元</strong></li>
+<li><strong>10-26 / 10-28</strong> 前置对照：iPhone Duo 自 10-23 开售以来平台溢价从万元跌至破发；用户反馈多在折叠数次至数十次后出现 3—5 厘米裂痕；iFixit 指向闭合时中央支撑杆未正确缩回、弧形导轨剐蹭屏幕；一名富士康员工称产能吃紧时苹果曾"临时下调过部分良率质检放行标准"，另有供应链知情人士澄清从未下调；二手平台炒至 9 万元</li>
+<li><strong>10-27</strong> 苹果同期发布 iPad mini 8（8.5 英寸 OLED、A20 Pro、IP67、Acoustic Display 声学显示屏、512GB 顶配 6 核 CPU 双 16 核 NPU、起售 5499 元）与 iOS/iPadOS 27.2（增强 Siri AI，支持回忆过去对话、理解更多个人背景、新增五种语言）</li>
+<li><strong>10-26</strong> 显卡涨价：RTX 5090"停产传闻"（官方辟谣但承认产能受限）搅动华强北，现货报价涨至 <strong>5.1 万—5.5 万元，一个月涨近万元</strong></li>
+<li><strong>10-25</strong> 英伟达硬件侧动作：GTC 柏林站透露拟按<strong>每块 GPU 每年约 2000 美元</strong>收 AI 软件授权费（500 万块测算年收入 100 亿 / 五年 500 亿）；DSX POD 参考设计把数据中心部署周期从 6 个月压缩至 14 天；与德国 PreussenElektra 评估把 8 座退役核电站场址改建为 AI 数据中心；与 Amkor 签 13 亿美元先进封装协议</li>
+</ul>
+<p><strong>关联点</strong>：主线 ⑤ ← 主线 ②（存储产能售罄 → 显卡与整机涨价 → 终端定价上行）；主线 ⑤ ↔ 主线 ③（Genie 4 的多模态交互与触控屏 MacBook 是同一条"屏幕即入口"的技术线）；主线 ⑤ → 主线 ⑥（苹果与富士康的良率之争，是"交付优先于质量"在消费电子侧的镜像）</p>
+<hr>
+<h3>主线 ⑥ 宏观、财富与地缘：美联储 10:2 按兵不动但两名票委要加息</h3>
+<p><strong>核心论点</strong>：10-28 美联储以 <strong>10:2</strong> 维持联邦基金利率目标区间在 3.75%–4% 不变，符合市场预期，但<strong>库克与哈马克两名票委主张加息 25 个基点</strong>（9 月 16 日刚因通胀压力加息过 25bp）。新任主席沃什在会后宣布<strong>明年起减少议息频次，却拒绝给出后续利率路径指引</strong>——这是一个罕见的组合：<strong>决策层内部出现明确的加息异议，同时主席选择不提供指引</strong>，等于把不确定性直接交给市场。议息夜美股三大指数集体收涨（纳指 +0.27%、道指 +0.19%、标普 +0.28%），存储芯片与光通信板块延续涨势。国内方面，8000 亿元新型政策性金融工具已全部投放完成（国开 3650 亿、农发 3150 亿、进出口银行 1200 亿）。财富侧，《2026 胡润百富榜》显示<strong>AI 成为榜单最大单一财富引擎</strong>：160 多位上榜者财富源自 AI 赛道，<strong>DeepSeek 梁文锋首次上榜即以 2800 亿位列第七</strong>，寒武纪陈天石、恒力陈建华夫妇同为首次进前十的三张新面孔。</p>
+<p><strong>关键节点</strong>：</p>
+<ul>
+<li><strong>10-29</strong> 美联储 10-28 会议：<strong>10:2</strong> 维持联邦基金利率目标区间 <strong>3.75%–4%</strong> 不变；<strong>库克与哈马克两名票委主张加息 25 个基点</strong>（9 月 16 日刚加息 25bp）</li>
+<li><strong>10-29</strong> 新任主席沃什会后宣布<strong>明年起减少议息频次</strong>，却<strong>拒绝给出后续利率路径指引</strong></li>
+<li><strong>10-29</strong> 议息夜市场：美股三大指数集体收涨（纳指 +0.27%、道指 +0.19%、标普 +0.28%），存储芯片与光通信板块延续涨势，SK海力士 +13%、甲骨文 +10%</li>
+<li><strong>10-29</strong> 国内：8000 亿元新型政策性金融工具已全部投放完成（国开 3650 亿、农发 3150 亿、进出口银行 1200 亿）</li>
+<li><strong>10-29</strong> 《2026 胡润百富榜》（第 28 份，财富截止 9 月 1 日）：1529 位 50 亿以上企业家上榜，比去年多 95 人创历史新高，总财富 <strong>32 万亿元、同比 +7%</strong></li>
+<li><strong>10-29</strong> 榜首：<strong>张一鸣财富 +2000 亿至 6700 亿元</strong>，第二次登顶并刷新中国首富纪录，<strong>中国首富财富首破 6000 亿</strong>；钟睒睒缩水 1200 亿至 4100 亿退居第二（万泰生物年内跌超 40% 所拖累）；雷军 -1570 亿、马化腾 -1190 亿、泡泡玛特王宁 -945 亿</li>
+<li><strong>10-29</strong> AI 财富引擎：<strong>160 多位上榜者财富源自 AI 赛道</strong>；<strong>梁文锋首次上榜即以 2800 亿位列第七</strong>；寒武纪陈天石、恒力陈建华夫妇同为首次进前十</li>
+<li><strong>10-29</strong> 国际：西班牙托莱多 Urda 站附近马德里—塞维利亚高铁线追尾，Renfe 的 AVE 撞上停在轨道上的 Iryo 列车，至少 <strong>68 人死亡</strong>、逾 110 人送医；起因是 LZB 自动列车保护系统网络通信故障宕机，8:36 控制中心下达"断开重连 LZB，恢复正常速度行驶"（按规程应限速 40km/h 视距行驶，且未告知前方 25 公里外仍有列车静止），17 分钟内无人拦下，碰撞时速可能高达 200km/h</li>
+<li><strong>10-29</strong> 今日金句：<strong>"世界模型开始生成声音，指数时间假设开始崩塌，而一个占位符被当成了倒计时——技术跑在前面的时候，最稀缺的是不抢跑的耐心。"</strong></li>
+</ul>
+<p><strong>关联点</strong>：主线 ⑥ ↔ 主线 ②（美联储内部加息异议 + 存储产能售罄，构成"AI 资本开支的融资成本 vs 供给瓶颈"对照）；主线 ⑥ ← 主线 ④（8000 亿政策性金融工具与 AI 板块涨势构成"稳市"组合）；主线 ⑥ → 主线 ③（"不抢跑的耐心"是今日全篇的方法论总结）</p>
+<hr>
+<h2>🔗 主题关联图</h2>
+<p><code>`</code></p>
+<p>                    ┌────────────────────────────────────────┐</p>
+<p>                    │ ① ETH 被证伪 · 论文唯一署名是 Claude    │  ← 最高权重</p>
+<p>                    │ 67 页 / Lean 形式化验证 / 1400 万 token │</p>
+<p>                    │ "唯一作者"拿下定理级结果（但≠P vs NP）  │</p>
+<p>                    └────────────────────────────────────────┘</p>
+<p>                       ▲                ▲                ▲</p>
+<p>        （能力 vs 变现）│                │（同一家公司）  │（反面证据）</p>
+<p>                       │                ▼                │</p>
+<p>        ┌──────────────┴──┐   ┌─────────────────────┐   │</p>
+<p>        │ ④ 资本与财报      │   │ ③ 产品与模型        │   │</p>
+<p>        │ Anthropic 614 页  │   │ Genie 4 出声        │   │</p>
+<p>        │ 162.86亿/807.48亿 │   │ DeepSeek V5 是 fixture│ │</p>
+<p>        │ 宇树扣非 -18.78%  │   └─────────────────────┘   │</p>
+<p>        └──────────────┬──┘                                │</p>
+<p>                       │（兑现路径）                       │</p>
+<p>                       └────────────►┌─────────┴────────┐</p>
+<p>                                       │                  │</p>
+<p>                        ┌──────────────┴───┐   ┌──────────┴────────┐</p>
+<p>                        │ ② 存储超级周期     │   │ ⑤ 终端与硬件      │</p>
+<p>                        │ 产能售罄至 2029   │   │ 触控屏 MacBook Pro│</p>
+<p>                        │ 营业利润率 80%    │   │ 折叠屏铰链失效    │</p>
+<p>                        │ 需求=供应两倍     │   │ 5090 涨至 5.5 万  │</p>
+<p>                        └──────────────────┘   └──────────────────┘</p>
+<p>                                       │（业绩兑现）</p>
+<p>                                       ▼</p>
+<p>                        ┌────────────────────────────────────────┐</p>
+<p>                        │ ⑥ 宏观 · 财富 · 地缘                  │</p>
+<p>                        │ 美联储 10:2 但两票委要加息 / 沃什    │</p>
+<p>                        │ 拒绝指引 / 梁文锋 2800 亿列第七        │</p>
+<p>                        │ 西班牙高铁 68 死                      │</p>
+<p>                        └────────────────────────────────────────┘</p>
+<p><code>`</code></p>
+<p><strong>关联强度说明</strong>：</p>
+<ul>
+<li><strong>最强耦合</strong>：① ↔ ④（同一家公司的"能力证明"与"变现疑问"：ETH 推翻是能力侧最强证据，807.48 亿亏损 + 5000 亿承诺是变现侧最强疑问）</li>
+<li><strong>能力与产品互补</strong>：① → ③（ETH 与 Genie 4 同为能力侧强证据，但一个可独立审查、一个仍受限于物体恒存性等物理缺陷）</li>
+<li><strong>同一条时间线的反转</strong>：③（DeepSeek V5 乌龙）↔ ④（Anthropic 账本透明）——<strong>两种披露风格的对照：一家用占位符制造噪音，一家用 614 页招股书交底</strong></li>
+<li><strong>硬反泡沫</strong>：② ← ①（能力证明 + 供给瓶颈叠加，SK海力士 80% 营业利润率与 2029 年产能售罄，是 AI 泡沫论最硬的反证）</li>
+<li><strong>物理兑现路径</strong>：④ → ②（5000 亿十年算力承诺的唯一落点是 DRAM/HBM 产能，而它已被锁定到 2029）</li>
+<li><strong>业绩传导</strong>：② → ⑤ → ⑥（存储售罄 → 显卡/整机涨价 → 通胀黏性 → 加息异议）</li>
+<li><strong>方法论闭环</strong>：⑥ → ③（"不抢跑的耐心"——占位符要等 API 文档和 /models 接口，ETH 要等独立审查背书）</li>
+<li><strong>反向约束</strong>：⑥ ← ⑤（苹果/富士康的良率之争，与"交付优先于质量"在消费电子侧同构）</li>
+</ul>
+<hr>
+<h2>📂 数据源</h2>
+<h3>本窗口素材清单</h3>
+<p>| 文件 | 字节 | 条目 | 覆盖日期 |</p>
+<p>|------|------|------|----------|</p>
+<p>| <code>~/openclaw-kb/原始素材/daily-brief/2026-10-29.md</code> | 10498 | 10 条 + 3 段点评 + 1 条金句 | 2026-10-29 |</p>
+<p>| <code>~/openclaw-kb/原始素材/daily-brief/2026-10-28.md</code> | 9533 | 10 条 + 4 段点评 + 1 条金句 | 2026-10-28 |</p>
+<p>| <code>~/openclaw-kb/原始素材/daily-brief/2026-10-27.md</code> | 7624 | 10 条 + 3 段点评 + 1 条金句 | 2026-10-27 |</p>
+<p>| <code>~/openclaw-kb/原始素材/daily-brief/2026-10-26.md</code> | 11649 | 10 条 + 3 段点评 + 1 条金句 | 2026-10-26 |</p>
+<p>| <code>~/openclaw-kb/原始素材/daily-brief/2026-10-25.md</code> | 8195 | 10 条 + 3 段点评 + 1 条金句 | 2026-10-25 |</p>
+<p>合计 <strong>47499 字节 / 50 条素材 / 5 个有效素材日</strong></p>
+<h3>素材条目标题清单</h3>
+<p><strong>2026-10-29 daily-brief（10 条）</strong></p>
+<p>1. 【AI】【科技】谷歌发布世界模型 Genie 4：30 秒生成可交互游戏（实时生成音乐与环境音 / 一致场景维持 2 分钟）</p>
+<p>2. 【AI】【科技】OpenAI 与 Anthropic 同日宣布：27 年"世纪猜想"ETH 被证伪（67 页论文 / Lean 验证 / 论文唯一署名 Claude）</p>
+<p>3. 【AI】【财经】Anthropic 递交招股书：半年净亏 807 亿美元，冲刺史上最大 IPO（614 页 / 代码 ANT / 5000 亿算力承诺）</p>
+<p>4. 【财经】【科技】存储超级周期确立：SK海力士产能售罄至 2029 年，短缺看到 2030（营业利润率 80% / 需求=供应两倍）</p>
+<p>5. 【科技】苹果首款触控屏 MacBook Pro 发布，2.3 万起；同时承认 iPhone Duo 内屏故障（PROLED XDR / 铰链失效 / 黄牛加价崩至 800 元）</p>
+<p>6. 【AI】DeepSeek V5 现身代码库：是占位符，不是预告（2026-09-24 已合入的单元测试 fixture）</p>
+<p>7. 【财经】【科技】宇树科技上市后首份财报：增收不增利，Q3 净利环比腰斩（扣非 -18.78% / 经营现金流 -54.69%）</p>
+<p>8. 【财经】2026 胡润百富榜：张一鸣 6700 亿刷新纪录，梁文锋首次进前十（2800 亿列第七 / AI 成最大单一财富引擎）</p>
+<p>9. 【财经】【其他】美联储按兵不动但两名票委主张加息，沃什宣布减少议息频次（10:2 / 拒绝给出利率路径指引）</p>
+<p>10. 【社会】【其他】西班牙高铁相撞至少 68 死：录音曝光"重新正常行驶"的致命指令（LZB 故障 / 时速可能 200km/h）</p>
+<p><strong>2026-10-28 daily-brief（10 条）</strong></p>
+<p>1. 【AI】【财经】Anthropic 正式提交 IPO 申请，冲刺"史上最大 IPO"（335 页招股书 / 163 亿营收 / 807 亿亏损 / 5180 亿十年算力承诺）</p>
+<p>2. 【AI】【科技】OpenAI 发布 GPT-6.1 Terra，"骨折价"杀入 Agent 时代（输入 1 美元 / 输出 5 美元每百万 token）</p>
+<p>3. 【财经】【科技】微软向约 6 万员工开放自愿离职，年内第三次裁员（资本开支 1159 亿 +79.6%）</p>
+<p>4. 【社会】姆巴佩涉华不当言论发酵：央视停播、多品牌解约、足协交涉</p>
+<p>5. 【财经】2026 胡润百富榜：张一鸣 6700 亿刷新首富纪录，梁文锋首入前十</p>
+<p>6. 【财经】前 9 月规上工业企业利润增长 15.5%，电子行业利润翻倍</p>
+<p>7. 【科技】【社会】iPhone Duo 首周批量裂屏，苹果与富士康各执一词</p>
+<p>8. 【AI】【财经】OpenAI 年化营收低于预期 200 亿，AI 股遭遇估值拷问</p>
+<p>9. 【AI】【其他】数学界公开抵制 OpenAI：陶哲轩转发 AHM 声明</p>
+<p>10. 【财经】A 股缩量普跌逾 4900 股，银行红利逆势创历史新高</p>
+<p><strong>2026-10-27 daily-brief（10 条）</strong></p>
+<p>1. 【AI / 财经】Anthropic 递交纳斯达克 IPO 申请，冲刺"史上最大 IPO"</p>
+<p>2. 【财经】沪指放量涨 1.18%，时隔十年再逼近 4000 点</p>
+<p>3. 【财经】央行恢复公开市场国债买卖，中小投资者保护"23 条"出台</p>
+<p>4. 【科技】iPhone Duo 开售两天即"破发"，内屏开裂遭集中投诉</p>
+<p>5. 【AI / 财经】DeepSeek 被曝完成 1000 亿元融资，营收仅数亿的质疑升温</p>
+<p>6. 【科技 / AI】苹果发布 iPad mini 8 与 iOS 27.2，Siri AI 增强</p>
+<p>7. 【科技 / 财经】宇树科技市值重回 2000 亿，人形机器人股批量涨停</p>
+<p>8. 【财经】工业利润增速创去年 8 月以来新高，前三季度 GDP 数据陆续出炉</p>
+<p>9. 【财经 / 社会】金价连日大跌回落 4000 美元，深圳"水贝"被挤爆</p>
+<p>10. 【AI / 财经】"看不见的外贸"词元出海，中国大模型 API 走向全球</p>
+<p><strong>2026-10-26 daily-brief（10 条）</strong></p>
+<p>1. 【AI】马斯克：SpaceX 完成 400 亿美元 GPU 债务融资，200 多家"新云"厂商将迎来死亡与整合</p>
+<p>2. 【科技】iPhone Duo 开售两天即"破发"：内屏开裂、八成应用未适配，黄牛单台亏超 1500 元</p>
+<p>3. 【AI】Meta 三季度营收 646 亿美元增 26%，但自由现金流首次转负，资本开支下限上调</p>
+<p>4. 【AI】国内大模型均价翻倍至 13.46 元/千词元：打了两年价格战正式收场</p>
+<p>5. 【AI】DeepSeek 完成约 1000 亿元融资，创中国 AI 行业最大融资纪录，冲科创板 IPO</p>
+<p>6. 【财经】现货黄金跌破 4000 美元创 7 月以来新低，美股周五三大指数集体收低</p>
+<p>7. 【财经】科创板 66 家三季报净利翻倍，AI 算力链开始兑现业绩；A 股 10 月掀起回购潮</p>
+<p>8. 【社会】西藏那曲巴青 7.0 级地震救援推进：那曲市救助响应升一级，16 人遇难</p>
+<p>9. 【社会】31 省份平均工资出炉：全国城镇非私营单位年均 129441 元，我国家庭规模持续缩小</p>
+<p>10. 【国际】塞尔维亚议会选举变天：武契奇承认败选，"学生名单"获胜</p>
+<p><strong>2026-10-25 daily-brief（10 条）</strong></p>
+<p>1. 【AI】Kimi K3.1 Pro 发布：3 万亿参数全球最大开源模型，但用户吐槽"用不起"</p>
+<p>2. 【AI】Anthropic 超级 IPO 估值预期从 2 万亿下调至 1.5 万亿美元</p>
+<p>3. 【AI】国务院办公厅发文：减缓人工智能应用就业替代影响</p>
+<p>4. 【财经】上证系列重要指数编制方案修订，26 日起实施</p>
+<p>5. 【财经】现货黄金跌破 4000 美元，深圳水贝被挤爆</p>
+<p>6. 【科技】英伟达考虑按 GPU 每年收 2000 美元 AI 软件授权费</p>
+<p>7. 【科技】85 万新能源车成"电子孤儿"，维修与保险双双失灵</p>
+<p>8. 【社会】国考 302.5 万人过审，最热岗位 5840:1</p>
+<p>9. 【财经】芯片巨头业绩与资本开支密集披露：寒武纪前三季净利翻倍，机器人 IPO 降温</p>
+<p>10. 【国际】俄乌同步停火落地，中东与巴西同日变局</p>
+<h3>素材缺口说明</h3>
+<ul>
+<li>本周报读取 <code>~/openclaw-kb/原始素材/</code> 全目录最近 7 天（2026-10-23 → 2026-10-29）新增的全部 <code>.md</code> 文件，共 <strong>5 份</strong>（不含索引文件 <code>daily-brief/README.md</code>）。</li>
+<li><strong>10-23 → 10-24 共 2 天无 daily-brief 产出</strong>；叠加此前 10-07 → 10-22，累计 18 天空档（10-07 → 10-24）。10-25、10-26、10-27、10-28、10-29 为链路恢复后的第 1—5 天。</li>
+<li><code>daily-brief/</code> 目录内最新日期已到 <strong>10-29</strong>，与本任务 22:00 的执行时点一致。</li>
+<li><strong><code>daily-news-push/</code> 推送存档自 10-26 后连续 4 天未落盘</strong>（10-27、10-28、10-29、10-30 均无新文件）：该目录内当前最新文件仍是 10-26 一份（5157 字节）。<strong>根因已定位——不是素材生产端问题，而是微信 iLink 会话未就绪导致推送层 <code>delivery_failed</code></strong>，详见下节链路诊断。</li>
+</ul>
+<hr>
+<h2>⚠️ 素材链路诊断</h2>
+<p>| 任务 | 计划 | deliver | 最近一次运行 | 状态 |</p>
+<p>|------|------|---------|--------------|------|</p>
+<p>| 豆豆龙-每日新闻+AI要闻 | 06:50 | weixin | 2026-10-29 06:51 | ❌ <strong>delivery_failed</strong> — iLink sendmessage session not ready: ret=-2 "prepare failed — the user must send the bot a message first (or re-pair)" |</p>
+<p>| 豆豆龙-信息收集助手(36kr) | 07:30 | local | 2026-10-29 07:31 | ✅ ok |</p>
+<p>| 豆豆龙-每日十大热点分析汇编 | 08:30 | local | 2026-10-29 08:32 | ✅ ok |</p>
+<p>| 豆豆龙-GitHub热榜 | 09:30 | local | 2026-10-29 09:31 | ✅ ok |</p>
+<p>| 豆豆龙-上海天气预报 | 11:00 | local | 2026-10-29 11:01 | ✅ ok |</p>
+<p>| 豆豆龙-韭研公社今日热门 | 20:00（工作日） | local | 2026-10-29 20:01 | ✅ ok |</p>
+<p>| 豆豆龙-每日推送重试兜底 | */13 | local | 2026-10-29 22:00 | ✅ ok |</p>
+<p>| 豆豆龙-档案管理助手（本任务） | 22:00 | local | 本次运行 | ✅ running |</p>
+<p>| 豆豆龙-周报兜底 | 23:30 | local | 2026-10-28 23:30 | ✅ ok |</p>
+<p>| 豆豆龙-宏观经济早报 | 07:00 | weixin | 2026-10-25 23:10 | ⚠️ ok 但推送报错（iLink sendmessage 速率限制冷却 30s）——已连续 4 天未成功运行 |</p>
+<p><strong>结论（本日关键变化）</strong>：素材生产端已连续 <strong>5 天</strong>稳定落盘（daily-brief 10-25 / 10-26 / 10-27 / 10-28 / 10-29），本次新增 10-29 一份（10498 字节 / 10 条）。<strong>主推送任务「豆豆龙-每日新闻+AI要闻」今日状态从 ok 变为 <code>delivery_failed</code></strong>——错误信息为 <code>iLink sendmessage session not ready: ret=-2 errcode=None errmsg=prepare failed — the user must send the bot a message first (or re-pair)</code>。这解释了 <code>daily-news-push/</code> 存档自 10-26 后连续 4 天缺失的根因：<strong>该任务在推送失败后没有把内容写入存档目录</strong>，而非内容未生成。<strong>修复需要老板在微信里给机器人发一条消息（重新建立 iLink 会话）或重新配对</strong>——这一步只能由用户侧完成，cron 无法自行恢复。</p>
+<p><strong>历史空档</strong>：10-23 → 10-24 共 2 天无 daily-brief 产出，叠加此前 10-07 → 10-22，累计 18 天空档（10-07 → 10-24）。这是素材侧的存量问题，非本次运行可修复范围。</p>
+<p><strong>关于本任务自身</strong>：上一次运行（2026-10-28 22:04）状态为 ok，10-28 的 weekly 文件、版本化副本与索引行均已完整落盘；本次运行未复现此前的 worker 异常退出问题。</p>
+<hr>
+<h2>📌 附：本次执行自检</h2>
+<p>| 检查项 | 结果 |</p>
+<p>|--------|------|</p>
+<p>| weekly 文件产出 | ✅ <code>weekly-2026-10-29.md</code>（含一句话总结 / 6 大主线主题分组 / 主题关联图 / 数据源） |</p>
+<p>| 版本化副本 | ✅ <code>weekly-2026-10-29_beta1.0.md</code>（同内容版本化存档，遵循"版本化文件不覆盖"约定） |</p>
+<p>| ai-trends README 索引 | ✅ 10 月表新增 <code>10-29</code> 行（详细版 + 版本化副本各一行） |</p>
+<p>| daily-brief/README 检查 | ✅ <code>daily-brief/2026-10-29.md</code> 存在（10498 字节 / 10 条），索引中 <code>10-29</code> 行尚未写入 → <strong>本次追加</strong>（同一日期只保留一行原则） |</p>
+<p>| 7 日窗口数据源 | ✅ 5 份（daily-brief × 5）/ 47499 字节 / 50 条 |</p>
+<p>| 无新增时的兜底 | ✅ 本窗口有新增素材，未触发"无新增"状态报告路径 |</p>
+<p>| 微信推送 | ⏭️ 按需求 deliver=local，未推送 |</p>
+<p>| 素材链路诊断 | ✅ 10-23→10-24 共 2 天仍缺素材，累计空档 18 天；生产端连续 5 天稳定；<strong>主推送任务今日转 <code>delivery_failed</code>（iLink 会话未就绪，需用户侧发消息重连）</strong> |</p>
+<hr>
+<p><em>由档案管理助手 cron（22:00）自动生成。生成时间：2026-10-29 22:0x CST。</em></p>
+</body>
+</html>
