@@ -747,6 +747,26 @@
     text-transform:uppercase;
   }
   .dispatch .foot .red{color:var(--red)}
+  .dispatch .body .li .mt{
+    font-weight:600;
+    color:var(--ink);
+  }
+  .dispatch .body .li .mv{
+    font-family:"SF Mono","JetBrains Mono",monospace;
+    font-weight:600;
+    color:var(--red);
+    margin:0 6px;
+  }
+  .dispatch .body .li .mb{
+    color:var(--ink-2);
+    margin:0 4px;
+  }
+  .dispatch .body .li .ms{
+    font-family:"SF Mono","JetBrains Mono",monospace;
+    font-size:9.5px;
+    color:var(--ink-3);
+    margin-left:6px;
+  }
   .dispatch .foot .green{color:#0a8a3a}
   .dispatch .watermark{
     position:absolute;
@@ -2434,31 +2454,26 @@
     <div class="dispatches">
 
       <!-- D-MORNING-START -->
-<div class="dispatch">
-        <div class="watermark">07:30&nbsp;CST</div>
+<div class="dispatch" id="dispatch-morning">
+        <div class="watermark">06:20&nbsp;CST</div>
         <div class="head">
-          <span class="no">DISPATCH NO. M-0807</span>
+          <span class="no" id="dm-no">DISPATCH NO. M—</span>
           <span class="ch">WECHAT · 微信</span>
         </div>
         <div class="type-row">
           <div class="type">早</div>
           <div>
             <div class="title">宏观 + 知识库早报</div>
-            <div class="sub">10:30 GMT+8 · DAILY · 2026-08-07</div>
+            <div class="sub" id="dm-sub">加载中...</div>
           </div>
         </div>
-        <div class="body">
+        <div class="body" id="dm-body">
           <h5>▍ 宏观早报</h5>
-          <h5>▍ HN · V2EX 热榜</h5>
-          <div class="li"><span class="n">·</span><span class="t">**AMD acquires Taalas**（855分，328 upvote）— AMD收购AI推</span></div>
-          <div class="li"><span class="n">·</span><span class="t">**Mario Meets Pareto**（855分）— 游戏设计与帕累托法则，休闲游戏如何做到2</span></div>
-          <div class="li"><span class="n">·</span><span class="t">**Launch HN: ProvenMetal**（185分）— YC S26项目，电路板交付从数</span></div>
-          <div class="li"><span class="n">·</span><span class="t">**40岁程序员大头兵，出来还能找到工作吗** — 职场年龄焦虑引发热议，中年转行困境是程序员社区永</span></div>
-          <div class="li"><span class="n">·</span><span class="t">**我现在是在推广节点吗，推广一下** — 节点推广帖，社区经济模式讨论</span></div>
+          <div class="li"><span class="n">·</span><span class="t">正在从 data.json 读取最新宏观数据…</span></div>
         </div>
         <div class="foot">
-          <span>SECTIONS · 0</span>
-          <span class="green">● DELIVERED 10:31</span>
+          <span id="dm-sections">SECTIONS · 0</span>
+          <span class="green" id="dm-status">● LOADED</span>
         </div>
       </div><!-- D-MORNING-END -->
 
@@ -3356,6 +3371,42 @@
       });
       document.getElementById('ld-count').textContent = d.items_count;
       document.getElementById('ld-tags').textContent = (d.tags || []).slice(0, 6).join(' / ');
+    }
+
+    // === Macro / 宏观早报（§ 05 每日送达卡片） ===
+    if (data.macro && data.macro.groups && data.macro.groups.length) {
+      const M = data.macro;
+      const md = (M.date || '').replace(/^(\d{4})-(\d{2})-(\d{2})$/, '$1-$2-$3');
+      const short = md.slice(5);
+      const noEl = document.getElementById('dm-no');
+      const subEl = document.getElementById('dm-sub');
+      const bodyEl = document.getElementById('dm-body');
+      const secEl = document.getElementById('dm-sections');
+      const stEl = document.getElementById('dm-status');
+      if (noEl) noEl.textContent = 'DISPATCH NO. M-' + short.replace(/-/g, '');
+      if (subEl) subEl.textContent = '06:20 GMT+8 · DAILY · ' + md;
+
+      if (bodyEl) {
+        let html = '';
+        let count = 0;
+        (M.groups || []).forEach(g => {
+          const items = (g.items || []).slice(0, 5);
+          if (!items.length) return;
+          html += '<h5>▍ ' + g.label + '</h5>';
+          items.forEach(it => {
+            count++;
+            const val = it.value ? '<b class="mv">' + it.value + '</b>' : '';
+            const src = it.source ? '<small class="ms">' + it.source + '</small>' : '';
+            const body = it.body ? '<span class="mb">' + it.body + '</span>' : '';
+            html += '<div class="li"><span class="n">·</span><span class="t">' +
+                    '<span class="mt">' + it.title + '</span>' + val + body + src +
+                    '</span></div>';
+          });
+        });
+        bodyEl.innerHTML = html || '<h5>▍ 宏观早报</h5><div class="li"><span class="n">·</span><span class="t">暂无宏观数据</span></div>';
+        if (secEl) secEl.textContent = 'SECTIONS · ' + count;
+        if (stEl) stEl.textContent = '● LOADED ' + md.slice(5);
+      }
     }
 
     // === Trending / 今日热榜 ===
