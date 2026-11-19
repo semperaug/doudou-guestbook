@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-19T19:08:45.902579",
-  "updated_at_human": "2026-11-19 19:08 CST",
+  "updated_at": "2026-11-19T19:36:57.068535",
+  "updated_at_human": "2026-11-19 19:36 CST",
   "weekly": [
     {
       "date": "2026-11-18",
@@ -374,14 +374,6 @@
   "trending": [
     {
       "section": "GitHub 热榜",
-      "title": "Verified directly: `microsoft/onnxruntime`, `microsoft/onnxruntime-genai`, `microsoft/agent-framework` all return 404 vi",
-      "url": "",
-      "summary": "",
-      "date": "2026-11-19",
-      "file": "2026-11-19_digest_midday.md"
-    },
-    {
-      "section": "GitHub 热榜",
       "title": "CLI-Anything（万物皆可 CLI 化）",
       "url": "https://github.com/HKUDS/CLI-Anything",
       "summary": "不建议直接依赖。核心问题不是理念（Agent-Native 方向是对的，论文已发 arXiv）而是工程可信度：仓库最后提交停在 2026-09-22，已两个月无更新；\"2464 个测试 100% 通过\"不等于导出真能出文件。想去噪的话，用 MCP + 现成 CLI（这条路径有 Safari harness 的实测数据：MCP 每次调用 119ms vs CLI 3023ms，token 开销 84 倍差距），比用这个生成器靠谱得多。",
@@ -511,6 +503,14 @@
     {
       "section": "韭研公社热门",
       "title": "万通发展（600246）：换壳完成，数渡科技单季占比73.7%",
+      "url": "",
+      "summary": "",
+      "date": "2026-11-18",
+      "file": "2026-11-18_digest_evening.md"
+    },
+    {
+      "section": "韭研公社热门",
+      "title": "君逸数码（301172）：1.84亿募资ALL IN Token算力底座",
       "url": "",
       "summary": "",
       "date": "2026-11-18",
@@ -1042,9 +1042,15 @@
     "failed_count": 0,
     "weixin_count": 1,
     "local_count": 15,
-    "last_collected_at": "2026-11-19T19:08:46.875940"
+    "last_collected_at": "2026-11-19T19:36:57.981858"
   },
   "github": [
+    {
+      "sha": "e12b0de",
+      "message": "sync: weekly 2026-11-18 + data update",
+      "date": "2026-11-19",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/e12b0defa760c94a3c45016fdd574de9bc9bd2a4"
+    },
     {
       "sha": "16e1922",
       "message": "sync: weekly 2026-11-18 + data update",
@@ -1068,12 +1074,6 @@
       "message": "sync: weekly 2026-11-18 + data update",
       "date": "2026-11-19",
       "url": "https://github.com/semperaug/doudou-guestbook/commit/51050dfcd1fb84e957e594f1d9d0f30aaaecee80"
-    },
-    {
-      "sha": "abbb42a",
-      "message": "sync: weekly 2026-11-18 + data update",
-      "date": "2026-11-19",
-      "url": "https://github.com/semperaug/doudou-guestbook/commit/abbb42ab7d5d0bd37fdc662f2e14cd8d792f0b3f"
     }
   ]
 }
