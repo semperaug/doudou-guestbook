@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-19T11:10:28.322802",
-  "updated_at_human": "2026-11-19 11:10 CST",
+  "updated_at": "2026-11-19T11:14:49.896565",
+  "updated_at_human": "2026-11-19 11:14 CST",
   "weekly": [
     {
       "date": "2026-11-18",
@@ -1036,9 +1036,21 @@
     "failed_count": 0,
     "weixin_count": 1,
     "local_count": 15,
-    "last_collected_at": "2026-11-19T11:10:28.957478"
+    "last_collected_at": "2026-11-19T11:14:50.524819"
   },
   "github": [
+    {
+      "sha": "ec12e65",
+      "message": "chore: untrack local .bak backup files",
+      "date": "2026-11-19",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/ec12e6594aed3ad617d9845d50b8501455c0514a"
+    },
+    {
+      "sha": "ba7d1d5",
+      "message": "sync: weekly 2026-11-18 + data update",
+      "date": "2026-11-19",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/ba7d1d56f45d8fe9cc7054da2011e89674fc36b6"
+    },
     {
       "sha": "51050df",
       "message": "sync: weekly 2026-11-18 + data update",
@@ -1056,18 +1068,6 @@
       "message": "sync: weekly 2026-11-18 + data update",
       "date": "2026-11-19",
       "url": "https://github.com/semperaug/doudou-guestbook/commit/b7df020d146a39256cbc4c810890e8bc6c7edf02"
-    },
-    {
-      "sha": "f4ca923",
-      "message": "sync: weekly 2026-11-18 + data update",
-      "date": "2026-11-19",
-      "url": "https://github.com/semperaug/doudou-guestbook/commit/f4ca9237f2bf90bc808499a698bcb975a1b0add9"
-    },
-    {
-      "sha": "3d77ede",
-      "message": "sync: weekly 2026-11-18 + data update",
-      "date": "2026-11-18",
-      "url": "https://github.com/semperaug/doudou-guestbook/commit/3d77edea2ce7077f2a07c2b8acecf0e42e0992c9"
     }
   ]
 }
