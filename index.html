@@ -3397,7 +3397,14 @@
             count++;
             const val = it.value ? '<b class="mv">' + it.value + '</b>' : '';
             const src = it.source ? '<small class="ms">' + it.source + '</small>' : '';
-            const body = it.body ? '<span class="mb">' + it.body + '</span>' : '';
+            // body is the rest of the line after the value clause — skip if it
+            // merely repeats the value (avoids "X X" duplication)
+            let body = '';
+            if (it.body && it.value && it.body.indexOf(it.value) !== 0) {
+              body = '<span class="mb">' + it.body + '</span>';
+            } else if (it.body && !it.value) {
+              body = '<span class="mb">' + it.body + '</span>';
+            }
             html += '<div class="li"><span class="n">·</span><span class="t">' +
                     '<span class="mt">' + it.title + '</span>' + val + body + src +
                     '</span></div>';
