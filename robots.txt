@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://semperaug.github.io/doudou-guestbook/sitemap.xml

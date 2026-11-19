@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-19T08:12:46.772131",
-  "updated_at_human": "2026-11-19 08:12 CST",
+  "updated_at": "2026-11-19T11:07:44.756794",
+  "updated_at_human": "2026-11-19 11:07 CST",
   "weekly": [
     {
       "date": "2026-11-18",
@@ -963,7 +963,7 @@
         "name": "豆豆龙-每日推送重试兜底",
         "schedule": "17 */2 * * *",
         "deliver": "local",
-        "last_run": "2026-11-19T06:17:10.695161+08:00",
+        "last_run": "2026-11-19T10:17:11.754014+08:00",
         "last_status": "ok"
       },
       {
@@ -971,7 +971,7 @@
         "name": "豆豆龙-微信token保活",
         "schedule": "every 360m",
         "deliver": "local",
-        "last_run": "2026-11-19T03:14:11.156825+08:00",
+        "last_run": "2026-11-19T09:15:11.116490+08:00",
         "last_status": "ok"
       },
       {
@@ -979,7 +979,7 @@
         "name": "豆豆龙-cron体检",
         "schedule": "0 9 * * *",
         "deliver": "origin",
-        "last_run": "2026-11-18T09:00:13.790355+08:00",
+        "last_run": "2026-11-19T09:00:21.980035+08:00",
         "last_status": "ok"
       },
       {
@@ -987,7 +987,7 @@
         "name": "豆豆龙-SuperAgent观察期体检",
         "schedule": "every day at 9:10am",
         "deliver": "weixin:o9cq80825FKQEAFKfObIpwBGtBFc@im.wechat",
-        "last_run": "2026-11-18T09:10:15.934504+08:00",
+        "last_run": "2026-11-19T09:10:17.882826+08:00",
         "last_status": "ok"
       },
       {
@@ -1036,9 +1036,15 @@
     "failed_count": 0,
     "weixin_count": 1,
     "local_count": 15,
-    "last_collected_at": "2026-11-19T08:12:47.394025"
+    "last_collected_at": "2026-11-19T11:07:45.636861"
   },
   "github": [
+    {
+      "sha": "abbb42a",
+      "message": "sync: weekly 2026-11-18 + data update",
+      "date": "2026-11-19",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/abbb42ab7d5d0bd37fdc662f2e14cd8d792f0b3f"
+    },
     {
       "sha": "b7df020",
       "message": "sync: weekly 2026-11-18 + data update",
@@ -1062,12 +1068,6 @@
       "message": "sync: weekly 2026-11-18 + data update",
       "date": "2026-11-18",
       "url": "https://github.com/semperaug/doudou-guestbook/commit/b32a6c25b4e2eba2f6ea67f128a705902e21753f"
-    },
-    {
-      "sha": "81283fc",
-      "message": "sync: weekly 2026-11-18 + data update",
-      "date": "2026-11-18",
-      "url": "https://github.com/semperaug/doudou-guestbook/commit/81283fcc7c020813f6c3bcbe6478c40d7cae1301"
     }
   ]
 }
