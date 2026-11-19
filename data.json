@@ -1,7 +1,24 @@
 {
-  "updated_at": "2026-11-19T19:36:57.068535",
-  "updated_at_human": "2026-11-19 19:36 CST",
+  "updated_at": "2026-11-19T23:45:14.545841",
+  "updated_at_human": "2026-11-19 23:45 CST",
   "weekly": [
+    {
+      "date": "2026-11-19",
+      "title": "周报 · 2026-11-19（窗口 11-13 → 11-19）",
+      "one_line": "央行第一次把 AI 写进通胀风险清单，产业就把资本开支写进了现金流**——美联储 10 月纪要同时点名「AI 表外租赁承诺与循环融资安排会在回报不及预期时放大损失」，同一天 Anthropic 以 83 美元定价、估值 1.5 万亿美元并挂牌，英伟达营收翻倍却收跌、腾讯资本开支暴增 527% 导致单季自由现金流 -691 亿，BIS 新规当日生效把国产算力的瓶颈从「缺卡」改写为「缺良率」——**定价权完成第七次换代：从「算力有多稀缺」转向「谁的现金流撑得住这份稀缺」**。",
+      "themes": [
+        "一句话总结",
+        "主题分组",
+        "主题关联",
+        "数据源",
+        "链路诊断（本窗口关键变化）"
+      ],
+      "section_count": 17,
+      "size": 40268,
+      "url": "./weekly-2026-11-19.html",
+      "beta": true,
+      "version": "1.0"
+    },
     {
       "date": "2026-11-18",
       "title": "Weekly · 2026-11-18",
@@ -921,7 +938,7 @@
         "name": "豆豆龙-档案管理助手",
         "schedule": "20 22 * * *",
         "deliver": "local",
-        "last_run": "2026-11-18T22:23:36.692604+08:00",
+        "last_run": "2026-11-19T22:23:44.709953+08:00",
         "last_status": "ok"
       },
       {
@@ -961,7 +978,7 @@
         "name": "豆豆龙-周报兜底",
         "schedule": "50 22 * * *",
         "deliver": "local",
-        "last_run": "2026-11-18T22:50:10.759591+08:00",
+        "last_run": "2026-11-19T22:50:10.773628+08:00",
         "last_status": "ok"
       },
       {
@@ -969,7 +986,7 @@
         "name": "豆豆龙-每日推送重试兜底",
         "schedule": "17 */2 * * *",
         "deliver": "local",
-        "last_run": "2026-11-19T18:17:10.819119+08:00",
+        "last_run": "2026-11-19T22:17:10.698726+08:00",
         "last_status": "ok"
       },
       {
@@ -977,7 +994,7 @@
         "name": "豆豆龙-微信token保活",
         "schedule": "every 360m",
         "deliver": "local",
-        "last_run": "2026-11-19T15:16:11.161060+08:00",
+        "last_run": "2026-11-19T21:17:11.163545+08:00",
         "last_status": "ok"
       },
       {
@@ -1017,16 +1034,16 @@
         "name": "豆豆龙-每日汇总-晚间",
         "schedule": "40 19 * * *",
         "deliver": "local",
-        "last_run": "2026-11-18T19:40:14.773094+08:00",
-        "last_status": "ok"
+        "last_run": "2026-11-19T19:40:12.649782+08:00",
+        "last_status": "error:"
       },
       {
         "id": "55ed4082e67f",
         "name": "豆豆龙-每日汇总-夜间",
         "schedule": "40 23 * * *",
         "deliver": "local",
-        "last_run": "2026-11-18T23:40:12.942888+08:00",
-        "last_status": "ok"
+        "last_run": "2026-11-19T23:40:13.004635+08:00",
+        "last_status": "error:"
       },
       {
         "id": "87e87d02ec8d",
@@ -1038,13 +1055,19 @@
       }
     ],
     "total": 17,
-    "ok_count": 17,
+    "ok_count": 15,
     "failed_count": 0,
     "weixin_count": 1,
     "local_count": 15,
-    "last_collected_at": "2026-11-19T19:36:57.981858"
+    "last_collected_at": "2026-11-19T23:45:15.274651"
   },
   "github": [
+    {
+      "sha": "e041e28",
+      "message": "sync: weekly 2026-11-18 + data update",
+      "date": "2026-11-19",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/e041e28a9628026ab2c4108162a53b0eba1dc238"
+    },
     {
       "sha": "e12b0de",
       "message": "sync: weekly 2026-11-18 + data update",
@@ -1068,12 +1091,6 @@
       "message": "sync: weekly 2026-11-18 + data update",
       "date": "2026-11-19",
       "url": "https://github.com/semperaug/doudou-guestbook/commit/ba7d1d56f45d8fe9cc7054da2011e89674fc36b6"
-    },
-    {
-      "sha": "51050df",
-      "message": "sync: weekly 2026-11-18 + data update",
-      "date": "2026-11-19",
-      "url": "https://github.com/semperaug/doudou-guestbook/commit/51050dfcd1fb84e957e594f1d9d0f30aaaecee80"
     }
   ]
 }
