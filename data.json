@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-21T08:43:42.403900",
-  "updated_at_human": "2026-11-21 08:43 CST",
+  "updated_at": "2026-11-21T08:44:02.597335",
+  "updated_at_human": "2026-11-21 08:44 CST",
   "weekly": [
     {
       "date": "2026-11-20",
@@ -882,9 +882,15 @@
     "failed_count": 0,
     "weixin_count": 1,
     "local_count": 15,
-    "last_collected_at": "2026-11-21T08:43:43.036473"
+    "last_collected_at": "2026-11-21T08:44:03.213200"
   },
   "github": [
+    {
+      "sha": "7579142",
+      "message": "sync: weekly 2026-11-20 + data update",
+      "date": "2026-11-21",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/75791426cbdb39fd168e32f9e82a9183944488cc"
+    },
     {
       "sha": "e4dbb51",
       "message": "sync: weekly 2026-11-20 + data update",
@@ -908,12 +914,6 @@
       "message": "sync: weekly 2026-11-20 + data update",
       "date": "2026-11-20",
       "url": "https://github.com/semperaug/doudou-guestbook/commit/c4bd174b0b45c509fdf780a6e5291598261d8e9b"
-    },
-    {
-      "sha": "7537e91",
-      "message": "sync: weekly 2026-11-19 + data update",
-      "date": "2026-11-19",
-      "url": "https://github.com/semperaug/doudou-guestbook/commit/7537e9106990bbd00fd2b5f449b4e6361feb2f05"
     }
   ]
 }
