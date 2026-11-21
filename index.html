@@ -13,7 +13,12 @@
 <meta property="og:url" content="https://semperaug.github.io/doudou-guestbook/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- 只加载拉丁字体（约 30KB）。中文用系统字体栈：
+     Noto Serif SC 从 Google Fonts 拉会下载 44MB（中文衬线字重的完整字库），
+     在国内还经常被墙/超时 → 整页卡在字体上白屏。
+     系统自带宋体/思源宋体的观感完全够用，且零加载成本。 -->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <style>
 /* ══════════════════════════════════════════════════════════
    豆豆龙 · 阅读型日报
@@ -38,10 +43,10 @@
   /* 强调 */
   --accent:#c1272d;
   --accent-soft:#fdf0f0;
-  /* 字体 */
-  --serif:'Noto Serif SC','Songti SC','Source Han Serif SC',Georgia,serif;
-  --sans:'IBM Plex Sans','PingFang SC','Microsoft YaHei',system-ui,sans-serif;
-  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+  /* 字体：中文走系统栈（零下载），拉丁走 IBM Plex（~30KB） */
+  --serif:'Songti SC','SimSun','Noto Serif CJK SC','Source Han Serif SC','Noto Serif SC',Georgia,serif;
+  --sans:'IBM Plex Sans','PingFang SC','Hiragino Sans GB','Microsoft YaHei',system-ui,sans-serif;
+  --mono:'IBM Plex Mono','SF Mono',ui-monospace,Menlo,Consolas,monospace;
   /* 尺度 */
   --r:3px;
   --maxw:1180px;
