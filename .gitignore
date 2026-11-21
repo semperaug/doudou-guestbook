@@ -2,3 +2,6 @@
 *.bak
 *.bak-*
 index.html.bak*
+index_test.html
+*.tmp.html
+_test*.html
