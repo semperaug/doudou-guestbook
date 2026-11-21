@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-21T08:22:27.977286",
-  "updated_at_human": "2026-11-21 08:22 CST",
+  "updated_at": "2026-11-21T08:41:01.411164",
+  "updated_at_human": "2026-11-21 08:41 CST",
   "weekly": [
     {
       "date": "2026-11-20",
@@ -873,7 +873,7 @@
         "name": "Emby解封监控",
         "schedule": "every 10m",
         "deliver": "origin",
-        "last_run": "2026-11-21T08:14:11.889946+08:00",
+        "last_run": "2026-11-21T08:36:11.444584+08:00",
         "last_status": "ok"
       }
     ],
@@ -882,9 +882,15 @@
     "failed_count": 0,
     "weixin_count": 1,
     "local_count": 15,
-    "last_collected_at": "2026-11-21T08:22:28.885019"
+    "last_collected_at": "2026-11-21T08:41:02.364321"
   },
   "github": [
+    {
+      "sha": "7d723d8",
+      "message": "sync: weekly 2026-11-20 + data update",
+      "date": "2026-11-21",
+      "url": "https://github.com/semperaug/doudou-guestbook/commit/7d723d83da1693cc6232dfc0b58048a4d89e880f"
+    },
     {
       "sha": "c4ff3a1",
       "message": "chore: remove index_test.html from published site",
@@ -908,12 +914,6 @@
       "message": "sync: weekly 2026-11-18 + data update",
       "date": "2026-11-19",
       "url": "https://github.com/semperaug/doudou-guestbook/commit/e041e28a9628026ab2c4108162a53b0eba1dc238"
-    },
-    {
-      "sha": "e12b0de",
-      "message": "sync: weekly 2026-11-18 + data update",
-      "date": "2026-11-19",
-      "url": "https://github.com/semperaug/doudou-guestbook/commit/e12b0defa760c94a3c45016fdd574de9bc9bd2a4"
     }
   ]
 }
