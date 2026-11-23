@@ -1,0 +1,11 @@
+# 本地备份文件，不应进仓库
+*.bak
+*.bak-*
+index.html.bak*
+index_test.html
+*.tmp.html
+_test*.html
+
+# 数字资产清单 —— 含本地绝对路径与案卷名，绝不公开
+assets.json
+assets.html

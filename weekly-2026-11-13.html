@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>豆豆龙周报 · 2026-11-13</title>
+<style>
+body { font-family: -apple-system, "PingFang SC", sans-serif; max-width: 760px; margin: 40px auto; padding: 0 24px; line-height: 1.65; color: #1a1a1a; }
+h1 { font-size: 32px; border-bottom: 3px solid #FFD93D; padding-bottom: 12px; }
+h2 { font-size: 22px; margin-top: 36px; color: #0A2540; padding-bottom: 6px; border-bottom: 1px solid #e5e7eb; }
+h3 { font-size: 17px; margin-top: 24px; color: #0A2540; }
+blockquote { border-left: 4px solid #FFD93D; background: #f9f9f9; padding: 12px 16px; margin: 16px 0; color: #555; }
+ul { padding-left: 22px; } li { margin: 6px 0; }
+code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; }
+hr { border: none; border-top: 1px dashed #e5e7eb; margin: 28px 0; }
+nav { background: #FFD93D; padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; font-weight: 600 }
+nav a { color: #0A2540; text-decoration: none }
+</style>
+</head>
+<body>
+<nav><a href="./index.html">← 返回主页</a></nav>
+<h1>AI 周报 · 2026-11-13（7 日窗口：11-07 → 11-13）</h1>
+<blockquote>豆豆龙 · 档案管理助手｜生成时间：2026-11-13 22:0x CST</blockquote>
+<blockquote>窗口内 daily-brief 覆盖 <strong>6/7（86%）</strong>，11-07 缺失（采集侧断链，当日 6 个 agent 型任务全部 26900 秒超时）；累计空档仍 19 天（10-07→10-24 共 18 天 + 11-07 共 1 天）</blockquote>
+<hr>
+<h2>一句话总结</h2>
+<p><strong>泡沫的审判庭第七次换庭：从「定价定案」走到「管理层出走」——11-12 黄仁勋辞去英伟达总裁/CEO/董事职务即刻生效、结束 33 年掌舵生涯，CFO 克雷斯临时接任、新思前 CEO 哈维·琼斯出任首位董事长，当日英伟达开盘一度重挫约 14%、收盘 166.19 美元跌 4.34%、单日蒸发逾 1800 亿美元至 4.0 万亿，较 10-06 历史高位回落约 30%、11 月累计蒸发近 1 万亿，而 AMD +5.9%、博通 +5.5%——同一条链在同一小时内再次分裂；叠加特朗普公开点名库克接任、美对华芯片出口政策连续性成疑、11-17 财报成为本窗口末最大锚点；中国侧则是「通胀剪刀差 + 管制五层合围 + 国产替代提速」三线并进：10 月 PPI 同比 5.7% 创 2022-07 以来新高而 CPI 仅 0.7%、剪刀差扩至 5 个百分点，美国拟限制中国 AI 主体经第三国远程调用 Blackwell 芯片，国产 GPU 份额叙事从「政策」转向「订单兑现」（英伟达中国 34% vs 华为 28%），中芯国际、华虹宏力双创历史新高（产能利用率 97.3% / 102.9% 超负荷）。</strong></p>
+<p>🆕 <strong>本窗口最重要的非内容变化：推送通道连续第 2 天全面恢复</strong>（deliveries.db 实测 11-13 06:51 / 07:02 / 09:00 三条全部 <code>delivered</code>、<code>error=None</code>），采集侧连续第 6 天完全健康，详见第十节链路诊断。</p>
+<hr>
+<h2>主题分组</h2>
+<h3>主题 A｜治理风险从「折价」走到「管理层出走」：黄仁勋辞职与英伟达接班悬念</h3>
+<p><strong>11-12 英伟达公告（路透 / 财新 / 36 氪）</strong></p>
+<ul>
+<li>黄仁勋于美国时间 11-12 上午辞去<strong>总裁、首席执行官及董事</strong>职务，<strong>即刻生效</strong>，结束 <strong>33 年</strong>掌舵生涯。</li>
+<li>由执行副总裁兼 CFO <strong>Colette Kress（克雷斯）</strong> 兼任临时 CEO；董事会<strong>启动正式 CEO 遴选</strong>，将考虑内部及外部候选人。</li>
+<li>同时任命<strong>新思科技（Synopsys）前 CEO Harvey C. Jones 哈维·琼斯</strong>出任公司<strong>首位董事会主席</strong>——即「CEO 出局 + 董事长另立」的组合。</li>
+<li>黄仁勋为英伟达<strong>第四大股东，持股约 3.61%</strong>（前序窗口记 3.58%，以 11-12 素材口径 3.61% 为准）。</li>
+</ul>
+<p><strong>市场反应（11-12 收盘）</strong></p>
+<p>| 指标 | 数值 |</p>
+<p>|---|---|</p>
+<p>| 英伟达开盘 | 一度重挫约 <strong>14%</strong>（盘初 -13.08%） |</p>
+<p>| 收盘价 | <strong>166.19 美元，跌 4.34%</strong> |</p>
+<p>| 单日市值蒸发 | 超 <strong>1800 亿美元</strong>（daily-brief 口径约 1820 亿） |</p>
+<p>| 收盘市值 | 约 <strong>4.0 万亿美元</strong> |</p>
+<p>| 较 10-06 历史高位 239.24 美元 | 回落约 <strong>30%</strong> |</p>
+<p>| 11 月累计蒸发 | 近 <strong>1 万亿美元</strong> |</p>
+<p>| 同日同链 | AMD <strong>+5.9%</strong>、博通 <strong>+5.5%</strong>、CoreWeave <strong>-6.9%</strong>、美超微 <strong>-11%+</strong> |</p>
+<p><strong>接班悬念</strong></p>
+<ul>
+<li><strong>特朗普公开建议苹果 CEO 库克出任英伟达 CEO</strong>（东方财富，11-13），成为接班人猜测中的焦点人选；市场同时关注「CUDA 之父」领跑等说法。</li>
+<li><strong>APEC 层级信号</strong>：英伟达<strong>未获美方工商峰会代表邀请，谷歌入选</strong>（深圳 11-18/19）——治理风波已开始产生外交层面的可见代价。</li>
+<li><strong>公社内部信息差</strong>：员工已发起请愿要求黄仁勋复职，相关帖子超 1600 条评论。</li>
+<li>⚠️ <strong>11-17 仍是本周最大变量</strong>：英伟达将发布<strong>黄仁勋辞职后首份财报</strong>（指引约 1080 亿美元），同时 11-18 三委员会要求其出席国会闭门简报——<strong>辞职、财报、作证三件事挤在同一周</strong>。</li>
+</ul>
+<p><strong>读法</strong>：前序窗口的治理风险序列是「估值折价 → 股东集体诉讼 → FBI 调查 → 董事会聘请前联邦检察官 → 国会传票」，本窗口<strong>跳过了「折价」阶段直接落到「关键人离场」</strong>——这是同一条链上迄今最难用财报证伪的一类风险，因为它改变的是组织的连续性本身，而不是某一季的收入。</p>
+<hr>
+<h3>主题 B｜泡沫的审判庭第七次换庭：定价定案 → 管理层出走 → 现金流的反身性照旧</h3>
+<p><strong>前序窗口的三级递进在本窗口继续，但叙事重心被治理事件抢走</strong></p>
+<ul>
+<li><strong>定价定案（11-11/11-12 已完成）</strong>：Anthropic IPO 发行 8.25 亿股 A 类普通股，定价区间 <strong>70–78 美元</strong>，基础发行募资至多 <strong>644 亿美元</strong> + 私募 <strong>260 亿美元</strong>（谷歌/微软/英伟达/AMD/博通/美光/台积电）= 至多 <strong>904 亿美元</strong>；<strong>基本市值 1.02 万亿 / 完全摊薄最高约 1.405 万亿</strong>；代码 <strong>ANT</strong>，<strong>11-18 定价、11-19 纳斯达克挂牌</strong>。</li>
+<li>🆕 <strong>本窗口新增（S-1 首次披露完整收入结构）</strong>：2026 年前三季度收入 <strong>332.4 亿美元、同比 +1206%</strong>，Q3 单季约 <strong>170 亿美元</strong>，年化收入运行率约 <strong>810 亿美元</strong>，<strong>算力承诺约 9009 亿美元</strong>——<strong>收入曲线仍然陡峭，与被压低的估值形成本窗口最尖锐的对冲</strong>。</li>
+<li>🆕 <strong>同期发布新模型与办公套件</strong>：<strong>Claude Fable 5.2 / Mythos 5.2</strong>（输出速度提升最高 30%）、<strong>Claude Whiteboards / Sheets / Data</strong> 三件套切入办公场景——消息一出<strong>微软股价盘中跌 3%</strong>。</li>
+<li>⚠️ <strong>口径差异保留不合并</strong>：36 氪口径「OpenAI Q3 营收约 100 亿美元」，另有「年化约 500 亿美元」口径；估值 1.25 万亿、已募首批 110 亿，本周报不把不同口径拼成单一数字。</li>
+</ul>
+<p><strong>反身性定价在本窗口仍然成立，但第一次被治理事件打断</strong></p>
+<ul>
+<li>11-12 <strong>英伟达 -4.34%</strong>、费半 -0.54%，但 <strong>AMD +5.9%、博通 +5.5%</strong>——<strong>同一条链内部继续两极分化</strong>。</li>
+<li>🆕 <strong>OpenAI 罕见站队管制</strong>：彭博报道 OpenAI 加入支持国会两党芯片管控提案的浪潮，国会审议三项议案。</li>
+<li>🆕 <strong>OpenAI 自身经营数据（首次从公司口径披露）</strong>：Q3 营收<strong>首破 100 亿美元</strong>（CFO Sarah Friar：环比增长近 50%、约为去年同期三倍、年化约 500 亿美元），<strong>企业业务环比翻番</strong>、与消费者业务各占一半，<strong>付费订阅用户破 1 亿</strong>；上线 ChatGPT「Businesses」（beta）与 Business Agent，覆盖每周 12 亿用户。</li>
+</ul>
+<p><strong>读法</strong>：泡沫叙事本窗口的实质进展不在估值（已定案），而在<strong>「谁是 AI 时代的系统性关键人」这个问题第一次被公开定价</strong>——一个靠单点人物驱动的组织，其治理风险已经无法用季度现金流折现。</p>
+<hr>
+<h3>主题 C｜美对华芯片管制从「限制谁买」升级到「五层合围」，国产替代从政策叙事转向订单兑现</h3>
+<p><strong>🆕 美商务部新规草案（韭研公社 11-13，本窗口最重要的政策变量）</strong></p>
+<ul>
+<li>限制中国 AI 主体经<strong>新加坡、马来西亚、巴西</strong>等第三国机房<strong>远程调用 Blackwell 及以上高端芯片</strong>，堵死绕道租算力路径；跨部门协调中，<strong>预计最快当月出台</strong>。</li>
+<li>OpenAI 加入支持国会两党芯片管控提案；国会审议三项议案。</li>
+<li>公社定性为<strong>「五层合围」</strong>：卡算力、卡设备、卡投资、卡 AI 能力、堵第三国绕道。</li>
+<li>判读：<strong>对英伟达原生绑定供应链偏利空，对国产 GPU 及配套算力链偏利多</strong>——但注意，这与前序窗口的 51% 条款、60 万枚 H200 滞留香港（审批窗口）等是<strong>同一条链的第五环，不是独立事件</strong>。</li>
+</ul>
+<p><strong>国产替代的硬证据：份额与订单同时落地</strong></p>
+<ul>
+<li><strong>IDC 数据</strong>：2026 上半年<strong>英伟达中国 AI 芯片份额降至 34%</strong>，华为 <strong>28%</strong> 紧随，<strong>差距缩至 6 个百分点</strong>。</li>
+<li><strong>生态层</strong>：<strong>DeepSeek V4 未向英伟达提供早期访问权限</strong>，率先完成<strong>昇腾深度适配</strong>，并<strong>开源面向昇腾的 TileLang 编译工具</strong>——直接动摇 CUDA 生态的代码迁移壁垒。</li>
+<li><strong>订单端</strong>：台媒称英伟达有意放缓芯片订单，但公社判断本质是把 CoWoS-L 与 HBM4 紧俏产能从「独家包场」改为「排队分配」，<strong>需求未崩</strong>；DeepSeek V5 已用约 <strong>2T 参数超稀疏 MoE</strong> 在昇腾 950/950DT 上预训练。</li>
+<li><strong>标的梯队</strong>：燧原科技（688801，一周接近翻倍，总龙头）、摩尔线程（688795，MUSA）、沐曦股份（688802，MXMACA）、寒武纪、海光信息、景嘉微；低位补涨安诺其（智星云 GPU 调度平台）、大胜达（芯瞳 × 腾讯云 GPU 算力协同）。中泰电子指<strong>二线 GPU 厂均迎 Q3 业绩拐点</strong>。</li>
+</ul>
+<p><strong>国产设备与材料的替代链</strong></p>
+<ul>
+<li><strong>米莱芯程</strong>（联合化学参股 37.28%）首台国产 DUV 整机下线，总经理高安披露路线图：<strong>先 i-line 基础机型 → KrF（248nm）→ ArF（193nm）干式 → ArF 浸没式</strong>；「国内做光刻机的公司很多，但真正能出货的很少」。</li>
+<li><strong>蓝英装备</strong>（300293）瑞士子公司 UCM AG 自 2008 年起为 ASML 提供 EUV 光学系统关键部件清洗设备。</li>
+<li><strong>三星、SK 海力士豪掷近 2000 亿韩元抢购 EUV</strong>，单家上限约 992 亿元（20 万亿韩元）；ASML 警告 <strong>2027–2028 年 EUV 供不应求</strong>。</li>
+<li>公社提示核心卡点是<strong>先进逻辑 + HBM 产能</strong>，光刻胶/涂胶显影/量检测等低国产化率环节替代需求紧迫。</li>
+</ul>
+<p><strong>读法</strong>：本窗口国产替代的性质变了——此前是「审批节奏给迭代窗口」，本窗口第一次出现<strong>「份额数字 + 生态工具链 + 业绩拐点」三件套同时成立</strong>，替代逻辑从政策预期转向订单兑现。</p>
+<hr>
+<h3>主题 D｜中国半导体双龙头创历史新高：AI 配套芯片成为增量核心</h3>
+<p><strong>中芯国际（688981）</strong></p>
+<ul>
+<li><strong>Q3 收入 31.9 亿美元（IFRS）</strong>，环比 +6.1%、同比 <strong>+34%</strong>，<strong>超指引上限</strong>；归母净利 <strong>28.47 亿元</strong>（同比 +87.6%、环比 -8.35%），扣非 <strong>26.39 亿元</strong>（同比 +107.3%）；前三季度营收 <strong>606.18 亿元</strong>（+22.4%）、归母净利 <strong>73.14 亿元</strong>（+91.6%）、经营现金流净额 <strong>286.25 亿元</strong>（+133%）。</li>
+<li><strong>毛利率 29.9%，环比 +4.6pct，一致预期仅 25.9%——超预期约 4pct</strong>（全窗口最锋利的一处预期差）。</li>
+<li><strong>产能利用率 93.7% → 97.3%</strong>（+3.6pct）；8 英寸出货<strong>首破 300 万片</strong>（环比 +5.7%），晶圆均价环比 +1.8%，期末月产能 111.68 万片。</li>
+<li><strong>结构变化是核心</strong>：智能手机占比降至 <strong>14.3%</strong>（去年同期 21.5%），<strong>工业与汽车升至 19.3%（+7.4pct）</strong>；超预期主因是客户对 <strong>BCD、专用存储、Controller 等 AI 配套芯片</strong>需求增速快于预期，公司减缓工程研发投片支持出货。</li>
+<li>Q4 指引收入环比 +4%~6%（<strong>量价各贡献约一半</strong>）、毛利率 26%–28%；<strong>全年收入预计超 120 亿美元（近 +30%），折旧增约三成而毛利率反升约 5pct</strong>；高盛维持买入、A股目标价上调至 <strong>263 元</strong>。</li>
+<li><strong>风险</strong>：在美 BIS 实体清单上，设备/材料供应受限；设备交付周期拉长或扰动资本开支执行。</li>
+</ul>
+<p><strong>华虹宏力</strong></p>
+<ul>
+<li><strong>Q3 收入 9.871 亿美元</strong>，同比 +19.9%、环比 +9.9% <strong>创历史新高</strong>；毛利率 <strong>24.6%</strong>（同比 +7.6pct、环比 +4.7pct）；归母净利 <strong>8.35 亿元</strong>（同比 <strong>+136.14%</strong>），扣非 6.16 亿元（同比 <strong>+276%</strong>）。</li>
+<li><strong>月产能 63.6 万片，产能利用率 102.9%——超负荷运转</strong>；Q4 指引收入 10.8–10.9 亿美元、毛利率 25%–26% 继续改善。</li>
+<li><strong>2026 年平均提价幅度 10%–15%，2027 年预计均价仍升</strong>；工业与汽车收入 1.95 亿美元、同比 +38.9%。</li>
+</ul>
+<p><strong>🆕 国产超节点：从「堆算力」到「提效率」</strong></p>
+<ul>
+<li>国联民生：单卡制程受限背景下，超节点以低时延高带宽构建更多卡的 HBD 域互联；训练侧缩短模型迭代周期、推理侧降本已成为「优选项」。</li>
+<li><strong>关键变化：云厂商及政企客户资本开支从「芯片采购」向「系统交付」倾斜，系统侧价值占比提升，2026 年有望迎 0 到 1 放量拐点</strong>。</li>
+<li>受益：盛科通信、胜蓝股份、浪潮信息、紫光股份、锐捷网络、华勤技术、华丰科技；<strong>11-13 至 11-14 北京 openEuler Summit 2026 发布超节点 OS 与 Agentic Infra 核心成果</strong>。</li>
+<li>关联：阿里拟<strong>分拆平头哥赴港独立上市</strong>（真武 AI 芯片累计出货 56 万片、玄铁累计授权 60 亿+颗），受强绑定第一梯队：利扬芯片、全志科技、芯原股份、长电科技、通富微电。</li>
+</ul>
+<p><strong>读法</strong>：本窗口中国半导体第一次给出「<strong>双龙头同时创历史新高 + 产能利用率双双逼近或超过 100% + 毛利率在折旧上升三成的背景下反升 5pct</strong>」的组合——这是<strong>需求侧硬证据</strong>，与美股「需求没崩、崩的是筹码」的旧结论在本窗口被中芯的超预期数据再次确认。</p>
+<hr>
+<h3>主题 E｜AI 硬件通胀写进官方统计：PPI 5.7% 创新高、CPI 仅 0.7%，剪刀差扩至 5 个百分点</h3>
+<p><strong>中国 10 月物价（国家统计局，11-09）</strong></p>
+<ul>
+<li><strong>CPI 同比 +0.7%</strong>（前值 +0.9%）、环比持平；核心 CPI 同比 <strong>+0.8%</strong>（涨幅比 9 月回落 0.2pct）；1–10 月平均 +0.9%。</li>
+<li><strong>PPI 同比 +5.7%</strong>，前值 +5.0%，<strong>涨幅扩大 0.7pct，创 2022 年 7 月以来新高</strong>；环比 +0.7%（涨幅比上月回落 0.5pct）；购进价格 +7.9%。</li>
+<li>分项：煤炭开采和洗选业 <strong>+36.6%</strong>、石油和天然气开采业 <strong>+35.0%</strong>；环比下游精炼石油产品制造 +6.8%、有机化学原料制造 +6.8%、煤炭加工 +3.2%、燃气生产和供应业 +1.5%。</li>
+<li>食品价格同比 <strong>-2.9%</strong>（鲜菜 -16.9%、猪肉 -8.6%）；非食品 +1.5%；交通通信 +5.5%、医疗保健 +2.4%、居住 -0.3%。</li>
+</ul>
+<p><strong>🆕 AI 硬件通胀已在官方 CPI 结构中留下指纹</strong></p>
+<ul>
+<li>汽油价格同比 <strong>+22.4%</strong>，拉动 CPI 同比上涨约 <strong>0.63pct</strong>。</li>
+<li><strong>数据存储设备 +45.4%、平板电脑 +29.3%、计算机 +23.0%、移动电话机 +16.7%，四项合计拉动 CPI 同比上涨约 0.26pct</strong>——即<strong>约四分之一的 CPI 同比涨幅来自 AI/算力硬件链条的终端定价</strong>。</li>
+<li><strong>剪刀差扩大至 5 个百分点</strong>（PPI 5.7% vs CPI 0.7%）——上游涨价对中下游利润的挤压已到必须正视的程度（早报点评原话）。</li>
+</ul>
+<p><strong>美国 10 月 CPI 的「同比空白」与本窗口的延续</strong></p>
+<ul>
+<li>整体环比 <strong>+0.4%</strong>（前值 +0.6%、预期 +0.3%）、核心环比 <strong>+0.3%</strong>（前值 +0.3%、预期 +0.2%）——双双超预期。</li>
+<li><strong>同比 BLS 明确不发布</strong>：2025 年联邦政府停摆（2025-10-01 至 11-12）期间未能采集 2025 年 10 月物价数据、基期为空，官方数据表该单元格为横线并注明 "Data unavailable due to the 2025 lapse in appropriations"。<strong>美银插值估算 3.8%/2.7% 属模型推演，本周报不采信。</strong></li>
+<li>分项：能源环比 +0.7%（9 月 +5.2%）、汽油 +1.0%、食品 +0.5%、<strong>住房 +0.3%（贡献整体涨幅 30% 以上）</strong>、交通服务 +0.8%、机动车保险 +0.7%、机票 +0.4%、二手车 -1.2%、新车 +0.2%。</li>
+<li><strong>初请失业金（截至 11-07 当周）</strong>：20.0 万人（前值 18.9 万、修正为 19.1 万；预期 19.5 万），四周均值 19.525 万；续请 169.7 万人，四周均值约 170.8 万，受保失业率 1.1%。</li>
+<li><strong>10 月 PPI 于本窗口末（11-13 21:30 CST / 08:30 ET）公布</strong>，早报标为「待公布、预期整体环比 +0.4%、核心环比 +0.3%，均为预期值非实际值」——<strong>本报告采信时该行仍为预期，不作事实</strong>。</li>
+</ul>
+<p><strong>利率与资产的再定价</strong></p>
+<ul>
+<li>11-12 收盘：道指 52,297.09（-0.36%）、标普 500 7,592.40（-0.35%）、纳指 25,366.09（-0.39%）、费半 10,506.67（-0.54%）。</li>
+<li><strong>美债 10Y +11.58bp 至 5.105%</strong>（盘中触 5.1169%，为 10-21 以来最高）、<strong>2Y +13.96bp 至 4.867%</strong>（10-14 以来最高）；11-10 财政部 420 亿美元 10 年期拍卖最高中标 5.02% 为 2006 年来首次达 5%；11-12 计划发行 250 亿美元 30 年期，收益率约 5.35%。</li>
+<li><strong>中国国债反向</strong>：11-10 银行间 10 年期 250016 报 <strong>1.535%–1.5425%</strong>、30 年期 2500006 报 <strong>2.078%–2.09%</strong>；DR007 1.42%、3 个月 Shibor 1.40%——<strong>两个利率市场反向走势是本窗口最干净的中美分化证据</strong>。</li>
+<li><strong>黄金暴跌</strong>：现货黄金 11-12 收 <strong>3877.44 美元/盎司，跌 161.10 美元、跌幅 3.99%</strong>（11-11 收 4038.54）；现货白银跌破 50 美元、跌幅超 4%；COMEX 12 月期价一度跌超 3.5%、跌破 3900。<strong>美元指数盘中最高 103.02，创 2025 年 4 月以来最高</strong>；日元跌至 159.83 逼近 160，欧元徘徊 1.11。</li>
+<li><strong>原油逆势上涨</strong>：WTI +0.44% 报 86.42、布伦特 +1.24% 报 92.62（盘中一度破 93）；EIA 估计 10 月中东原油停产规模已从 5 月峰值日均 1090 万桶降至 <strong>250 万桶</strong>，10 月布伦特均价自 10-30 的 117.64 回落。</li>
+<li>⚠️ <strong>口径冲突（两处并存，本周报并列不合并）</strong>：daily-brief 11-12 收盘口径 = 布伦特 92.62 / WTI 86.42 / 黄金 3877.44；韭研 11-13 20:00 口径 = <strong>WTI +2.6% 至 88.74、布伦特 +3.3% 至 95.82、现货黄金 -2.87% 至 3873.42、白银 -3.29% 至 49.95</strong>——<strong>属不同时间点/口径的同一日读数，不得相互替换。</strong></li>
+</ul>
+<p><strong>中国货币政策：宽松延续但结构明确</strong></p>
+<ul>
+<li>人民银行《2026 年第三季度中国货币政策执行报告》：继续实施<strong>适度宽松</strong>的货币政策；年初下调结构性工具利率基础上<strong>再下调 PSL 利率 0.25pct</strong>；<strong>增加科技创新和技术改造再贷款额度 2000 亿元、支持比例由 60% 上调至 100%</strong>；<strong>增加支农支小再贷款额度 5000 亿元，其中民营企业再贷款额度增加 3000 亿元</strong>；将「六张网」纳入 PSL 支持范围。前三季度 GDP 同比 +4.6%，前三季度 DR001 均值 1.34%。</li>
+<li>11-10 开展 1900 亿元隔夜逆回购、利率 1.25%，当日 1820 亿到期，净投放 80 亿。</li>
+<li><strong>成品油价</strong>：11-12 24 时起汽/柴油每吨分别下调 <strong>645/625 元</strong>，92 号每升降 0.51 元、95 号降 0.54 元、0 号柴油降 0.53 元；加满 50 箱约省 25.5 元。<strong>年内第六次下调，也是 8 月下旬以来首次</strong>；本轮为 2026 年第 22 轮调价窗口，落地后年内格局为「<strong>十四涨六跌两搁浅</strong>」；下一窗口 11-26 24 时。</li>
+<li>10 月 LPR 1Y 3.00% / 5Y+ 3.50% 未调整（连续第 17 个月不变）。</li>
+<li><strong>「十五五」将重拳打击财务造假</strong>，严查虚增利润、粉饰报表；证监会表态汇聚各方合力全力维护市场平稳运行。</li>
+</ul>
+<hr>
+<h3>主题 F｜A 股：11-12 放量冲高回落到 11-13 全线重挫，两天完成一轮「拥挤换冷门」</h3>
+<p><strong>11-12 收盘（daily-brief 口径，记录的是 11-12 收盘）</strong></p>
+<ul>
+<li>上证 <strong>3655.83（-0.67%）</strong>、深成指 <strong>11197.98（-1.68%）</strong>、创业板指 <strong>2509.43（-2.44%）</strong>、科创综指 1559.14（-0.35%）、<strong>科创 50 逆势 +0.73%</strong>、北证 50 -1.65%。</li>
+<li>两市成交 <strong>1.932 万亿，放量 2558 亿</strong>；<strong>超 4600 只个股下跌</strong>；涨停 37 只、跌停 5 只、连板 11 只、<strong>破板率 48.61%</strong>。</li>
+<li><strong>资金面高度流出</strong>：融资融券净流出 <strong>454.45 亿</strong>、深股通净流出 <strong>341.22 亿</strong>、富时罗素净流出 <strong>296.15 亿</strong>、基金减仓净流出 <strong>270.64 亿</strong>、MSCI 中国净流出 <strong>233.24 亿</strong>；净流入仅半导体 +23.53 亿、广告营销 +18.86 亿、医疗服务 +9.70 亿、银行 +7.46 亿。</li>
+<li>板块：燃气（东方环宇 4 连板）、算力芯片（天普股份 3 连板、寒武纪 +8%、燧原科技 +13% 创上市新高）、消费逆势走强；<strong>AI 漫剧（上海电影跌停、华策影视 -10%）</strong>、贵金属概念下挫。</li>
+<li>成交额前列：中际旭创 336.22 亿、新易盛 256.65 亿、寒武纪 201.72 亿、东山精密 182.61 亿、长鑫科技 177.94 亿。港股恒指 24008.55（-1.26%）。</li>
+</ul>
+<p><strong>11-13 收盘（韭研公社 20:00 口径，记录的是 11-13 收盘）</strong></p>
+<ul>
+<li>沪指 <strong>-0.59% 收 3634.35</strong>、深成指 <strong>-2.05% 收 10968.79</strong>、创业板指 <strong>-3.32% 收 2426.08</strong>、科创综指 <strong>-2.74%</strong>。</li>
+<li>三市成交 <strong>1.67 万亿，缩量 2788 亿</strong>，<strong>超 4700 股下跌</strong>，38 股涨停 / 34 股跌停，<strong>炸板率约 36%</strong>。</li>
+<li><strong>资金流向高度分化</strong>：<strong>影视院线净流入 13.87 亿（行业第一）</strong>，元件净流出 <strong>104.2 亿</strong>；<strong>银行股逆势创历史新高</strong>（江苏银行、南京银行、青岛银行、成都银行、杭州银行）；<strong>算力硬件领跌</strong>——景旺电子跌停、天孚通信 -10%+、中际旭创/新易盛 -8%+、科翔股份 -13%+、胜宏科技 -10%+、沪电股份/深南电路/生益科技跌停。</li>
+</ul>
+<p><strong>读法</strong>：两天内完成「11-12 放量冲高回落（4600 股跌、破板率 49%）→ 11-13 缩量续跌（4700 股跌、算力硬件批量跌停）」，<strong>钱从算力硬件换到银行与影视</strong>。早报点评写得很准：「800 亿杠杆与外资流出，对上不足 90 亿承接，钱不是跑了，是从拥挤换到冷门。」</p>
+<p><strong>结构性亮点（同期）</strong></p>
+<ul>
+<li><strong>医药估值触底</strong>：申万医药 PE(TTM) <strong>26.21 倍，处 2010 年以来 15% 历史分位</strong>，对沪深 300 溢价率 <strong>115.65%、历史分位仅 5%</strong>；26Q3 医药主题基金规模 2108 亿元、环比 +11.3%；关注众生药业、凯莱英、昭衍新药、奥浦迈。</li>
+<li><strong>猪周期反转启动</strong>：Q3 末能繁母猪 <strong>3602 万头、同比 -10.7%，首次跌破 3750 万头正常保有量</strong>（单季减 178 万头，较 Q2 的 124 万头提速）；11-12 瘦肉型生猪 <strong>8.56 元/公斤再破前低</strong>，期货主力触及 9040 元/吨（较 9 月初最大跌幅近 30%）；关注温氏股份、金新农、天邦食品、巨星农牧。</li>
+<li><strong>AI 漫剧 / 影视院线的矛盾结构</strong>：10 月票房创 2014 年以来同期新低，但文投控股自 10-27 起 14 个交易日 9 板、累计涨幅 100%，11-13 <strong>18 天 10 板</strong>；幸福蓝海 20cm 涨停，横店影视、中国电影、金逸影视、儒意电影、湖北广电涨停。催化：微信「看一看」小范围灰度测试短剧入口、京东内测短剧小程序、红果用户量走高、Omdia 预测 2026 年全球 AI 软件收入超 2000 亿美元（2024 年两倍）。</li>
+<li><strong>量子 + 半导体双轮</strong>：频准激光（301252）23–25 年营收 1.48 亿→4.18 亿（CAGR 68.2%）、<strong>25 年综合毛利率 69.33%</strong>；离子阱/中性原子量子计算高度依赖激光完成冷却、囚禁、操控与读出；<strong>我国量子计算领域首批性能测试评估类国家标准正式实施</strong>。</li>
+<li><strong>具身智能</strong>：华为云具身世界模型 <strong>CloudRobo-WM1.2 定档 11-16 14:00</strong>（昇腾原生，含<strong>新增签约 A 股环节</strong>）——本周五后最重要催化；标的：亿嘉和、拓斯达、福龙马（华为云 2 亿元环卫具身智能合同）、埃夫特、软通动力；触觉方向汉威科技（子公司能斯达深耕电子皮肤 20 余年，国产前三）、飞亚达（获 Sharpa 灵巧手量产订单）。</li>
+<li><strong>天龙股份（603266）</strong>：苏州豪米波并表后的 <strong>4D 毫米波雷达感知层</strong> + 51% 控股上海机器人产业技术研究院<strong>关节模组平台</strong>（首条产线即将落地）；公社热度 25/29/23/0 居个股第一梯队。</li>
+</ul>
+<hr>
+<h3>主题 G｜模型与能力：Gemini 4 Carbon 全开 + 决策 API，国产模型集体加速</h3>
+<p><strong>Google</strong></p>
+<ul>
+<li><strong>Gemini 4 Carbon 全面开放</strong>：定位「最强前沿推理模型」，主攻复杂软件工程、多步骤智能体、科研与网络安全；<strong>CursorBench 4.0、Perplexity WANDR、Zapier AutomationBench 三项工作流基准排名第一</strong>，单任务成本不到部分外部模型一半。</li>
+<li>定价：<strong>API 入门价每百万输入 2 美元 / 输出 10 美元</strong>（优惠期，<strong>11-30 后翻倍</strong>）；Google AI Studio、Gemini for Business、AI Ultra 订阅用户及 Antigravity 开发工具同步开放。</li>
+<li><strong>Gemini Decisions API + Gemini Decision 1</strong>：单次可判最多 <strong>1000 道封闭式选择题</strong>，端到端 <strong>150–250 毫秒</strong>，输入每百万 token <strong>0.10 美元</strong>。</li>
+<li><strong>Gemini Robotics 2.5 VLA</strong>：200+ 任务成功率提升 <strong>30%–100%</strong>；Runway 开源 <strong>Praxis-1</strong> 世界动作模型（27B，Apache 2.0，在 NVIDIA RoboLab-120 位列世界动作模型及开源机器人基础模型第一）。</li>
+</ul>
+<p><strong>中国模型</strong></p>
+<ul>
+<li><strong>百度文心 5.5 Flash Preview</strong>：MoE 架构，总参数 <strong>2800 亿、每 token 激活 140 亿</strong>，支持 <strong>100 万 token 上下文</strong>、生成速度超 <strong>200 token/s</strong>；混合稀疏注意力 + 多路由器 MoE + ECHO 多 Token 预测；<strong>11-25 前开源权重</strong>；<strong>首次引入自研 RSI 技术</strong>（ERNIE Evolve 参与推理优化）。</li>
+<li><strong>阿里 Qwen4-Max 预览版上线</strong>：强化世界知识、感知、编程与智能体能力，面向复杂编程、3D 建模、网页设计与专业办公；已接入千问办公、Qoder、千问 App 和 QwenStudio；<strong>Qwen Code 1.0 发布</strong>，Qoder 与 Qwen Code 融合开源。</li>
+<li><strong>美团开源 LongCat-2.5</strong>：<strong>1.6 万亿参数、百万上下文、MIT 协议</strong>。</li>
+<li><strong>智元开源终身具身智能框架 LIFE</strong>：任务成功率由 <strong>37.5% 提升至 65.8%</strong>。</li>
+<li><strong>张一鸣（字节）</strong>：字节有能力与 OpenAI、Anthropic 竞争，但真正追平前沿技术「<strong>最早也要到 2029 年或 2030 年</strong>」；坦言 <strong>Seed 系列模型预训练数据集规模「仍然少了」</strong>，重申<strong>不应用「蒸馏」方式追赶</strong>；计划数周内推出类似 Meta Muse 的 AI 助手。</li>
+</ul>
+<p><strong>国产硬件与算力</strong></p>
+<ul>
+<li><strong>华为官宣全新子品牌 OSTA「星芒」</strong>，11-20 鸿蒙智行享界 V8 及星芒品牌发布会首秀，首款或为阔直板手机；<strong>麒麟 9050 系列搭载新一代达芬奇架构 NPU，业界首个 30B MoE 大模型入端</strong>。</li>
+<li><strong>AMD 发布 MEXT 预测式存储软件</strong>：用 AI 在 DRAM 与 SSD 间调度，测试中 <strong>DRAM 用量减半仍保 99% 效能</strong>。</li>
+<li><strong>英飞凌全球首次将 300mm 碳化硅晶圆加工成功能功率器件</strong>；<strong>IBM 推出下一代量子处理器 Nighthawk r3</strong>（520 个可编程量子比特、2034 个物理比特）。</li>
+<li><strong>SpaceX 签下 SINGULUS HJT 太阳能整线合同</strong>（年产能 100GW，布局太空算力）；另 36 氪口径 <strong>SpaceX 宣布 740 亿美元自建超级算力项目并尝试「去英伟达化」自研 Kessel 机柜</strong>。</li>
+<li><strong>腾讯「元宝搜索」正式上线</strong>，覆盖全网网页、公众号、视频号与学术文献。</li>
+</ul>
+<p><strong>治理与产品</strong></p>
+<ul>
+<li><strong>微信「看一看」内测短剧入口</strong>（小范围灰度），此前 10-14 已上线「绿泡泡短剧」小程序（全内容免费、单集间插广告变现、首页「朋友在看」推荐位）——<strong>腾讯把短剧升为平台级分发</strong>。</li>
+<li><strong>微软 Auto SR 正式推出</strong>，覆盖 Xbox Ally X 与部分锐龙 Copilot+ PC，帧率上限提至 120FPS。</li>
+<li><strong>新增 73 款生成式 AI 服务完成网信办备案</strong>；百度世界 2026 开幕主题「下一幕，智能组织」；IC China 2026 开幕聚焦 AI 算力芯片与先进封装；超聚变创业板 IPO 上会拟募 80 亿元；沐曦与优必选合资曦选创智完成 5 亿元天使轮。</li>
+</ul>
+<hr>
+<h3>主题 H｜GitHub 热榜：品类继续「Agent 运行时 / 原生二进制 / 协议治理」三线漂移，本窗口首次出现「开源社区封禁 AI 贡献」的制度性冲突</h3>
+<p><strong>Meta Astryx 智能体就绪设计系统</strong>（今日 +1,830 星，30 天从 1.3 万涨到 2.65 万，增速全榜最高）</p>
+<ul>
+<li>Meta 内部 8 年打磨、支撑 13,000+ 应用的 React19 + StyleX 设计系统开源，150+ 无障碍组件、10 套主题。</li>
+<li>差异化是「<strong>agent ready</strong>」：每个组件带 JSDoc、自描述 JSON manifest 和 MCP server，<strong>Claude Code / Cursor / Codex 能和人类读同一份参考文档构建 UI</strong>。</li>
+<li>争议：仍是 Beta（<code>@astryxdesign/lab</code> 未发 npm、部分包仅 canary）、强绑 React 19、StyleX 冷启动成本高。</li>
+<li>评估：值得关注、不建议现在全面接入——「agent 可消费」设计是今年真正的新范式，值得跟踪学习；但 Beta + React-only 限制太硬。</li>
+</ul>
+<p><strong>TensorFold 纯 Zig 大模型推理引擎</strong>（今日 +54 星，Trending 第 7）</p>
+<ul>
+<li>M5 Max 上 Nemotron 3.5 Lightning 4-bit 单流 <strong>277 tok/s</strong>，比自家 Python 引擎快 1.2–1.3 倍、比 mlx_lm server 快约 1.6 倍。</li>
+<li>卖点是<strong>零 Python 依赖</strong>——一个 Zig 二进制直接驱动 Metal / CUDA / Vulkan kernel，自带 checkpoint IO、分词和 OpenAI + Anthropic 兼容 API。</li>
+<li>评估：值得关注、暂不建议上生产——已支持 MiniMax-M3.1-Flash 等模型，但仅约 1.9k 星，README 大量篇幅在讲「哪些模型没通过资格验证」（A100 明确被拒、M1–M4 未完整验证）。</li>
+</ul>
+<p><strong>华为 MACaQ 模型无关量化器</strong>（11-10 开源，3 天星数破 190，HN 讨论 132 分 / 31 评论）— <strong>推荐试用（NVIDIA 机器）</strong></p>
+<ul>
+<li>论文 arXiv 2611.10649：MXFP4 W4A4 后训练量化，每层独立做通道均衡 + 32 点 Hadamard 变换 + Hessian 感知 bit-flip 精修，perplexity 低于 DuQuant++ 与 MR-GPTQ，<strong>量化耗时少 11 倍</strong>；122B 模型 <strong>64 分钟</strong>量化完，峰值显存只要 32.5 GB。</li>
+<li><strong>杀手锏 MACaQ-R</strong>：精修已有 GGUF 而保持<strong>标准 llama.cpp 完全兼容</strong>，同体积下 KL 散度 0.013367 优于 Unsloth UD-Q4_K_XL 的 0.015731。另覆盖 Diffusers 图像/视频/音频与 vLLM W4A4。</li>
+<li>风险：性能数字均为作者自述、无独立复现；仅支持 NVIDIA CUDA（Apple Silicon / AMD 不支持），Ascend NPU 内核只是 PR 不是可用运行时。</li>
+</ul>
+<p><strong>华为算力系统实验室 KVarN</strong>（520 星）— vLLM 原生 KV-cache 量化后端，主打「3–5 倍上下文、吞吐超 FP16、接近 FP16 精度、无需校准、加一个 flag 即可」，与 MACaQ 同门可配套（权重 W4A4 + KV 量化）。</p>
+<p><strong>🆕 开源社区对 AI 生成贡献的封禁潮</strong>（HN 107 分）— <strong>本窗口唯一一条「制度性冲突」类信号</strong></p>
+<ul>
+<li>已至少 <strong>23 个知名项目</strong>（yt-dlp、QEMU、OpenJDK 等）封杀或重限制 AI 贡献。</li>
+<li>触发点：一名 Node.js TSC 成员提交 <strong>19,000 行 Claude Code 生成的 PR</strong>，80+ 名开发者联名请愿全项目禁令。</li>
+<li>三种立场成型：<strong>OpenJDK 直接禁止</strong>（连「部分或全部由 LLM 生成」都算）、<strong>llama.cpp / CloudNativePG 要求披露并由人担责</strong>、<strong>curl / Oh My Zsh 主张「与 AI 无关的质量标准照旧适用」</strong>。</li>
+<li>配套出现安全扫描器 NVIDIA/SkillSpector（25.7k 星）。</li>
+<li>🆕 <strong>北京大学研究</strong>：编码 agent 在 106 个任务中只有 <strong>3.5% 主动读过政策文件</strong>，四个 agent/模型组合在「应拒绝 AI 贡献」规则上<strong>合规率为 0%</strong>。</li>
+<li>评估：<strong>与本档案直接相关</strong>——当上游项目开始封杀 AI 提交，<strong>skill 供应链审查会持续收紧</strong>，对大量依赖外部 skill 的 Hermes 工作流是真实的长期风险；建议安装任何第三方 skill 前先过一遍 SkillSpector 一类扫描器。</li>
+</ul>
+<p><strong>补充观察</strong>：HN 前排被两条非技术新闻占领——<strong>Anthropic IPO（812 分 / 802 评论）与 NVIDIA CEO 黄仁勋疑似被解职（2909 分 / 2751 评论）</strong>；Apple 子公司 Claris 内测新应用 "Harbor"，把 Mac 变成私有 AI 推理服务器，支持雷雳 5 多机统一内存池化（仅 Claris 私人预览，App Store 页面已下架）。</p>
+<hr>
+<h3>主题 I｜地缘与贸易：油价复涨、黄金暴跌，「地缘溢价」与「避险溢价」本窗口彻底分裂</h3>
+<ul>
+<li><strong>特朗普称「不需要与伊朗达成协议」</strong>（11-12 Truth Social）：「那样的日子早已一去不复返」，并称已掌握伊朗数千亿美元资金及霍尔木兹海峡——<strong>油涨金跌</strong>。</li>
+<li>同期<strong>伊朗称两艘油轮在霍尔木兹海峡发生爆炸</strong>；<strong>美国与伊朗战争已持续第九个月，10 月共 37 艘船只遭袭为 2 月战争爆发以来月度最高</strong>。</li>
+<li><strong>以色列安全内阁指示军方准备对伊朗动武</strong>；伊朗议长称霍尔木兹海峡「<strong>永远不会恢复</strong>」战前状态；胡塞武装称袭击沙特利雅得机场；美中央司令部声明严格执行对伊海上封锁。</li>
+<li><strong>油价</strong>：11-12 布伦特 +1.24% 收 92.62（盘中破 93），WTI +0.44% 收 86.42；韭研 11-13 口径布伦特 +3.3% 至 95.82、WTI +2.6% 至 88.74。</li>
+<li><strong>黄金暴跌</strong>：现货黄金 11-12 收 3877.44（-3.99%），<strong>自 1-29 高点最大回撤超 30%，而中国央行连续第 24 个月增持黄金</strong>——央行在买金而金价在跌，说明是<strong>储备管理的战略意图而非价格判断</strong>（延续前序窗口结论）。</li>
+<li><strong>俄美乌三方会谈</strong>：阿布扎比和谈收官，<strong>俄乌原则上同意换俘</strong>（人数未公布）；美国特使威特科夫、库什纳赴莫斯科会见普京，普京称俄乌之间「<strong>只有一条分界线，就是国家边界线</strong>」。</li>
+<li><strong>COP31 安塔利亚气候峰会进行</strong>：韩正作为习近平特使出席并作中国国别发言；古特雷斯呼吁制定「气候正义契约」；埃尔多安倡议为后代留下更清洁、更绿色、更公平的世界。</li>
+<li><strong>APEC 深圳 11-18/19</strong>：主题「开放、创新、合作」，马斯克将出席并推动 FSD 在华落地；<strong>英伟达未获美方工商峰会代表邀请，谷歌入选</strong>。</li>
+</ul>
+<hr>
+<h3>主题 J｜社会与国内变量</h3>
+<ul>
+<li><strong>纪念孙中山先生诞辰 160 周年大会在京举行</strong>：习近平出席并发表重要讲话；李强主持国务院第 22 次专题学习（<strong>强调进一步深化社会保障制度改革，强化社保基金安全监管和保值增值</strong>）；港澳台分别举行纪念仪式、晋谒衣冠冢；纪念邮票发行。</li>
+<li><strong>中美经贸</strong>：商务部新闻发言人何亚东（11-12）称「<strong>300 亿对 300 亿</strong>」对等降税框架安排有利于稳定和拓展中美双边贸易，中美双方就实施该安排<strong>保持密切沟通</strong>；2025 年 5 月以来双方已举行 <strong>8 轮经贸磋商</strong>；背景是 11-06 何立峰副总理与美方牵头人贝森特、格里尔视频通话。<strong>王毅与美财长鲁比奥通话，就中美关系及元首互动深入交换意见。</strong></li>
+<li><strong>关税</strong>：国务院关税税则委员会公告（税委会公告 2026 年第 6 号），自 <strong>11-10 13:01 起 2 个月内继续暂停实施 24% 对美加征关税、保留 10%</strong>；美方 USTR 公告原定 11-09 到期的 <strong>178 项对华 301 关税豁免延期至 2027-01-09</strong>（含 164 项通用工业产品、14 项光伏设备）。</li>
+<li><strong>商务部回应欧盟禁用中国企业设备</strong>：已就德国拟修订法规将 5G 基站列为关键网络组件、6G 不允许使用中国组件，以及葡萄牙重新审议 5G 禁令仍认定华为为「高风险供应商」等报道，向相关国家政府表达严重关切；<strong>坚决反对将技术问题政治化、泛安全化</strong>。</li>
+<li><strong>猪周期</strong>：见主题 F；<strong>10 月汽车产销双超 300 万辆，新能源销量同比 +13.1%</strong>；中国海油渤海中部取得超深层油气勘探突破；<strong>海南新组建空天集团注册资本 100 亿元</strong>；香港 9 月商品出口货量同比 +36.1%。</li>
+<li><strong>其他国际</strong>：印尼副总统 Gibran 辞职；<strong>西班牙 14 年来首次全国大罢工，逾 400 万工人抗议房租高涨</strong>；欧盟拟立《数码公平法》违规企业最高罚年营业额 6%；华盛顿特区枪击案 1 死 4 伤、嫌疑人饮弹自尽；意大利逾 6300 所学校收到炸弹威胁邮件；集安组织峰会取消亚美尼亚投票权。</li>
+<li><strong>上海天气（11-13 11:01）</strong>：当前 18℃、体感约 19℃，阴转多云有零星小雨，湿度 88%；早晨 15–17℃ 有雾路面湿滑；夜间 17–18℃ 降雨增强、累积雨量中等，<strong>夜间降雨概率 60–84% 需带伞</strong>；明晚到周六白天有一次较明显降水过程，下周二至周三有降温大风。</li>
+</ul>
+<hr>
+<h2>主题关联图</h2>
+<p><code>`</code></p>
+<p>                    ┌─────────────────────────────────────┐</p>
+<p>                    │  11-12 黄仁勋辞职（本窗口第一冲击）  │</p>
+<p>                    │  33 年掌舵结束 / 临时 CEO / 首任董事长│</p>
+<p>                    └──────────────┬──────────────────────┘</p>
+<p>                                   │</p>
+<p>         ┌─────────────────────────┼─────────────────────────┐</p>
+<p>         │                         │                         │</p>
+<p>         ▼                         ▼                         ▼</p>
+<p>  【对华政策连续性】          【组织连续性风险】        【英伟达 11-17 财报】</p>
+<p>   特朗普点名库克接任      同日 AMD +5.9% 博通 +5.5%      黄仁勋辞职后首份</p>
+<p>   APEC 英伟达未获代表      → 链内两极分化加剧            指引约 1080 亿美元</p>
+<p>   资格 谷歌入选            韭研 11-13「事件驱动的        + 11-18 国会闭门简报</p>
+<p>         │                   风险隔离定价」第四次验证              │</p>
+<p>         │                         │                         │</p>
+<p>         ▼                         ▼                         ▼</p>
+<p>  ┌────────────────────────────────────────────────────────────┐</p>
+<p>  │  管制五层合围（美商务部新规草案）                          │</p>
+<p>  │  卡算力 / 卡设备 / 卡投资 / 卡 AI 能力 / 堵第三国绕道     │</p>
+<p>  │  → OpenAI 罕见站队支持两党芯片管控提案                     │</p>
+<p>  └───────────────────────┬────────────────────────────────────┘</p>
+<p>                          │</p>
+<p>        ┌─────────────────┼──────────────────┐</p>
+<p>        ▼                 ▼                  ▼</p>
+<p>  【国产替代兑现】   【国产算力生态】    【国产设备材料】</p>
+<p>   英伟达中国 34%     DeepSeek V4 率先     米莱芯程首台 DUV</p>
+<p>   vs 华为 28%        昇腾适配 + 开源      路线 i-line→KrF→ArF</p>
+<p>   差 6pct           TileLang 编译工具     蓝英装备 UCM 供 ASML</p>
+<p>        │                 │                  │</p>
+<p>        └────────┬────────┴──────────┬───────┘</p>
+<p>                 ▼                   ▼</p>
+<p>        ┌─────────────────┐  ┌──────────────────────┐</p>
+<p>        │ 中芯国际 Q3 超预期│  │ 华为 CloudRobo-WM1.2 │</p>
+<p>        │ 毛利 29.9%(+4.6) │  │ 11-16 14:00 发布      │</p>
+<p>        │ 利用率 97.3%     │  │ 含新增签约 A 股环节   │</p>
+<p>        │ 华虹 102.9% 超负荷│  └──────────┬───────────┘</p>
+<p>        └────────┬────────┘             ▼</p>
+<p>                 │              【A 股 11-12→11-13 两日】</p>
+<p>                 │              算力硬件批量跌停 → 银行/影视</p>
+<p>                 ▼              4700 股下跌 / 炸板率 36%</p>
+<p>        ┌─────────────────┐              │</p>
+<p>        │ 国产超节点 0→1   │              ▼</p>
+<p>        │ 资本开支从「芯片  │      ┌──────────────────┐</p>
+<p>        │ 采购」→「系统交付」│      │ 猪周期反转启动     │</p>
+<p>        │ 11-13/14 openEuler│     │ 母猪首破 3750 万头 │</p>
+<p>        └─────────────────┘      │ 医药 PE 15% 分位  │</p>
+<p>                                  └──────────────────┘</p>
+<p>  ┌────────────────────────────────────────────────────────────┐</p>
+<p>  │  通胀线（与治理线并行，构成「通胀不回头，加息不收兵」）    │</p>
+<p>  │  美国 10 月 CPI 环比 +0.4% 核心 +0.3% 双超预期            │</p>
+<p>  │  同比因 2025 停摆基期缺失 BLS 明确不发布（不采信插值）    │</p>
+<p>  │  → 10Y +11.58bp 至 5.105% / 2Y +13.96bp 至 4.867%        │</p>
+<p>  │  → 黄金 -3.99% 至 3877.44（自高点回撤超 30%）             │</p>
+<p>  │  → 美元指数 103.02 创 2025-04 以来最高                    │</p>
+<p>  │  中国 CPI +0.7% vs PPI +5.7%（2022-07 来新高）             │</p>
+<p>  │  → 剪刀差 5pct → 中下游利润挤压                          │</p>
+<p>  │  → AI 硬件通胀入 CPI 结构（存储 +45.4% 等四项 +0.26pct）│</p>
+<p>  │  → 反向：10Y 国债 1.535% / 30Y 2.078%（中美利率反向）   │</p>
+<p>  └────────────────────────────────────────────────────────────┘</p>
+<p>  ┌────────────────────────────────────────────────────────────┐</p>
+<p>  │  模型与能力线（本窗口「产品化 + 国产加速」）              │</p>
+<p>  │  Gemini 4 Carbon 全开 + Decisions API（1000 题 / 150-250ms）│</p>
+<p>  │  → 定价分层：入门 $2/$10，11-30 翻倍                      │</p>
+<p>  │  百度文心 5.5 Flash Preview（2800 亿 MoE / 100 万 ctx）     │</p>
+<p>  │  阿里 Qwen4-Max 预览 + Qwen Code 1.0                      │</p>
+<p>  │  美团 LongCat-2.5（1.6 万亿参数 MIT）/ 智元 LIFE 65.8%    │</p>
+<p>  │  华为 OSTA「星芒」+ 麒麟 9050 达芬奇 NPU（首个 30B MoE 入端）│</p>
+<p>  │  张一鸣：追平最早 2029-2030，不用蒸馏、预训练数据「仍然少了」│</p>
+<p>  └────────────────────────────────────────────────────────────┘</p>
+<p>  ┌────────────────────────────────────────────────────────────┐</p>
+<p>  │  地缘线（本窗口与资产价格彻底分裂）                        │</p>
+<p>  │  特朗普「不需要与伊朗达成协议」→ 油涨（金跌）              │</p>
+<p>  │  霍尔木兹两艘油轮爆炸 / 10 月 37 艘遇袭为 2 月来最高      │</p>
+<p>  │  以色列内阁指示准备动武 / 伊朗议长「霍尔木兹永不恢复战前」  │</p>
+<p>  │  美伊战争第九个月 → 布伦特复涨至 92.62–95.82            │</p>
+<p>  │  俄美乌阿布扎比和谈：换俘原则同意 / 普京「只有国界」       │</p>
+<p>  │  APEC 深圳 11-18/19（马斯克出席；英伟达未获代表资格）      │</p>
+<p>  └────────────────────────────────────────────────────────────┘</p>
+<p>  ┌────────────────────────────────────────────────────────────┐</p>
+<p>  │  工程与生态线                                            │</p>
+<p>  │  Meta Astryx（agent-ready 设计系统，增速全榜第一）        │</p>
+<p>  │  TensorFold（纯 Zig 零 Python 依赖推理引擎 277 tok/s）     │</p>
+<p>  │  华为 MACaQ（MACaQ-R 保 llama.cpp 兼容）+ KVarN（KV 量化）  │</p>
+<p>  │  → 工具链从「Python 生态」向「单体原生二进制」迁移         │</p>
+<p>  │  🆕 23 个知名项目封禁/限制 AI 贡献（OpenJDK 直接禁）        │</p>
+<p>  │  → agent 主动读政策文件比例仅 3.5%，合规率 0%            │</p>
+<p>  │  → 对本档案：第三方 skill 供应链审查将持续收紧            │</p>
+<p>  └────────────────────────────────────────────────────────────┘</p>
+<p><code>`</code></p>
+<hr>
+<h2>数据源</h2>
+<h3>窗口内原始素材（<code>~/openclaw-kb/原始素材/</code>）</h3>
+<p>| 文件 | 字节 | 条数 | 说明 |</p>
+<p>|---|---|---|---|</p>
+<p>| <code>daily-brief/2026-11-06.md</code> | 8,463 | 12 | 四段式结构（科技·AI 5 + 财经·宏观 4 + 社会·时政 3） |</p>
+<p>| <code>daily-brief/2026-11-08.md</code> | 7,303 | 10 | AI 头条 4 + 科技财经 3 + 社会民生 3 |</p>
+<p>| <code>daily-brief/2026-11-09.md</code> | 8,380 | 10 | AI/科技头条 6 + 财经宏观 3 + 社会文体 1 |</p>
+<p>| <code>daily-brief/2026-11-10.md</code> | 16,788 | 10 | 早报体：宏观三段 + 政策央行 + 市场表现 + Top 10 + 点评 3 |</p>
+<p>| <code>daily-brief/2026-11-11.md</code> | 14,100 | 10 | 早报体（<code>grep -cE '^[0-9]+\. '</code> = 13，含点评 3） |</p>
+<p>| <code>daily-brief/2026-11-12.md</code> | 18,090 | 10 | 早报体：<code>grep -cE '^[0-9]+\. '</code> = 10 |</p>
+<p>| <code>daily-brief/2026-11-13.md</code> | 17,855 | 10 | 早报体：<code>grep -cE '^[0-9]+\. '</code> = 13（含点评 3） |</p>
+<p>| <strong>小计（7 份）</strong> | <strong>90,979</strong> | <strong>62</strong> | daily-brief 覆盖 6/7 |</p>
+<h3>从 cron 输出存档补录（<code>~/.hermes/profiles/writer/cron/output/</code>，11-13 当日）</h3>
+<p>| 任务 | 时间 | 字节 | 内容 |</p>
+<p>|---|---|---|---|</p>
+<p>| <code>f0c7de023e77</code> 豆豆龙-每日新闻+AI要闻 | 06:51 | 8,820 | 每日新闻 9 段 + AI/数码要闻 9 条 |</p>
+<p>| <code>c29f80fe0f7f</code> 豆豆龙-宏观经济早报 | 07:02 | 26,896 | 早报全文（与 <code>daily-brief/2026-11-13.md</code> 同源同内容） |</p>
+<p>| <code>85bab5f7e08a</code> 36氪信息收集助手 | 07:31 | 2,382 | 科技新闻摘要 1 段 7 条 |</p>
+<p>| <code>edeedc6bbb9e</code> 豆豆龙-cron体检 | 09:00 | 1,991 | 「cron体检通过。」 |</p>
+<p>| <code>68f676cab791</code> GitHub 热榜 | 09:31 | 7,520 | 5 条热榜 + 逐条评估 + 补充观察 |</p>
+<p>| <code>30fcd05af8da</code> 上海天气预报 | 11:01 | 2,304 | 当前实况 + 今日预报 + 提醒 |</p>
+<p>| <code>3d2341b0ab37</code> 豆豆龙-韭研公社今日热门 | 20:01 | 17,065 | 资讯荟萃 6 + 个股研究 7 + 题材行业 8 + 本周关注日历 |</p>
+<p>| <code>2587c202fe16</code> 微信 token 保活（no_agent） | 02:50 / 08:51 / 14:52 / 20:53 | 4 × 162 | 全部 silent（空输出） |</p>
+<p>| <code>0a6cebbf1418</code> 每日推送重试兜底（no_agent） | 12:13–22:00 | 47 × ~290 | 全部「发现 2 条待补推的失败投递 / 发送窗口关着」 |</p>
+<p>| <strong>小计</strong> | <strong>≈ 67,900</strong> | <strong>约 100+</strong> | |</p>
+<h3>本窗口总计</h3>
+<ul>
+<li><strong>原始素材 7 份 / 90,979 字节 / 62 条</strong> + <strong>cron 输出存档补录 9 类 / ≈ 67,900 字节 / 约 100+ 条</strong></li>
+<li><strong>本窗口总计 ≈ 16 份 / 约 158,900 字节 / 约 162+ 条</strong></li>
+</ul>
+<h3>素材缺口与重复</h3>
+<ul>
+<li><strong><code>daily-brief/2026-11-07.md</code> 缺失</strong>——当日 6 个 agent 型采集任务全部因出站网络中断而 26900 秒超时失败，该文件从未生成；累计空档仍 19 天（10-07→10-24 共 18 天 + 11-07 共 1 天）。</li>
+<li><strong><code>daily-news-push/</code> 归档本窗口新增 0 份</strong>——目录最新仍停在 11-11（宏观早报 13035 + AI 要闻 4762），<strong>11-12、11-13 连续两天推送 delivered 却未落盘</strong>，落盘缺陷在「恢复」后再度停滞；去重逻辑仍未加（11-10 的六份中三份为重复存档）。</li>
+<li><strong>36 氪 / GitHub 热榜 / 韭研公社 / 上海天气四任务产出仍只存在于 cron 输出存档</strong>，不落盘至 <code>原始素材/</code>（本周报已全部补录）。</li>
+<li>早报体自 11-10 起结构固定（宏观 + 政策 + 市场 + Top 10 + 点评），条数统计口径为 Top 10 编号条（点评不计）。</li>
+</ul>
+<hr>
+<h2>数据口径提醒（延续前序窗口）</h2>
+<p>1. <strong><code>daily-brief</code>（08:30 落盘）记录前一交易日收盘；韭研公社（20:00 落盘）记录当日收盘。</strong></p>
+<p>   - 11-13 的 <code>daily-brief</code> 记录 <strong>11-12 收盘</strong>（上证 3655.83 / -0.67%，成交 1.932 万亿，超 4600 只下跌，AI 漫剧与贵金属概念走弱）。</p>
+<p>   - 韭研公社 11-13 20:01 记录 <strong>11-13 收盘</strong>（沪指 3634.35 / -0.59%，深成指 -2.05%，创业板 -3.32%，科创综指 -2.74%，三市成交 1.67 万亿缩量 2788 亿，超 4700 股下跌，炸板率约 36%）。</p>
+<p>   - <strong>混读会得到「11-13 只跌 0.67%」的错误结论</strong>；11-13 实为缩量续跌、算力硬件批量跌停。</p>
+<p>2. <strong>美国 10 月 CPI 同比因 2025 年 10 月停摆导致基期缺失、BLS 明确不发布</strong>，官方数据表该单元格为横线（横线 ≠ 零增长）。美银等机构插值估算同比 3.8%/2.7% <strong>属模型推演，本周报不作为事实采信</strong>。</p>
+<p>3. <strong>美国 10 月 PPI 于 11-13 21:30 CST 发布</strong>——本窗口早报标为「待公布、预期整体环比 +0.4%、核心环比 +0.3%，均为预期值非实际值」；<strong>本报告不将其写为事实</strong>。</p>
+<p>4. <strong>Anthropic 季度营收口径差异</strong>：S-1 前三季度累计 332.4 亿美元（同比 +1206%）、Q3 单季约 170 亿美元、年化运行率约 810 亿美元；OpenAI 侧 36 氪口径 Q3 约 100 亿美元、年化约 500 亿美元。<strong>不同公司、不同口径，不合并为单一数字。</strong></p>
+<p>5. <strong>贵金属/原油 11-12 与 11-13 两套读数并存</strong>：daily-brief（11-12 收盘）布伦特 92.62 / WTI 86.42 / 黄金 3877.44；韭研（11-13 20:00）布伦特 95.82 / WTI 88.74 / 黄金 3873.42。<strong>属不同时间点读数，并列不替换。</strong></p>
+<p>6. <strong>「未来数据过滤」防线连续第 6 天实测生效</strong>：11-13 早报把美国 10 月 PPI 标为「待公布（预计 11-13 08:30 ET = 北京时间 21:30）」、中国 10 月金融数据标为「暂无数据」并附财联社预测值（新增贷款中值 -1500 亿、新增社融中值 1.5 万亿，<strong>明示为机构预测值非实际值</strong>）、10 月 PMI 标为已公布（制造业 49.8%、建筑业 48.0%）。<strong>本报告采信时无需剔除任何一行。</strong></p>
+<hr>
+<h2>链路诊断</h2>
+<h3>✅ 采集侧：连续第 6 天完全健康</h3>
+<p>11-13 全部 7 个 agent 型 cron 任务正常产出且时间戳符合正常调度（非延迟回收）：</p>
+<p>| 任务 | Job ID | 时间 | 字节 |</p>
+<p>|---|---|---|---|</p>
+<p>| 豆豆龙-每日新闻+AI要闻 | <code>f0c7de023e77</code> | 06:51 | 8,820 |</p>
+<p>| 豆豆龙-宏观经济早报 | <code>c29f80fe0f7f</code> | 07:02 | 26,896 |</p>
+<p>| 36氪信息收集助手 | <code>85bab5f7e08a</code> | 07:31 | 2,382 |</p>
+<p>| 豆豆龙-cron体检 | <code>edeedc6bbb9e</code> | 09:00 | 1,991 |</p>
+<p>| GitHub 热榜 | <code>68f676cab791</code> | 09:31 | 7,520 |</p>
+<p>| 上海天气预报 | <code>30fcd05af8da</code> | 11:01 | 2,304 |</p>
+<p>| 豆豆龙-韭研公社今日热门 | <code>3d2341b0ab37</code> | 20:01 | 17,065 |</p>
+<ul>
+<li><code>daily-brief/2026-11-13.md</code> 正常落盘 <strong>17,855 字节</strong>。</li>
+<li><strong>11-07 的 26900 秒集体超时确认是孤立事件（当日网络中断），连续 6 天未复发，未改动任何 cron 配置。</strong></li>
+<li><code>cron体检</code> 09:00 输出「<strong>cron体检通过。</strong>」，配置层面无 ERROR。</li>
+</ul>
+<h3>✅ 推送侧：连续第 2 天全面恢复（本窗口最重要的链路变化）</h3>
+<p><code>deliveries.db</code> 实测 <strong>11-13 三条全部 <code>delivered</code></strong>（<code>error=None</code>）：</p>
+<p>| 时间 | 状态 | 错误 |</p>
+<p>|---|---|---|</p>
+<p>| 2026-11-13 06:51:10 | <strong>delivered</strong> | None |</p>
+<p>| 2026-11-13 07:02:27 | <strong>delivered</strong> | None |</p>
+<p>| 2026-11-13 09:00:56 | <strong>delivered</strong> | None |</p>
+<p><strong>交付序列（11-07 → 11-13）</strong>：</p>
+<p><code>`</code></p>
+<p>11-07  ███████  7 条全 delivered</p>
+<p>11-08  ░░░      3 条全 failed  (ret=-2 prepare failed)</p>
+<p>11-09  ░░░      3 条全 failed</p>
+<p>11-10  ▓░░░     00:30:43 一条 delivered + 日间 3 条 failed</p>
+<p>11-11  ░░░      3 条全 failed</p>
+<p>11-12  ███      3 条全 delivered  ← 恢复</p>
+<p>11-13  ███      3 条全 delivered  ← 连续第 2 天</p>
+<p><code>`</code></p>
+<ul>
+<li><strong>判读</strong>：11-12 与 11-13 均符合已定案的「入站消息到达后 ≥1 小时的那条推送 delivered，且当日后续投递仍 delivered」= <strong>真恢复</strong>判据（区别于 11-10 00:30 那条「窗口用掉」）。<strong>推论老板在 11-11 深夜至 11-12 凌晨发过一条真人微信，此后连续两日通道可用。</strong></li>
+<li>🆕 <strong>保活脚本 11-13 四次运行（02:50 / 08:51 / 14:52 / 20:53）全部 silent（空输出）</strong>——与 11-10、11-11、11-12 完全一致。<strong>silent 本身就是「窗口已关」的特征，既不能证明保活成功、也不能证明通道健康；唯一判据是 <code>deliveries.db</code> 的实际投递结果。</strong></li>
+<li>⚠️ <strong>兜底任务 <code>0a6cebbf1418</code> 11-13 全天跑 47 次（12:13–22:00，每 13 分钟一次）</strong>，每次输出「<strong>发现 2 条待补推的失败投递 / 发送窗口关着（需用户发一条消息），本轮不尝试推送</strong>」——<strong>它整日认为窗口关着，而实际当日三条主动推送全部 delivered</strong>，说明<strong>兜底脚本的「窗口状态」判断与实际投递能力脱节</strong>（延续 11-12 的结论），<strong>不能作为通道健康度判据</strong>。</li>
+<li>⚠️ <strong>待补推失败投递从 4 条降为 2 条</strong>（兜底脚本口径）——<strong>11-12、11-13 的失败投递应已被清理或重置</strong>；11-08/09/10/11 累计 12 条中的其余部分仍待补推。<strong>若要补推，必须合并成一条消息发出</strong>，逐条补推会把第一次成功当作窗口已用、后面全部白失败。</li>
+<li>⚠️ <strong>补推优先级建议</strong>：11-13 主推送（每日新闻 + AI 要闻）> 11-13 宏观早报 > 11-12 主推送。</li>
+</ul>
+<h3>⚠️ 落盘侧：连续 2 天停滞</h3>
+<ul>
+<li><code>daily-news-push/</code> 目录最新文件仍停在 <strong>11-11</strong>（宏观早报 13035 + AI 要闻 4762），<strong>11-12 与 11-13 推送均 delivered 却未落盘</strong>。</li>
+<li>「先保存文件再输出正文」指令自 11-10 生效后，11-10 落 6 份（3 组重复）、11-11 落 4 份（含 11-10 的两份），<strong>11-12 与 11-13 归零</strong>——<strong>落盘恢复未持续</strong>。</li>
+<li>仍建议给该指令补一条「<strong>同名同日不重复写入、只保留最后一次版本</strong>」（去重），并复查 11-12/11-13 未落盘的原因。</li>
+<li><strong>36 氪 / GitHub 热榜 / 韭研公社 / 上海天气四任务仍只存在于 cron 输出存档</strong>——建议给这四个任务补上与 <code>b40fc09f48b8</code> 相同的「先保存文件再输出正文」指令（该范式已在主推送与宏观早报上验证有效）。</li>
+</ul>
+<h3>✅ 其他链路</h3>
+<ul>
+<li>韭研公社 <code>3d2341b0ab37</code> <strong>连续第 5 天正常产出</strong>（11-09/10/11/12/13），结束 11-07、11-08 连续 2 天「连 FAILED 记录都没有」的调度缺位状态。</li>
+<li>宏观经济早报 <code>c29f80fe0f7f</code> <strong>连续第 6 天正常产出</strong>，且「未来数据过滤」防线连续第 6 天实测生效。</li>
+<li><code>b40fc09f48b8</code>（每日十大热点分析汇编）已于 <strong>2026-11-10 删除</strong>，内容并入 <code>c29f80fe0f7f</code>（宏观经济早报）；合并后早报同时输出宏观数据与当日要闻 Top 10，<code>daily-brief/YYYY-MM-DD.md</code> 的文件名与格式未变，<strong>档案管理助手照旧读同一目录即可</strong>。</li>
+<li>本档案 local 模式产物（weekly 文件 + 两处索引）不受推送状态影响，已完整落盘。</li>
+</ul>
+<hr>
+<h2>本窗口的五个「第一次」</h2>
+<p>1. <strong>第一次出现 AI 龙头「关键人离场」型治理风险</strong>：黄仁勋辞职（33 年掌舵结束）即刻生效、CFO 临时接任、新思前 CEO 出任<strong>公司首位董事会主席</strong>——治理风险首次跳出「折价/诉讼/调查」这类财务可对冲的范畴，直接触及组织连续性本身。</p>
+<p>2. <strong>第一次出现「同一条链在治理冲击日仍然两极分化」</strong>：11-12 英伟达开盘 -14% / 收盘 -4.34%，同日 AMD <strong>+5.9%</strong>、博通 <strong>+5.5%</strong>、CoreWeave -6.9%——这是「事件驱动的风险隔离定价」判据的<strong>第四次实证</strong>，比 11-12 周报的第三次验证更极端（龙头跌幅远大于指数、且同链个股反向）。</p>
+<p>3. <strong>第一次出现「国产替代从政策叙事转为订单兑现」的完整三件套</strong>：IDC 份额（英伟达中国 34% vs 华为 28%，差距缩至 6pct）+ 生态工具链（DeepSeek V4 率先昇腾适配并开源 TileLang）+ 业绩拐点（二线 GPU 厂 Q3 业绩拐点、中芯毛利率超预期约 4pct）。</p>
+<p>4. <strong>第一次出现官方统计数据里的「AI 硬件通胀」完整指纹</strong>：中国 10 月 CPI 中数据存储设备 +45.4%、平板 +29.3%、计算机 +23.0%、手机 +16.7%，四项合计拉动 CPI 同比约 +0.26pct——<strong>AI/算力硬件的终端定价第一次被量化进官方 CPI 结构</strong>。</p>
+<p>5. <strong>第一次出现「开源社区对 AI 生成贡献的制度性封禁潮」</strong>：至少 23 个知名项目（yt-dlp、QEMU、OpenJDK 等）封杀或重限制 AI 贡献，OpenJDK 连「部分或全部由 LLM 生成」都禁止；北大研究显示编码 agent 在 106 个任务中只有 3.5% 主动读过政策文件、四个 agent/模型组合合规率 0%——<strong>与本档案直接相关</strong>。</p>
+<hr>
+<h2>本窗口的三处自我修正</h2>
+<p>1. <strong>「事件驱动的风险隔离定价」第四次实证并升级</strong>：11-09 提出「链内换血」→ 11-10 判为「单一资产的风险隔离定价」→ 11-12 定案「事件驱动的风险隔离定价」→ <strong>本窗口 11-12 验证到极端形态（龙头 -14% 开盘、同链 AMD/博通反向大涨）</strong>。结论强化：<strong>同涨同跌都取决于事件方向，不是结构性换血、也不是新周期</strong>。建议 <code>daily-brief</code> 正式加入「<strong>风险敞口（单一资产 vs 链级）</strong>」与「<strong>事件缓和/恶化</strong>」两个字段，并在「关键人变动」事件上强制标注<strong>继任者是否为内部人</strong>。</p>
+<p>2. <strong>「泡沫审判」的框架本窗口须再改写一次</strong>：前序序列为「估值击穿 → 现金流审判 → 信用定价 → 领导权 → IPO 定价定案 → 现金流反身性」；<strong>本窗口应追加一级为「关键人出走」，并把「组织连续性」列为独立于财务的第五种硬约束</strong>——因为它既不能被 11-17 的财报证伪，也不能被现金流锁定对冲（Anthropic 用 9000 亿保底换估值的那套手法对「创始人离场」无效）。</p>
+<p>3. <strong>数据口径提醒（延续前序窗口，本窗口新增两处并列冲突）</strong>：<code>daily-brief</code> 记录前一交易日收盘、韭研公社记录当日收盘——11-13 的 daily-brief 记 11-12 收盘（沪指 -0.67%），韭研 11-13 记 11-13 收盘（沪指 -0.59%、创业板 -3.32%、4700 股下跌、算力硬件批量跌停）；<strong>贵金属/原油亦存在两套读数并存</strong>（daily-brief 的 11-12 收盘 vs 韭研的 11-13 20:00）。<strong>凡同日两份素材出现，先核对各自标注的「收盘所属交易日」与「采样时点」，并列不替换。</strong></p>
+<hr>
+<h2>前序周报（保留作对照）</h2>
+<ul>
+<li><code>weekly-2026-11-12.md</code> / <code>weekly-2026-11-12_beta1.0.md</code>（42,776 字节，md5 一致 <code>3f9acec22559e358c4756527d30d802f</code>）</li>
+<li><code>weekly-2026-11-11.md</code> / <code>weekly-2026-11-11_beta1.0.md</code>（42,684 字节）</li>
+<li><code>weekly-2026-11-10.md</code> / <code>weekly-2026-11-10_beta1.0.md</code>（38,587 字节）</li>
+</ul>
+<p><em>本报告为素材整理，不构成投资建议。</em></p>
+</body>
+</html>

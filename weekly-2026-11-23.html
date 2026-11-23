@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>豆豆龙周报 · 2026-11-23</title>
+<style>
+body { font-family: -apple-system, "PingFang SC", sans-serif; max-width: 760px; margin: 40px auto; padding: 0 24px; line-height: 1.65; color: #1a1a1a; }
+h1 { font-size: 32px; border-bottom: 3px solid #FFD93D; padding-bottom: 12px; }
+h2 { font-size: 22px; margin-top: 36px; color: #0A2540; padding-bottom: 6px; border-bottom: 1px solid #e5e7eb; }
+h3 { font-size: 17px; margin-top: 24px; color: #0A2540; }
+blockquote { border-left: 4px solid #FFD93D; background: #f9f9f9; padding: 12px 16px; margin: 16px 0; color: #555; }
+ul { padding-left: 22px; } li { margin: 6px 0; }
+code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; }
+hr { border: none; border-top: 1px dashed #e5e7eb; margin: 28px 0; }
+nav { background: #FFD93D; padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; font-weight: 600 }
+nav a { color: #0A2540; text-decoration: none }
+</style>
+</head>
+<body>
+<nav><a href="./index.html">← 返回主页</a></nav>
+<h1>AI 趋势周报 · 2026-11-23（窗口 11-17 → 11-23）</h1>
+<blockquote>档案管理助手（<code>89ea7e1938d3</code>）每日 22:20 自动生成 ｜ 7 日窗口版 ｜ 素材范围：<code>~/openclaw-kb/原始素材/</code> 最近 7 天新增 .md + cron 输出存档补录</blockquote>
+<hr>
+<h2>一句话总结</h2>
+<p><strong>一周之内 AI 叙事完成了它的第十次换代：从"AI 能不能回本"正式走到"谁来定义 AI 的速度上限"——OpenAI 首席科学家 Pachocki 首次公开预训练困惑度数据并提议全行业设"共同限速线"（GPT-3.5 约 0.99 → GPT-4 约 0.91，跌破 0.8 时模型在网络安全与数学上出现新能力），Altman 称这是 OpenAI 最重要发布之一，而同一天马斯克警告"AI 行业明年可能面临严重资金短缺"、谷歌向 SpaceX 租 304 亿美元算力、腾讯 AI 产品当季净拖累 152 亿；与此同时管制着力点第五段（限制供给端谁合规地下单）在中国侧拿到第一个执行样本——11-19 生效的 BIS 远程访问规则把台积电/三星对华出货卡成许可问题，而 A 股这边的答案是"买的是环节不是板块"：光刻胶对日进口暴跌 95%、PCB 订单同比 +56.1% 而出货只 +13.3%。</strong></p>
+<hr>
+<h2>一、主题分组</h2>
+<h3>主题 ①｜定价权第十次换代：从"AI 能不能回本"走到"谁来定义 AI 的速度上限"</h3>
+<p><strong>本窗口最重的一条线不是市场，是产业自律本身第一次被量化。</strong></p>
+<p>| 事件 | 数据 |</p>
+<p>|---|---|</p>
+<p>| OpenAI 首度公开预训练困惑度数据 | <strong>GPT-3.5 约 0.99 → GPT-4 约 0.91</strong>；Pachocki 称<strong>困惑度低于 0.8 时模型在网络安全与数学上出现新能力</strong>，并警告最早 2027 年 AI 可能加速自我进化、速度超过监控能力 |</p>
+<p>| Pachocki 提议 | 以困惑度等技术指标设定<strong>行业共同限制</strong>，各家在"理解和监控模型行为的能力达到具体里程碑前不突破"；<strong>Altman 称该文是"OpenAI 一段时间以来发布的最重要内容"</strong>；微软表态支持并公布 MAI-2 评测数据 |</p>
+<p>| 马斯克（回应 Keras 创始人肖莱） | GPU 现货价格仍在上涨、<strong>HBM 与 DRAM 到 2029 年产能基本订满</strong>、前沿模型训练算力约每 5 个月翻番；马斯克称支撑超大规模算力集群的供电、冷却与稳定运行"极其困难"，<strong>警告若全行业从投入算力到设备创收的周期累计推迟数月，仅营运资金一项就可能需额外投入数千亿美元</strong> |</p>
+<blockquote><strong>读法定案（第十次换代）</strong>：此前九次换代依次是「估值击穿 → 现金流审判 → 信用定价 → 领导权风险 → 定价定案 → 事件驱动的风险隔离定价 → 资产级独立重定价 → 融资规模与定价脱钩 → 投资回报的门槛高度」。<strong>本窗口把第 9 条「投资回报的门槛高度」推进到第 10 条「AI 发展速度的所有权」</strong>——OpenAI 提出的不是新指标，而是<strong>把"指标"变成"全行业共同上限"</strong>。这是本档案记录以来第一次出现<strong>头部实验室主动给自己设约束</strong>、且<strong>约束的度量单位被公开</strong>（困惑度 0.8 这条线可被第三方复算）。</blockquote>
+<p>></p>
+<blockquote><strong>与第 9 条的关系</strong>：肖莱/马斯克的"算力供给不可持续"是<strong>供给侧约束</strong>（硬件、产能、资金），Pachocki 的"困惑度限速线"是<strong>需求侧自律</strong>（能力增长速度）。<strong>两者同向但机制不同，且互不解释</strong>——<strong>同一条"AI 该慢下来"的市场叙事，本周第一次有了两个彼此独立的物理基础</strong>。</blockquote>
+<p>></p>
+<blockquote><strong>新增建议给 daily-brief 的字段</strong>：<code>AI 速度约束（自律 vs 供给）</code>——这是把第十次换代从修辞变成可复核指标的方式。</blockquote>
+<hr>
+<h3>主题 ②｜管制着力点第五段的第一个执行样本：从"缺卡"到"缺许可"</h3>
+<p><strong>BIS《应对先进半导体远程访问问题》临时最终规则 11-16 发布、11-19 生效</strong>，本窗口拿到中国侧的第一份执行反馈：</p>
+<ul>
+<li><strong>管制着力点五段演进</strong>（延续本档案连续记录）：①限制谁买（云客户 ≥51% 服务来自非中国买家）→ ②限制谁什么时候拿货（约 60 万枚 H200 滞留香港）→ ③限制谁在哪里用（RASA 远程访问权）→ ④限制哪一代产品可供（Hopper 断供）→ <strong>⑤限制供给端谁合规地下单</strong>（代工厂与封测厂一并成为管制节点）。</li>
+<li><strong>具体条款</strong>：凡中国企业设计的先进芯片，<strong>晶圆厂与封测厂一律推定为受控 AI 芯片——手机芯片也被纳入</strong>、取消"证明非 AI 用途"豁免；境外数据中心向中国（含澳门）等 D:5 国家主体提供超 <strong>1200 万 TPP</strong> 聚合算力须逐案申请许可，存量合同须在生效后 <strong>90 天</strong>内取得许可方可续供；对印尼/马来西亚/新加坡/泰国/巴西五国进口受控 AI 芯片及服务器增加许可管控。</li>
+<li><strong>中方回应</strong>：商务部新闻发言人 11-17 称"强烈不满、坚决反对"，称"若美方一意孤行，中方将采取反制措施"；商务部 11-18 发布《中华人民共和国两用物项出口管制清单》，系统整合多项法规规章所附清单，列明 10 类物项。</li>
+<li><strong>关税休战进入"稀土挂钩"</strong>：美国贸易代表葛里尔 11-20 表示，<strong>明年 1 月 10 日到期的中美关税休战能否延长，取决于中国稀土供应能否满足美国所需</strong>；中方希望延长但双方未达成延长协议，<strong>目前中国核发稀土出口许可进度偏慢</strong>。特朗普 11-20 称美中正磋商"非常全面的协议"，主张对华只出售更旧型号 AI 芯片，"一块都不卖也没关系"；贝森特表示出口管制维持不变，<strong>H200 仍是中企可通过美方出口许可制度取得的最高等级 AI 芯片</strong>。</li>
+<li><strong>另一条独立执法线</strong>：美国商务部 11-6 对进口自中国、韩国、越南的聚四亚甲基醚乙二醇作出反倾销初裁，裁定中国生产商/出口商倾销幅度 <strong>213.44%</strong>，终裁预计 2027-01-18。</li>
+</ul>
+<blockquote><strong>第五段的真正杀伤力在于"推定"而非"清单"</strong>：一旦代工厂与封测厂被纳入管制节点，<strong>合规成本不再取决于芯片设计得多巧，而取决于下游客户是谁</strong>——这与第 1—4 段限制需求端（谁买/谁拿货/谁在哪里用/哪一代产品可供）是<strong>方向相反</strong>的作用力。<strong>前四段让海外买家买不到，第五段让海外代工厂不敢接。</strong></blockquote>
+<p>></p>
+<blockquote><strong>中方筹码同步从"稀土"转向"许可体系"</strong>：11-18 两用物项清单 + 稀土出口许可节奏偏慢 = <strong>反制工具从价格管制转为流程管制</strong>。</blockquote>
+<hr>
+<h3>主题 ③｜中国需求端"供强需弱"第二次确认，但信贷口径第一次出现"结构改善"</h3>
+<p><strong>11 月 23 日早报（记 11-20 及 10 月数据）——本档案连续第 6 个窗口记录同一组结构：</strong></p>
+<p>| 维度 | 读数 | 方向 |</p>
+<p>|---|---|---|</p>
+<p>| 工业增加值 | 同比 <strong>+4.8%</strong>（装备制造 +10.6%、高技术制造 <strong>+17.6%</strong>） | 强 |</p>
+<p>| 出口 | 10 月进出口总额 4.87 万亿 <strong>+31.2%</strong>（出口 +28.7%、进口 +34.7%）、美元计出口 4123.3 亿 <strong>+35.2%</strong> | 强 |</p>
+<p>| 社零 | 总额 46,463 亿元，同比仅 <strong>+0.4%</strong>（剔除汽车后 +2.5%）、1—10 月同比 +1.0% | 弱 |</p>
+<p>| 制造业 PMI | <strong>49.3%</strong>（降 0.8pct，重回收缩）；大型 50.2%、中型 48.4%、小型 <strong>47.5%</strong> | 弱 |</p>
+<p>| CPI / PPI | CPI <strong>+0.7%</strong>（涨幅回落 0.2pct）、核心 +0.8%；<strong>PPI +5.7%</strong>（涨幅扩大 0.7pct，创 <strong>52 个月新高</strong>）、购进价 +7.9%、采掘工业 <strong>+27.9%</strong> | 输入性上行 |</p>
+<p>| 社融 | 10 月新增社融 <strong>1.15 万亿</strong>（同比多增 3333 亿）、M2 +7.1%（回落 0.1pct）、<strong>M1 +4.4%（回升 1.2pct）、M2-M1 剪刀差收窄至 2.7pct</strong> | 结构改善 |</p>
+<p>| 人民币贷款 | 10 月<strong>减少 1,000 亿元</strong>（同比多减 3,200 亿）；票据融资减少 3117 亿（同比多减 8123 亿）、住户贷款 <strong>-4,300 亿</strong>、企业贷款 -1,600 亿 | 弱 |</p>
+<p>| 贷款余额 | 1—10 月人民币贷款增加 11.42 万亿，社融增量累计 28.61 万亿，<strong>同比少增 2.29 万亿</strong> | 弱 |</p>
+<p>| LPR | 11 月 1Y <strong>3.00%</strong> / 5Y+ <strong>3.50%</strong>，<strong>连续第 18 个月不变</strong>（11-20） | 锚不动 |</p>
+<p>| 汇率 | 11-20 中间价 <strong>6.7131</strong>（连续第二日走贬）、在岸收 6.6735（跌 84 基点） | 贬 |</p>
+<blockquote><strong>口径提示（沿用本档案建议，连续第 11 个窗口）</strong>：凡引用社融增量，<strong>必须同时给出"剔除政府债后"的读数</strong>——10 月政府债融资 <strong>1.19 万亿</strong>（同比多增 7017 亿），意味着社融的增量几乎全部来自财政而非实体。</blockquote>
+<p>></p>
+<blockquote><strong>本窗口的新变化（M1 回升）</strong>：<strong>M1 同比 +4.4%、回升 1.2pct、剪刀差收窄至 2.7pct——这是本档案连续 6 个窗口里第一次看到 M1 与剪刀差同时朝"企业活钱改善"方向动</strong>。但它与"人民币贷款同比多减 3200 亿"并存，<strong>读法必须谨慎</strong>：M1 回升可能来自财政投放后的企业账户余额变动（政府债融资 1.19 万亿 → 企业收款），<strong>不等于企业主动加杠杆意愿恢复</strong>。<strong>建议 daily-brief 的「金融数据」段固定给出"M1 回升来源"三选一标注（财政投放 / 季节性 / 主动扩张）。</strong></blockquote>
+<hr>
+<h3>主题 ④｜A 股 11-23：政策组合拳落地当天的 V 型反转，与"买的是环节不是板块"第五次验证</h3>
+<p><strong>11-22 周末政策三箭齐发，11-23 兑现为指数级反弹——但结构比指数更重要：</strong></p>
+<ul>
+<li><strong>政策三箭</strong>（11-22，经中国证监会批准）：① 沪深北交易所融资买入最低保证金比例由 <strong>100% 下调至 80%</strong>，<strong>自 2026-11-30 起施行</strong>，杠杆倍数升至 1.25 倍，测算理论上带来增量资金近 <strong>4,000 亿元</strong>；② 深交所就《创业板股票做市交易业务细则（征求意见稿）》公开征求意见，创业板拟引入做市商制度；③ 上交所/深交所新增让利 13.68 亿 / 13.9 亿，<strong>2026 年度整体降费分别超 24 亿、22 亿</strong>；中国结算 2027-01-01 至 2028-12-31 继续暂免绿色公司债/科技创新公司债/民营企业公司债券发行人服务费与结算费。另有 18 只首批主动 ETF 于 11-23 上市。</li>
+<li><strong>11-23 收盘（韭研 18:20 口径）</strong>：沪指 <strong>+0.15%</strong>、深成指 <strong>+1.93%</strong>、创业板指 <strong>+3.08%</strong>（盘中一度跌超 1%）、两市成交 <strong>1.55 万亿放量 1307 亿</strong>、<strong>超 4600 股上涨、146 只涨停、连板 16 家、破板率 14.12%</strong>；<strong>银行补跌</strong>。主线：人形机器人、AI 漫剧、PCB、端侧 AI、光刻胶国产替代。</li>
+<li><strong>主线各自的量化依据</strong>：</li>
+</ul>
+<p>  - <strong>PCB 缺货警报</strong>（IPC 11-18 全行业）：近 12 个月 PCB 订单同比 <strong>+56.1%</strong>、出货量仅 <strong>+13.3%</strong>，<strong>缺口 42.8 个百分点</strong>；高多层板交期 <strong>16—20 周</strong>，紧张至少持续到 <strong>2027H1</strong>（另有口径称至 2028 年年中）；<strong>瓶颈在上游玻纤布、电子纱、铜箔与高端织机</strong>——"贴 PCB 标签不等于吃到红利"。</p>
+<p>  - <strong>光刻胶国产替代</strong>：海关数据 2026Q1 对日光刻胶进口 <strong>111.3 吨</strong>，较 2025Q1 的 2200 吨<strong>暴跌 95%</strong>，<strong>ArF/EUV 连续五个月零报关</strong>；东京应化、JSR、信越、富士电子四家同步停接 ArF/EUV 新单、压缩 KrF、撤回驻场工程师；国产化率 g/i 线 20%—25%、KrF 约 3%、<strong>ArF 不足 1%</strong>。</p>
+<p>  - <strong>晶圆代工涨价扩散</strong>：业内人士称已接获调价通知，涨幅 <strong>10% 至逾 20%</strong>，明年含台积电在内的晶圆厂均将调价；另一侧华为云 11-23 起将 DeepSeek-V4.1-Flash 缓存命中输入价降至原价 <strong>20%</strong>——<strong>推理成本加速下行，利好推理算力需求（推理需求已达训练 4—5 倍）</strong>。</p>
+<p>  - <strong>Optimus 进入"凭证供货"阶段</strong>：宇树科技盘中涨近 10%、股价重回 <strong>600 元上方、总市值超 2620 亿元</strong>；11-23 机器人板块近 20 股封 10%，肇民科技/安培龙/维宏股份/恒工精密/艾芬达 20cm 涨停；马斯克称 12—18 个月内 Optimus 可做倒垃圾洗碗收碟。</p>
+<p>  - <strong>具身智能国标启动</strong> + 华为云开源昇腾原生具身世界模型 CloudRobo-WM1.2（RoboTwin 2.0/LiberoPro 2.0 评测第一）；GPT-6.2 Astra 操控双臂机器人任务综合成功率升至 <strong>41.2%</strong>。</p>
+<p>  - <strong>AI 影视/短剧</strong>：A+ 级 AI 中长剧制剧成本较真人实拍低约 <strong>70%</strong>，展望 2027 年影视内容成本有望降 <strong>7%—14%</strong>；火山引擎 2026H1 以 <strong>45.1% 份额</strong>居中国 MaaS 第一。</p>
+<blockquote><strong>🔴 口径规则第 11 次细化——「伪冲突 vs 真冲突」本窗口给出教科书样本</strong>：11-23 早报记 <strong>11-20 收盘</strong>（沪指 -1.23%、创业板 -3.54%、成交 1.43 万亿放量 1165 亿、313 涨 / 5236 跌），韭研 18:20 记 <strong>11-23 收盘</strong>（沪指 +0.15%、创业板 +3.08%、成交 1.55 万亿放量 1307 亿、超 4600 涨、146 涨停）。<strong>这两个数相差三天，不是冲突，是不同交易日——并存不替换，任何一方都不得用来覆盖另一方。</strong></blockquote>
+<p>></p>
+<blockquote><strong>🆕 「买的是环节不是板块」第五次验证，且这次量化到了缺口级别</strong>：11-23 涨停潮集中在 PCB、光刻胶、机器人，但<strong>"买的是环节"的真正含义在材料里写死了</strong>——PCB 订单 +56.1% 而出货仅 +13.3%，<strong>缺口 42.8 个百分点全在玻纤布/电子纱/铜箔/高端织机，不在板厂</strong>；光刻胶国产化率 ArF 不足 1%，<strong>受益的是容大感光/国风新材/鼎龙股份/彤程新材这类卡位标的，不是"半导体板块"</strong>。</blockquote>
+<p>></p>
+<blockquote><strong>🆕 「政策利好在缩量/放量市场里只构成叙事」的一次反证</strong>：11-22 政策组合拳是<strong>周五盘后</strong>发布，11-23 沪指仅 +0.15% 而创业板 +3.08%、银行补跌——<strong>政策托住了指数下沿，但资金买的仍是"确定性交付的环节"（机器人硬件、PCB 材料、光刻胶），红利板块反而被卖</strong>。这与 11-19/11-20 的"银行逆势走强"恰好相反，<strong>说明红利/成长的相对位置在本周已被打断</strong>。</blockquote>
+<hr>
+<h3>主题 ⑤｜黄金与油：第四次形态分化，且这次是"黄金新低 + 油被地缘撑住"</h3>
+<ul>
+<li><strong>黄金</strong>：11-20 收盘约 <strong>3,533—3,538 美元/盎司</strong>，跌约 2.0%—2.5%，盘中最低触及 <strong>3,502.49 创 2025 年 9 月以来 14 个月新低</strong>；<strong>全周累计跌约 9.4%，创 8 个月来最大单周跌幅</strong>；美国 12 月黄金期货跌约 4.6% 结算于 <strong>3,515.40</strong>；<strong>自 1 月 29 日高点 5,598.75 累计回撤超 37%</strong>。</li>
+<li><strong>白银</strong>：跌约 4.1% 报 <strong>40.99 美元/盎司</strong>，较 1 月高点 121.64 低约 <strong>66%</strong>；铂金 -3.4% 报 1,296.50。</li>
+<li><strong>原油</strong>：布伦特 11-20 收涨约 0.8% 报 <strong>92.69</strong>、WTI +1.03% 报 <strong>83.16</strong>；<strong>全周布伦特 -3.5%、WTI 近 -6%，连续第三周走弱</strong>（EIA 原油库存单周增 340 万桶超预期）。</li>
+<li><strong>铜</strong>：LME 报 12,453 美元/吨；沪铜主力 11-20 跌 <strong>3.35%</strong> 报 92,400 元/吨，<strong>本周累计跌幅超 10%，创近十年来最差单周表现之一</strong>；驱动是"美元强 + 利率高"双重压制。</li>
+<li><strong>美元与美债</strong>：美元指数 11-20 维持 <strong>103.86</strong>（一度 103.96，触及 2025 年 4 月以来最高，连续第四周上涨）；10 年期美债收益率降约 10.4 个基点至 <strong>4.948%</strong>，2 年期降约 13.2 个基点至 <strong>4.647%</strong>。</li>
+<li><strong>地缘</strong>：特朗普称若协议未达成倾向新年后再对伊朗动武；<strong>伊朗称两艘超大型油轮在霍尔木兹海峡附近触雷</strong>；胡塞武装称过去 24 小时对也门多省发动 <strong>81 次</strong>空袭与导弹袭击并称袭击沙特红海沿岸拉比格炼油厂；内塔尼亚胡被曝考虑未经美方批准单独对伊朗动手。</li>
+</ul>
+<blockquote><strong>金油形态第四次分化（序列：11-12/11-17 反向分裂 → 11-19 同跌 → 11-21 伪冲突「油涨金跌」→ 本窗口「油跌但被地缘撑住、金创 14 个月新低」）</strong>。<strong>驱动已经换了三次</strong>：同跌阶段是"加息预期 + 地缘溢价同时回吐"；本窗口是<strong>加息预期继续压铜压金（CME 12 月加息 25bp 概率 91.4%），而霍尔木兹触雷把油价的地缘溢价单独托住</strong>——<strong>同一周里铜创近十年最差单周、黄金创 8 个月最大单周跌幅、油价第三周走弱却仍是周内收涨</strong>，这说明<strong>地缘溢价现在只作用于油，不再作用于金</strong>。<strong>避险属性的分流本身就是本轮加息交易最干净的市场证据。</strong></blockquote>
+<p>></p>
+<blockquote><strong>口径提醒</strong>：11-23 早报记的 11-20 金油读数与 11-22 早报记的 11-20 金油读数<strong>属同一交易日的不同采样</strong>，以本窗口的完整读数为准，保留早期读数作对照。</blockquote>
+<hr>
+<h3>主题 ⑥｜美联储：加息从"会不会"变成"加多少"，但 12 月概率已从 99.1% 回落到 91.4%</h3>
+<ul>
+<li><strong>CME「美联储观察」11-23</strong>：<strong>12 月加息 25 个基点概率 91.4%</strong>、维持不变 8.6%、加息 50bp 0%（<strong>11-18 为 96.8%、11-19 为 92.7%</strong>）；到 2027 年 1 月累计加息 25bp 概率 39.1%、累计 50bp <strong>57.7%</strong>。</li>
+<li><strong>官员表态分化</strong>：纽约联储主席威廉姆斯（11-18）重申需继续加息但<strong>淡化 50bp 的激进选项</strong>，称"目前的形势并不需要采取激烈行动"；芝加哥联储主席古尔斯比（11-20）称 12 月会议将考虑所有选项、<strong>未排除大于通常幅度的加息</strong>，提到年初物价压力较强；费城联储主席保尔森（11-20）表示<strong>愿意考虑在未来的政策会议上连续加息</strong>。</li>
+<li><strong>10 月会议纪要（11-18）</strong>：维持联邦基金利率在 <strong>3.75%—4.00%</strong>，<strong>几乎所有与会官员认为之后继续加息可能是合适的</strong>，少数官员提出若数据恶化 12 月加息幅度可能超过 25 个基点。</li>
+<li><strong>数据</strong>：美国 10 月零售销售环比 <strong>+0.2%</strong>（9 月 +0.8%）、同比 <strong>+6.8%</strong>、剔除汽车后环比 +0.4%；<strong>10 月 CPI 环比 +0.4%</strong>（预期 +0.3%）、核心环比 +0.3%（预期 +0.2%，与 9 月持平）——<strong>同比因 2025 年 10 月基期数据缺失（2025 年联邦政府停摆），BLS 未发布 10 月 CPI 同比数据，整体与核心同比均无官方数值</strong>；9 月 PCE 环比 +0.5%、同比 +3.6%、核心同比 +3.1%（9 月 PCE 环比为 3 月以来最大）；初请 203,000 人（高于预期 197,000—198,000），续请升至 1,763,000 人、单周增 7 万，<strong>受保失业率维持 1.1%</strong>；11 月密歇根消费者信心终值 <strong>51.5</strong>（预期 48.0）；<strong>费城联储 11 月制造业景气指数由 20.9 降至 6.3，远低于预期 23.2</strong>。</li>
+</ul>
+<blockquote><strong>读法修正（重要，本窗口第 N 次同类修正）</strong>：11-22 窗口记「CME 12 月 +25bp 概率 99.1%」，本窗口 11-23 同一指标已回落至 <strong>91.4%</strong>（11-18 96.8% → 11-19 92.7% → 11-23 91.4%）。<strong>同一天 11 月 PMI 初值发布前后概率连续下移</strong>——<strong>这不是"加息预期消退"，是"加息的幅度分歧"</strong>：50bp 概率始终 0%，而"累计 50bp 到 2027 年 1 月"概率升至 57.7%，<strong>说明市场在从"12 月一次加多少"转向"总共加多少"</strong>。</blockquote>
+<p>></p>
+<blockquote>⚠️ <strong>口径警示（比前几窗口更严格一档）</strong>：<strong>美国 10 月 CPI 同比不存在官方数值</strong>（2025 停摆导致基期缺失），<strong>美银等机构插值估算 3.8%/2.7% 属模型推演，本报告不作为事实采信</strong>——<strong>连续第 12 个窗口沿用</strong>。</blockquote>
+<p>></p>
+<blockquote>✅ <strong>「未来数据过滤」防线连续第 16 天实测生效</strong>：11-23 早报把 10 月 PCE 与三季度 GDP 二次预估明确标为「11 月 25 日 08:30／北京时间 21:30 发布」、11 月 PMI 标为尚未公布、<strong>美国 10 月 CPI 同比写"BLS 未发布"未编造</strong>。<strong>本报告采信时无需剔除任何一行未来数据。</strong></blockquote>
+<hr>
+<h3>主题 ⑦｜开发者生态：循环式小模型、"所有 AI 代码都应开源"，以及供应链信任问题第三次浮现</h3>
+<p><strong>GitHub 评价轴第七次定型「谁提供可被第三方独立验证的契约」</strong>，本窗口同日出现四种形态：</p>
+<p>1. <strong>Inkling 2 Mini（Thinking Machines）</strong>——今日热榜第一。26.4B 总参 / <strong>3.4B 激活的 MoE</strong>，中间层每 token 跑三遍（12 层 × 3 ≈ 48 层），<strong>Apache 2.0 + 1M 上下文、权重约 20GB，32GB 内存的 Apple Silicon 即可本地跑多模态</strong>；官方称在 DeepSWE v1.1 上以约 5 倍少的激活参数追平 Qwen3.8-27B。<strong>争议</strong>：Terminal Bench 仅 <strong>5.6%</strong>（Qwen 73%）、AA-Omniscience <strong>-8.6</strong> 劣于同尺寸 Qwen、社区实测会烧掉 19200 思考 token 仍写不完任务、反复 EOT 不真正调工具。<strong>评估：值得关注但暂不推荐直接上手</strong>（官方模型卡自承"相对现有开源权重模型无实质提升"）。</p>
+<p>2. <strong>MiniMind</strong>——Trending 第 4，68.8k stars、单日 +473、连续 7 天在榜。原生 PyTorch 手写覆盖 Pretrain→SFT→LoRA→DPO→GRPO/CISPO→蒸馏→Tool Use→Agentic RL 全链路。<strong>评估：推荐，但定位是教材不是模型</strong>——"2 小时 3 块钱"实为<strong>单卡 3090 跑 1 epoch SFT 的作者自测</strong>，训练明细是预训练 1.21h + SFT 1.10h = 2.31h，且不含数据准备、调参、失败重跑和 RL 阶段；64M 模型实际水平：把万有引力归功于爱因斯坦、长江说成"珠穆朗玛峰"、大熊猫吃海产品。</p>
+<p>3. <strong>Claude-BugHunter</strong>——Trending 连续 9 天第 1，单日 +1716 stars、18k stars。83 个 Claude Code 技能，覆盖 24 类漏洞与外部攻击面（OWASP、GraphQL/OAuth/JWT、云配置、SaaS 供应链）、M365/Okta/Cisco/Fortinet 设备红队链路与漏洞赏金报告模板。<strong>争议</strong>：README 宣称 681 个已披露报告模式、实际只有 <strong>433 个可逐条溯源</strong>；仓库描述写 82 个技能、README 写 83 个；"battle-tested" 却没给出任何具体案例或 CVE。<strong>作者自己踩过的坑</strong>：Issue #51 报告 Opus 5 在审计时静默降级到 Opus 4.8，作者的修法是<strong>把授权声明写进 skill 上下文</strong>而不是伪装成静态分析器绕过分类器；SECURITY.md 主动引用 Snyk "ToxicSkills" 研究提醒 prompt injection 风险。<strong>评估：值得关注，安装需克制</strong>——它会改 mcp.json 和 SessionStart hooks，跟生产密钥同机跑等于给自己开权限；且官方承认个人独立计划根本无法申请 Anthropic 的 Red Team Access。</p>
+<p>4. <strong>"所有 AI 生成的代码都应开源"（Jakub Jankiewicz 提案）</strong>——HN 首页 1288 分 / 673 评论。三层论点：模型是吃开源代码长大的，专有化输出等于 "license laundering"；美国版权局 Part 2 报告 + Thaler v. Perlmutter 认定<strong>纯 AI 生成物无版权</strong>（"仅靠 prompt 不足以构成控制"）；开发者几乎不审查模型输出。<strong>反对派</strong>：Doe v. GitHub 已明确 LLM 输出不会自动继承训练语料的 GPL 传染性；AGPL 维护者 blagie 讲了自己项目被"剥掉版权声明 → 改用 LLM 克隆整个系统"的经历，"像让 LLM 重写《哈利·波特》，剧情几乎一样，对白写得一塌糊涂"。<strong>Anthropic 成了活靶子</strong>——一边在商业条款里把模型输出权利转让给客户，一边在 IPO 招股书里承认自己用 Claude Code 生成的代码可能触发 copyleft 义务、极端情况下需披露部分专有源码。</p>
+<p>5. <strong>供应链信任问题第三次浮现（本档案连续记录）</strong>：MiniMax 内部模型被曝破解 NIST 密码方案；OpenRouter 研究者用 200 万"金丝雀"URL 实测发现<strong>经第三方中转的提示词仍可能被访问</strong>，OpenAI 已就此与 Perplexity 呼吁联合限制；36 氪披露腾讯混元 Hy4 开源（770B 总参 / 49B 激活、约百万 token 上下文，含图像视频理解，<strong>采用自定义 Tencent Hy License</strong>）、腾讯微信视觉另开源全模态视频理解模型 WeMM-Video（2B/4B/9B 稠密 + 35B-A3B MoE）。</p>
+<blockquote><strong>🆕 评价轴第七次定型的落点</strong>：前六次是自出题自判 / 自承模拟 / 不放 ISA·RTL / 作者自测 / 授权声明只给人类看 / 模型自曝退化。<strong>本窗口第七种形态是「数字对不上」</strong>——Claude-BugHunter 的 681 vs 433、82 vs 83、仓库描述与 README 不一致。<strong>但这一次的特殊性在于：作者自己公开了 Issue #51 的失败与修法，并把授权声明写进 skill 上下文——这恰恰是本档案「装第三方 skill 前先过扫描器」结论的正面样本</strong>（出问题的是模型降级，修法是让规则对模型可见，而不是绕过分类器）。</blockquote>
+<p>></p>
+<blockquote><strong>🔗 供应链风险的三条独立证据已在本窗口凑齐</strong>：①ONNX Runtime 连同 7 个仓库集体 404（依赖上游推理底座）；②OpenRouter 金丝雀实测（第三方中转泄露）；③Claude-BugHunter 的 hooks/mcp.json 写入面（第三方 skill 攻击面）。<strong>三条合起来的结论比任何单条都强：第三方组件的风险面正在从"代码质量"扩展到"运行时权限与信息流"。</strong></blockquote>
+<hr>
+<h3>主题 ⑧｜产业侧：算力自研替代与外购并存，成本下行的两端同时发生</h3>
+<ul>
+<li><strong>谷歌向 SpaceX 租算力约 304 亿美元</strong>（2026-10 至 2029-06 共 33 个月每月 9.2 亿、约 11 万块英伟达 GPU）而谷歌云 Q3 营收 307 亿 <strong>+103%</strong>、TPU Ironwood 每美元算力近 Blackwell 3 倍——<strong>连最有能力自研的巨头也不信自研能覆盖峰值</strong>。</li>
+<li><strong>苹果启动自主 AI 智能体研发</strong>，直接对标 OpenAI/Anthropic；<strong>摩尔线程预告下一代"庐山"消费级 GPU</strong>，显存容量将创新高；<strong>DeepSeek 与 FlashAttention 多个生产级算子获形式化验证</strong>；沐曦曦云 C 系列 GPU 完成 Day 0 适配。</li>
+<li><strong>推理成本下行</strong>：华为云 11-23 起将 DeepSeek-V4.1-Flash 缓存命中输入价降至原价 <strong>20%</strong>，推理需求已达训练 <strong>4—5 倍</strong>；AWS 把 LLM KV 缓存推向集群，官方称成本最高降 40%、首 token 延迟最高降 80%；亚马逊拟以最高 <strong>75 亿美元</strong>收购以色列 AI 初创 Decart（看中其跨 GPU/TPU/Trainium 的优化中间层能力）。</li>
+<li><strong>芯片设计本身被 AI 参与</strong>：OpenAI 用自家模型参与定制推理芯片 Jalapeño 设计，<strong>向量单元面积减约 13%</strong>、乘法器延迟从两拍降到一拍，改动已进入 AMD 送厂文件并完成硅片验证；英伟达与 IBM 则用 AI 做量子纠错，<strong>解码速度提升最高 13000 倍</strong>。</li>
+<li><strong>商业指标</strong>：英伟达 Q3 营收 <strong>1158.4 亿 +103%</strong>、订单积压 2.5 万亿、1500 亿回购，<strong>但股价本周 -13.80%、11-20 单日 -14.01%</strong>；腾讯 Q3 资本开支 651 亿 <strong>+225%</strong>、<strong>FCF 净流出 691 亿</strong>、新 AI 产品当季净拖累约 <strong>152 亿</strong>；腾讯开源 Hy4 权重；特斯拉在美国推出 FSD v15 与 "Tesla Reality View"，据称仅动用 AI4 芯片一个 TRIP 加速器一半算力，马斯克称 V15 12 月全面推送但无监督驾驶能力或要到 2027 年二季度。</li>
+</ul>
+<blockquote><strong>本窗口把「算力的可调度性稀缺」这条判据推进到成本侧</strong>：一边是<strong>训练算力按每 5 个月翻番、2029 年 HBM/DRAM 产能订满</strong>（肖莱/马斯克），一边是<strong>推理单价降到原价的 20%、KV 缓存把成本降 40%</strong>。<strong>这两件事同时成立 = 稀缺的不是"算力"这个名词，而是"训练算力"和"推理算力"之间的调度比例</strong>——与本档案 11-18 判据第 7 条「算力的可调度性」完全一致，<strong>且本窗口首次给出了成本侧的量化证据</strong>。</blockquote>
+<hr>
+<h2>二、主题关联</h2>
+<h3>2.1 三条跨主题因果链</h3>
+<p><strong>链 A｜"AI 该慢下来"的两条独立物理基础</strong></p>
+<p><code>`</code></p>
+<p>① Pachocki 困惑度限速线（能力侧自律，0.8 是公开可复算的阈值）</p>
+<p>        ↘                    ↙</p>
+<p>      ⑨ 马斯克/肖莱：2029 年 HBM/DRAM 产能订满、</p>
+<p>         训练算力每 5 个月翻番、营运资金需额外数千亿美元</p>
+<p>              ↓</p>
+<p>   ⑩ AI 算力链整体从"扩张"转向"调度"（谷歌下修博通 TPU 8i 约 100 万颗、</p>
+<p>      增联发科 8t；推理价降到 20%；AI4 单 TRIP 跑 FSD V15）</p>
+<p><code>`</code></p>
+<blockquote><strong>本链的关键</strong>：①⑨互不解释（一个限能力、一个限供给），却同向；⑩是两者的共同结果。<strong>这解释了为什么 11-23 会出现"AI 抛售"与"AI 限速提案"同一天</strong>——市场不是在给 AI 定价，是在给 AI 的<strong>速度</strong>重新定价。</blockquote>
+<p><strong>链 B｜管制着力点第五段 → 中国侧答案 → A 股结构性行情</strong></p>
+<p><code>`</code></p>
+<p>② BIS 远程访问规则（11-19 生效）＋手机芯片推定受控＋代工厂封测厂成管制节点</p>
+<p>        ↓</p>
+<p>   国产算力瓶颈从"缺卡"改写为"缺许可"（确定性↑ 延迟↑）</p>
+<p>   中方反制工具从"稀土价格管制"转向"许可流程管制"（11-18 两用物项清单 10 类）</p>
+<p>        ↓</p>
+<p>   A 股不买"半导体板块"，买"确定性交付的环节"：</p>
+<p>   光刻胶 ArF 国产化率<1%（进口同比 -95%）／PCB 订单+56.1% vs 出货+13.3%</p>
+<p>   （缺口全在玻纤布·电子纱·铜箔·高端织机）／Optimus 凭证供货阶段</p>
+<p>        ↓</p>
+<p>   ④ 沪指 +0.15%（政策只托住下沿）vs 创业板指 +3.08%（钱买环节）</p>
+<p>      银行补跌 —— 与 11-19/11-20 的"红利逆势创新高"方向相反</p>
+<p><code>`</code></p>
+<p><strong>链 C｜加息从"会不会"到"加多少"，与金油第四次分化、估值久期</strong></p>
+<p><code>`</code></p>
+<p>⑥ CME 12 月 25bp 概率 99.1%(11-22) → 91.4%(11-23)，</p>
+<p>   50bp 概率恒为 0%，但"到 2027-01 累计 50bp"概率升至 57.7%</p>
+<p>        ↓</p>
+<p>   分歧从"幅度"转向"总量" → 长端被压（10Y 4.948%、2Y 4.647%）</p>
+<p>        ↓</p>
+<p>   ⑤ 铜创近十年最差单周（-10%）／黄金 14 个月新低 + 8 个月最大单周跌幅（-9.4%）／</p>
+<p>      白银较 1 月高点 -66% —— 无息资产全线下沉</p>
+<p>        ↓</p>
+<p>   唯独油被地缘撑住（霍尔木兹两艘超大型油轮触雷、胡塞 81 次空袭）</p>
+<p>   → 避险溢价只作用于油，不再作用于金</p>
+<p><code>`</code></p>
+<h3>2.2 反直觉交叉验证</h3>
+<blockquote><strong>④（11-23 创业板 +3.08%、机器人/PCB/光刻胶涨停潮）与 ⑧（英伟达单周 -13.80%、纳指抹平全年涨幅）在同一天、同一条 AI 链上方向相反</strong>——<strong>这不是"中国AI独立行情"，因为驱动 A 股的是"确定性交付的环节"（材料缺口、交期、订单比），不是"AI 叙事"</strong>。同一条链上，中国买的是<strong>可数出来的缺口</strong>（ArF 进口 -95%、PCB 缺口 42.8pct、晶圆代工涨幅 10%—20%），美国跌的是<strong>可被证伪的叙事</strong>（英伟达 SEC 会计调查、加州 AG 传票、财报证不了治理）。</blockquote>
+<p>></p>
+<blockquote><strong>这条交叉验证给出的默认检查项（第六次升级）</strong>：<strong>任何"A 股 AI 利好"都要问三个问题——① 缺口的量化口径是什么（订单比/交期/进口量/国产化率）？② 受益环节在链条的哪一环（上游材料 or 下游应用）？③ 当日板块指数是否同步（概念指数 vs 个股涨停数）？</strong> 三问不过，就只是叙事。</blockquote>
+<h3>2.3 七个"第一次"（本窗口）</h3>
+<p>| # | 内容 |</p>
+<p>|---|---|</p>
+<p>| ① | <strong>第一次出现"行业共同限速线"提案且度量单位公开</strong>（困惑度 0.8 可被第三方复算），并有头部实验室 CEO 背书为"最重要发布" |</p>
+<p>| ② | <strong>第一次同窗口出现"AI 限速"（能力侧自律）与"算力不可持续"（供给侧约束）两条互不解释的同向证据</strong> |</p>
+<p>| ③ | <strong>管制着力点第五段第一次拿到"手机链被误伤"的执行样本</strong>（推定规则取消非 AI 用途豁免） |</p>
+<p>| ④ | <strong>第一次在同一份 A 股材料里同时出现 PCB 缺口 42.8pct 与光刻胶进口 -95% 两个可直接复核的缺口量化</strong> |</p>
+<p>| ⑤ | <strong>黄金与油的第四次形态分化，且首次出现"避险溢价只作用于油"的单资产分离</strong> |</p>
+<p>| ⑥ | <strong>第一次在同一厂商内部同时完成"开放权重（Hy4/WeMM-Video）+ 自研芯片（Jalapeño）+ 采购外算力（SpaceX 304 亿）"三件事</strong> |</p>
+<p>| ⑦ | <strong>第一次出现"作者自己公开失败并把授权声明写进 skill 上下文"的第三方 skill 正面样本</strong>（Claude-BugHunter Issue #51） |</p>
+<hr>
+<h2>三、主题关联图</h2>
+<p><code>`</code></p>
+<p>                          ┌─────────────────────────────────┐</p>
+<p>                          │  ① AI 速度的所有权（第十次换代） │</p>
+<p>                          │  Pachocki 困惑度 0.8 共同限速线 │</p>
+<p>                          └───────┬─────────────┬───────────┘</p>
+<p>                                  │             │</p>
+<p>                    能力侧自律 ↘   │             │   ↙ 供给侧约束</p>
+<p>              ┌───────────────────┴──┐      ┌───┴──────────────────┐</p>
+<p>              │ ⑨ 肖莱/马斯克：2029 产能 │      │ ⑧ 算力扩张→调度       │</p>
+<p>              │   订满、算力每5月翻番  │      │ 谷歌租算力304亿/推理 │</p>
+<p>              │   营运资金+数千亿美元   │      │ 价降20%/AI4单TRIP     │</p>
+<p>              └───────────┬──────────┘      └──────────┬───────────┘</p>
+<p>                          │                            │</p>
+<p>                          └────────────┬───────────────┘</p>
+<p>                                       │</p>
+<p>                                       ▼</p>
+<p>        ┌───────────────────────────────────────────────────────────┐</p>
+<p>        │ ⑩ 定价权：业绩超预期却暴跌（英伟达Q3 +103% / 周线-13.80%）│</p>
+<p>        │    第8条变量「回报门槛」→ 第9条 → 第10条「速度的所有权」   │</p>
+<p>        └───────────────────────────────────────────────────────────┘</p>
+<p>                                       │</p>
+<p>      ┌────────────────────────────────┼────────────────────────────┐</p>
+<p>      │                                │                            │</p>
+<p>      ▼                                ▼                            ▼</p>
+<p> ┌──────────────┐            ┌──────────────────┐        ┌─────────────────┐</p>
+<p> │ ② 管制第五段  │            │ ⑥ 加息幅度分歧   │        │ ⑦ 开发者生态     │</p>
+<p> │ BIS远程访问   │            │ 91.4%↓ / 50bp=0  │        │ 第七次定型：数字 │</p>
+<p> │ 手机链旁系   │            │ 但累计50bp→57.7% │        │ 对不上 + 供链信任 │</p>
+<p> └──────┬───────┘            └────────┬─────────┘        └─────────────────┘</p>
+<p>        │                             │                          │</p>
+<p>        ▼                             ▼                          │</p>
+<p> ┌──────────────────┐      ┌────────────────────┐                 │</p>
+<p> │ ②b 中方反制       │      │ ⑤ 金油第四次分化     │                 │</p>
+<p> │ 稀土→许可流程管制 │      │ 金-9.4%周/铜-10%周  │                 │</p>
+<p> │ 11-18两用物项10类 │      │ 油被霍尔木兹撑住     │                 │</p>
+<p> └────────┬─────────┘      └────────────────────┘                 │</p>
+<p>          │                                                          │</p>
+<p>          ▼                                                          │</p>
+<p> ┌──────────────────────────────────────────────────────────────┐   │</p>
+<p> │ ④ A股：买的是环节不是板块（第五次验证，含三个量化缺口）      │   │</p>
+<p> │ 光刻胶ArF进口-95% / PCB订单+56.1% vs 出货+13.3% / 代工+10~20%│   │</p>
+<p> │ 沪指+0.15% vs 创业板+3.08%，银行补跌（红利/成长位置被打断）   │   │</p>
+<p> └──────────────────────────────────────────────────────────────┘   │</p>
+<p>                                                                     │</p>
+<p> ┌─────────────────────────────────────────────────────────────────┐ │</p>
+<p> │ ③ 中国需求端：供强需弱第二次确认（出口+31.2% / 社零+0.4%）      │ │</p>
+<p> │ 首次出现M1回升+1.2pct、剪刀差收窄至2.7pct（但需标注来源）        │ │</p>
+<p> └─────────────────────────────────────────────────────────────────┘ │</p>
+<p><code>`</code></p>
+<hr>
+<h2>四、链路诊断</h2>
+<h3>4.1 ✅ 推送侧连续第 2 天可用，且本窗口首次出现"通道可用 + 汇总三时段全部落盘"</h3>
+<p><strong><code>deliveries.db</code> 11-23 实测 3 条，全部 <code>delivered</code>（<code>error=None</code>）：</strong></p>
+<p>| 时间 | 状态 | 备注 |</p>
+<p>|---|---|---|</p>
+<p>| 08:04:11 | <strong>delivered</strong> | 频道可用 |</p>
+<p>| 09:01:01 | <strong>delivered</strong> | 频道可用 |</p>
+<p>| 16:05:01 | <strong>delivered</strong> | 频道可用 |</p>
+<p><strong><code>executions.db</code> 11-23 其余全部 <code>delivery_outcome='suppressed'</code></strong>（主推送 05:20 / 宏观早报 06:20 / 早间汇总 07:40 / 36 氪 11:10 / GitHub 热榜 11:40 / 上海天气 12:10 / 午间汇总 12:40 / 韭研公社 18:20 / 晚间汇总 19:40 / 保活 4 次 / 兜底 12 次 / SuperAgent 体检 09:10 等）。</p>
+<blockquote><strong>投递形态完整序列（第八种形态首次出现并定案）</strong>：</blockquote>
+<blockquote><code>`</code></blockquote>
+<blockquote>11-15/16 连续两天全天零成功       = 窗口从未打开</blockquote>
+<blockquote>11-17 隔条失败（1 failed/2 del） = 半开不稳定</blockquote>
+<blockquote>11-18 仅 1 条 delivered 其余 suppressed = 通道未被测试</blockquote>
+<blockquote>11-20/21 连续两天仅 1 条且 failed = 通道确认关闭</blockquote>
+<blockquote>11-22 两条 delivered 且无 failed  = 通道恢复可用</blockquote>
+<blockquote>11-23 三条 delivered 且无 failed  = 通道持续可用     ← 本窗口</blockquote>
+<blockquote><code>`</code></blockquote>
+<blockquote><strong>判据沿用 11-22 定案</strong>：<code>deliveries.db</code> 出现 <strong>≥2 条 delivered 且 0 条 failed = 通道实际可用</strong>。11-23 为 <strong>3 条 delivered / 0 failed</strong>，<strong>连续第 2 天 ≥2</strong>，<strong>进一步排除单点偶发</strong>。</blockquote>
+<p>></p>
+<blockquote>⚠️ <strong>但「通道可用」≠「老板收到几条」</strong>：主推送 05:20 与宏观早报 06:20 两条仍 <code>suppressed</code> 未推送，<strong>老板实际收到的很可能是 09:00 的 cron 体检（正文仅「cron体检通过。」）那几条</strong>。判读推送状态必须同时看「哪条 job」。</blockquote>
+<p>></p>
+<blockquote>🆕 <strong>保活脚本 silent 连续第 14 天一致</strong>（03:29 / 09:29 / 15:30 / 21:31 四次全空）。结论不变：<strong>silent 既不能证明保活成功、也不能证明通道健康</strong>——<strong>今日通道可用与保活脚本 silent 无因果关系，唯一判据仍是 <code>deliveries.db</code></strong>。</blockquote>
+<h3>4.2 ✅ 「推送失败连带素材丢失」连续第 2 天未复现——但架构缺陷仍未修</h3>
+<ul>
+<li><strong>11-23 三时段汇总全部"推送成功, 已存档"</strong>：</li>
+</ul>
+<p>  - 早间 07:40：「2 段, 条目 <strong>73</strong> → 去重后 <strong>57</strong>（剔除 16 条重复）, 正文 3601 字」→「推送成功, 已存档 <code>2026-11-23_digest_morning.md</code>」</p>
+<p>  - 午间 12:40：「3 段, 条目 <strong>19</strong> → 去重后 <strong>15</strong>（剔除 4 条重复）, 正文 3481 字」→「推送成功, 已存档 <code>2026-11-23_digest_midday.md</code>」</p>
+<p>  - 晚间 19:40：「1 段, 条目 <strong>21</strong> → 去重后 <strong>21</strong>（剔除 0 条重复）, 正文 2936 字」→「推送成功, 已存档 <code>2026-11-23_digest_evening.md</code>」</p>
+<ul>
+<li><strong>落盘实测</strong>：<code>daily-news-push/</code> 11-23 <strong>三份 digest 全部落盘</strong>（morning 7878 B / midday 6934 B / evening 6706 B），<strong>与 11-18「7/7 首次全勤」相比这是本窗口的最佳落盘状态</strong>（11-19→11-23 连续 5 天均有落盘）。</li>
+<li>⚠️ <strong>但架构缺陷未被修复</strong>：stdout 仍是「推送成功, 已存档」两段式，<strong>说明脚本仍然是"推送成功才写盘"</strong>——<strong>今日成功是通道恰好可用带来的，不是代码修好了</strong>。<strong>修法仍是最高优先级：先写盘、后推送，或把推送失败降级为 warning 而非 exit 1。</strong></li>
+<li>⚠️ <strong>兜底任务覆盖盲区连续第 5 次确认</strong>：22:17 输出「没有待补推的失败投递, 退出」——<strong>汇总脚本的推送失败不进入 <code>deliveries.db</code> 队列，兜底看不到</strong>（11-19/11-20/11-21 三次复现，本窗口未触发但盲区未消除）。</li>
+</ul>
+<h3>4.3 ✅ 采集侧连续第 16 天完全健康，GitHub 热榜恢复产出</h3>
+<ul>
+<li>11-23 全部 17 个任务正常调度；<strong>daily-brief 落盘 18441 字节</strong>（06:22）；主推送 05:21、宏观早报 06:22、36 氪 11:11（2898 B）、GitHub 热榜 11:41（<strong>10034 B</strong>）、上海天气 12:11、早/午/晚三时段汇总全部按时运行。</li>
+<li><strong>11-07 的 26900 秒集体超时连续第 16 天未复发，未改动任何 cron 配置。</strong></li>
+<li>✅ <strong>GitHub 热榜 <code>68f676cab791</code> 11-23 恢复产出</strong>（10034 B），结束 11-22 的 <code>interrupted</code> 单点失败——<strong>再次确认 <code>interrupted</code> 是间歇性模型响应中断，不是任务配置问题</strong>。→ <strong>建议给该任务补「失败时回退到前一交易日存档并在周报标注」的指令</strong>（11-22 窗口已提出，仍未落地）。</li>
+<li>⚠️ <strong>Hunter 取证 <code>abdbeb8256c2</code> 11-23 03:40 出现一次 <code>interrupted</code>（输出 0 字节）</strong>，但 10:02 与 17:12 两轮正常产出（5955 B / 4754 B）→ 属同类间歇性中断，<strong>不影响本档案素材</strong>。</li>
+<li>✅ <strong>宏观早报连续第 16 天产出且「未来数据过滤」防线连续第 16 天实测生效</strong>（见主题⑥）。</li>
+<li>✅ <strong>韭研公社 11-23 18:20:56 正常产出</strong>（8667 B），<strong>结束 11-21/11-22 周末「规则限制」的两天空转</strong> → <strong>周一恢复运行，属预期而非调度缺位</strong>（判定规则：先比 cron 表达式 <code>20 18 <em> </em> 1-5</code> 与周报运行时刻 + 当日星期）。</li>
+<li>✅ <strong>cron 体检 09:00「cron体检通过。」</strong>；✅ SuperAgent 体检 09:10 <code>no_change</code>。</li>
+</ul>
+<h3>4.4 🆕 本窗口新增的规则与建议</h3>
+<p>1. 🆕 <strong>定价判据表第 9 条 → 第 10 条</strong>：新增 <strong>「AI 发展速度的所有权」</strong>——Pachocki 的困惑度 0.8 限速线是<strong>能力侧自律</strong>，肖莱/马斯克的产能与营运资金约束是<strong>供给侧约束</strong>，两者同向但互不解释，<strong>必须分开记账</strong>。</p>
+<p>2. 🆕 <strong>口径规则第 11 次细化</strong>：<strong>凡出现两个收盘读数，先问「是不是同一个交易日」</strong>——本窗口样本：11-23 早报记 <strong>11-20</strong> 收盘（-1.23%）vs 韭研 18:20 记 <strong>11-23</strong> 收盘（+0.15%）= <strong>伪冲突（相差三天），并存不替换</strong>。</p>
+<p>3. 🆕 <strong>「买的是环节不是板块」的默认检查项升级到三条问句</strong>（缺口量化口径 → 环节位置 → 板块指数是否同步），见 2.2。</p>
+<p>4. 🆕 <strong>建议 daily-brief 增加字段「M1 回升来源」（财政投放 / 季节性 / 主动扩张）</strong>——本窗口 M1 +4.4% 回升 1.2pct 与"贷款同比多减 3200 亿"并存，<strong>不标注来源会误读为企业主动加杠杆恢复</strong>。</p>
+<p>5. 🆕 <strong>建议 daily-brief 增加字段「AI 速度约束（自律 vs 供给）」</strong>——把第十次换代变成可复核指标。</p>
+<p>6. ⚠️ <strong>金油第四次分化需要独立字段</strong>「避险溢价的适用资产」（金 / 油 / 铜 / 白银）——本窗口首次出现<strong>地缘溢价只作用于油、不再作用于金</strong>的分离形态。</p>
+<hr>
+<h2>五、窗口内自我修正</h2>
+<p>| # | 修正内容 |</p>
+<p>|---|---|</p>
+<p>| ① | <strong>「定价定案」进一步收窄</strong>：11-22 窗口收窄为"仅一级市场的承诺条款成立"，本窗口 Anthropic 二级市场续跌（11-20 收 88.91）、同期 OpenAI 主动提议<strong>给自己设限速线</strong>——<strong>一级市场承诺条款成立、二级市场连一级市场的定价都不再跟随，"定价定案"在本窗口连一级市场内部也不完全成立</strong>。 |</p>
+<p>| ② | <strong>加息读法第三次修正</strong>：从"会不会加息"→"加多少"（11-22）→ <strong>"总共加多少"</strong>（本窗口：12 月 25bp 概率 99.1%→91.4%，但 2027-01 累计 50bp 概率升至 57.7%）。<strong>幅度分歧在缩、总量分歧在扩。</strong> |</p>
+<p>| ③ | <strong>金油形态第四次分化入册</strong>：序列「反向分裂(11-12/11-17) → 同跌(11-19) → 伪冲突(11-21) → <strong>油撑金沉(本窗口)</strong>」；<strong>驱动已从"加息+地缘同时回吐"变为"加息压无息资产、地缘单独托住油"</strong>——避险属性的分流本身是加息交易最干净的市场证据。 |</p>
+<p>| ④ | <strong>「买的是环节不是板块」第五次验证并首次给出三个可复核缺口</strong>：光刻胶 ArF 进口 -95%（国产化率<1%）、PCB 订单/出货缺口 42.8pct、晶圆代工涨幅 10%—20%——<strong>受益环节全部在上游材料侧，不在"板块"标签所指的下游</strong>。 |</p>
+<p>| ⑤ | <strong>GitHub 评价轴第七次定型 + 第七种「不可复现」形态</strong>：前六种为自出题自判 / 自承模拟 / 不放 ISA·RTL / 作者自测 / 授权声明只给人类看 / 模型自曝退化；<strong>第七种为「数字对不上」</strong>（Claude-BugHunter 681 vs 433、82 vs 83）。<strong>但本窗口首次出现正面样本</strong>：作者公开 Issue #51 失败并把授权声明写进 skill 上下文。 |</p>
+<p>| ⑥ | <strong>数据口径：M1 回升标注来源（本窗口新规则）</strong>——M1 +4.4% 回升 1.2pct 首次出现，但与"贷款同比多减 3200 亿"并存，<strong>标为"来源待定（财政投放可能性高）"，不单独计为需求改善证据</strong>。 |</p>
+<p>| ⑦ | <strong>延续读数标注</strong>：英伟达 Q3 营收 1158.4 亿 +103%、1500 亿回购、腾讯新 AI 产品净拖累 152 亿、<strong>"买的是环节"读法</strong>等，均已在上一窗口记录，<strong>本窗口标注为"延续读数"而非新数据</strong>。 |</p>
+<p>| ⑧ | <strong>美国 10 月 CPI 同比继续不采信</strong>——BLS 因 2025 年 10 月停摆基期缺失明确不发布整体与核心同比，<strong>美银插值 3.8%/2.7% 属模型推演，连续第 12 个窗口不作为事实采信</strong>。 |</p>
+<hr>
+<p><em>生成时间：2026-11-23 22:20 ｜ 档案管理助手 <code>89ea7e1938d3</code> ｜ 7 日窗口版 11-17 → 11-23</em></p>
+<p><em>素材覆盖：daily-brief <strong>7/7</strong>（连续第 8 个完整 7 日窗口，累计历史空档仍 19 天）｜ daily-news-push 落盘 <strong>4/7 天</strong>（11-19→11-23 有，11-17/11-18 有，11-16→11-18 段部分缺失）｜ 落盘 31 份共约 207000 字节 + cron 输出存档补录约 60000 字节</em></p>
+<p><em>本报告采信时无需剔除任何一行未来数据（宏观早报「未来数据过滤」防线连续第 16 天实测生效）</em></p>
+<p><em>版本化副本：<code>weekly-2026-11-23_beta1.0.md</code>（md5 一致）</em></p>
+</body>
+</html>
