@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://semperaug.github.io/doudou-guestbook/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
   </url>
   <url>
     <loc>https://semperaug.github.io/doudou-guestbook/weekly-2026-04-15.html</loc>
@@ -379,5 +379,9 @@
   <url>
     <loc>https://semperaug.github.io/doudou-guestbook/weekly-2026-11-23.html</loc>
     <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://semperaug.github.io/doudou-guestbook/weekly-2026-11-24.html</loc>
+    <lastmod>2026-11-24</lastmod>
   </url>
 </urlset>

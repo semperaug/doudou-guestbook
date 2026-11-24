@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>豆豆龙周报 · 2026-11-24</title>
+<style>
+body { font-family: -apple-system, "PingFang SC", sans-serif; max-width: 760px; margin: 40px auto; padding: 0 24px; line-height: 1.65; color: #1a1a1a; }
+h1 { font-size: 32px; border-bottom: 3px solid #FFD93D; padding-bottom: 12px; }
+h2 { font-size: 22px; margin-top: 36px; color: #0A2540; padding-bottom: 6px; border-bottom: 1px solid #e5e7eb; }
+h3 { font-size: 17px; margin-top: 24px; color: #0A2540; }
+blockquote { border-left: 4px solid #FFD93D; background: #f9f9f9; padding: 12px 16px; margin: 16px 0; color: #555; }
+ul { padding-left: 22px; } li { margin: 6px 0; }
+code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; }
+hr { border: none; border-top: 1px dashed #e5e7eb; margin: 28px 0; }
+nav { background: #FFD93D; padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; font-weight: 600 }
+nav a { color: #0A2540; text-decoration: none }
+</style>
+</head>
+<body>
+<nav><a href="./index.html">← 返回主页</a></nav>
+<h1>📈 AI 趋势周报 · 2026-11-24（7 日窗口版：2026-11-18 → 2026-11-24）</h1>
+<blockquote>生成时间：2026-11-24 22:20 CST ｜ 任务：豆豆龙-档案管理助手（<code>89ea7e1938d3</code>）</blockquote>
+<blockquote>主本 <code>weekly-2026-11-24.md</code> ＋ 版本化副本 <code>weekly-2026-11-24_beta1.0.md</code> / <code>_beta1.0_copy.md</code>（三者同内容，md5 一致）</blockquote>
+<hr>
+<h2>一句话总结</h2>
+<p><strong>黄仁勋用 12 天走完「辞任 → 董事会拒绝 → 浑水做空 → SEC 立场 → 全票复职」的完整闭环，英伟达 11-23 单日 +31.48%、市值一夜增约 9520 亿美元创 2003 年 5 月以来最大涨幅，把本档案挂了 12 天的第 6 条定价判据「治理事件的不可证伪性」第一次反向兑现——同一批「营收 +103%、订单积压 2.5 万亿、1500 亿回购」在 11-19→11-21 被定价成连跌七日、单周 -13.80%，在 11-23 被定价成 +31.48%，证明本档案的判据表里「治理」与「回报门槛」是两条独立轴、且治理轴可以在一天内被董事会决议一次性开合；同一周 A 股靠「两融降杠杆 100%→80% + 创业板做市 + 降费 46 亿」三箭齐发接住外围暴涨，创业板先 +3.08% 后 -0.05% 高开低走，而档案链路自身完成了本窗口最大的结构变化——<code>daily_digest.py</code> 改成「先写盘后推送」并当日实测生效 3 次、<code>recover_lost_digests.py</code> 一次性回填 11-19→11-23 丢失的 8 个时段，<code>daily-news-push</code> 窗口覆盖首次做到 7/7（25 份 / 144,920 字节）。</strong></p>
+<hr>
+<h2>主题分组</h2>
+<h3>① 治理事件的可逆性：黄仁勋 12 天闭环，第 6 条判据第一次拿到正向样本</h3>
+<p>本档案从 11-12 起记录的「组织连续性 / 治理事件的不可证伪性」这条判据，此前<strong>全部是折价方向的样本</strong>（11-12 辞任、11-18 首份无黄财报被治理折价、11-19 董事会拒绝回归 + 浑水做空、11-20 SEC 立场 + 加州 AG + 贝森特三线并发、11-21 单日 -14.01%）。本窗口第一次拿到<strong>反向样本</strong>：</p>
+<ul>
+<li><strong>11-23 英伟达董事会一致决议恢复黄仁勋总裁兼 CEO 及董事职务，即刻生效</strong>，代理 CEO 科莱特·克雷斯继续任 CFO；董事会称做出决定前<strong>听取了美国政府高级官员意见</strong>、认为复职不构成国家安全风险；特朗普称「是我说服了他们」（英伟达官网/路透，daily-brief 11-24 要闻 1）。</li>
+<li><strong>但独立董事委员会此前启动的调查仍将继续</strong> —— 这是「复职非调查结论」的原始出处，也是本条判据最关键的限定。</li>
+<li><strong>结果（美股 11-23 收盘）</strong>：道指 49595.31 <strong>+3.01%</strong>、标普 500 7237.17 <strong>+4.73%</strong>、纳指 24089.56 <strong>+6.51%</strong>（三者均为 2025-04-08 以来最大单日涨幅）；<strong>费城半导体指数 +14.03% 创 2025 年以来最大单日涨幅</strong>；<strong>英伟达 +31.48% 报 165.05 美元，单日市值增加创纪录的约 9520 亿美元，总市值站上 4 万亿美元</strong>；SK 海力士 +20.00%、美光 +19.04%、英特尔 +16.34%、台积电 +14.08%、阿斯麦 +9.28%、特斯拉 +11.46%、Meta +6.55%、Alphabet +6.34%；纳斯达克中国金龙指数 +2.44%（小鹏 +7.43%、阿里 +6.12%、百度 +5.54%）。</li>
+<li><strong>后续未结事项</strong>：黄仁勋 12-03 在参议院银行委员会<strong>公开作证</strong>（审查出口管制执行），12-01 先接受众议院三个委员会<strong>闭门问询</strong>；英伟达将成立<strong>国家安全与出口管制委员会</strong>；舒默称民主党明年掌控国会后将调查特朗普政府、黄仁勋及英伟达高管「出卖国家安全」的行为。</li>
+<li><strong>读法定案</strong>：治理变量的解除方式是<strong>董事会决议</strong>，它既不能被财报证伪（Q3 +103% 不能证明治理风险解除，这是 11-18 已定案的），<strong>也不能被财报证明、更不能被监管结案证明</strong>——它只能被同一个决策机构一次性开合。→ <strong>判据表需新增第 11 条候选「治理事件的可逆性 / 一次性可解决」</strong>，并明确第 6 条与第 8 条是<strong>两条独立轴</strong>。</li>
+<li><strong>建议 daily-brief 新增字段</strong>：<code>治理事件状态（未决 / 调查中 / 已解决）+ 解决方式（财报证伪 / 董事会决议 / 监管结案）</code>。</li>
+</ul>
+<h3>② 定价判据表的自我修正：第 8 条与第 6 条在同一批数字上打架</h3>
+<ul>
+<li><strong>第 8 条「投资回报的门槛高度」是 11-21 定案的</strong>：阿波罗测算 2026—2028 年 AI 基建累计资本开支约 3.5 万亿美元、到 2028 年底需 1.5 万亿—2 万亿美元<strong>年化收入</strong>（约为当前 5—7 倍）；路透：五大科技巨头前 9 个月经营现金流 5429 亿而资本支出 5569 亿，<strong>自由现金流由盈余 1435 亿转为 -140 亿美元、2011 年有统计以来首次转负</strong>，回购骤降 83% 至 136 亿；英伟达 10-Q 披露 360 亿美元云服务承诺 + 最高 35 亿美元信用担保。它当时被用来解释「业绩超预期却暴跌」。</li>
+<li><strong>本窗口的反证</strong>：完全相同的一组业绩变量（Q3 营收 1158.44 亿 <strong>+103%</strong>、云计算订单积压 <strong>2.5 万亿美元</strong>、<strong>1500 亿美元</strong>回购）在 11-19→11-21 被定价成<strong>连续第 7 日下跌、单周 -13.80% 创 2008-10 以来最大单周跌幅</strong>，在 11-23 被定价成 <strong>+31.48%</strong>。<strong>业绩变量一个字没变，方向完全反转。</strong></li>
+<li><strong>结论（本窗口第 9 处自我修正）</strong>：</li>
+</ul>
+<p>  1. 第 6 条（治理）与第 8 条（回报门槛）<strong>是两条独立轴</strong>，本窗口第 6 条<strong>压倒</strong>第 8 条；</p>
+<p>  2. <strong>「定价定案」的适用范围第四次收窄</strong> —— 从「AI 整体」→「仅一级市场」→「仅一级市场的承诺条款」→ 本窗口进一步：<strong>连二级市场也不是按基本面定案，而是按治理事件的开合定案</strong>；</p>
+<p>  3. 「业绩超预期却暴跌」这个 11-21 的谜题，本窗口给出了它的<strong>可逆版本</strong>：不是业绩被重新定价，而是<strong>同一组业绩被治理变量重新开关了一次</strong>。</p>
+<ul>
+<li><strong>建议 daily-brief 新增字段</strong>：<code>融资规模 vs 二级市场表现（同周对照）</code>（11-22 已提出）之外，补一条 <code>主导判据（当周是第几条变量在定价）</code>，否则每个窗口都会重新推导一遍。</li>
+</ul>
+<h3>③ 中国政策三箭：两融降杠杆把弹药放进枪膛，缺的还是需求</h3>
+<ul>
+<li><strong>11-22 沪深北交易所《关于调整融资保证金比例等相关安排的通知》</strong>：融资买入证券最低保证金比例由 <strong>100% 下调至 80%</strong>，<strong>自 2026-11-30 起施行</strong>，杠杆倍数升至 1.25 倍 —— <strong>2015 年 11 月以来第四次调整</strong>（证监会批准，daily-brief 11-24 要闻 3）。</li>
+<li><strong>11-23 两融风控细则</strong>：监管部门向券商下发通知，提出<strong>市场波动期间在与客户充分沟通、取得确认的情况下，可动态调整最低维持担保比例及追保平仓安排，以时间换空间</strong>保持适度弹性（新华社/新华财经）。</li>
+<li><strong>周末组合拳</strong>：创业板做市商制度征求意见 + 沪深交易所降费年度让利超 46 亿元；素材给出<strong>理论增量资金近 4,000 亿元</strong>（daily-brief 11-23 要闻 6、主推送 11-24 05:21）。</li>
+<li><strong>存量弹药</strong>：10 月以来股票型 ETF 净流入<strong>超 7,300 亿元</strong>、超 1,300 家上市公司年内回购<strong>超 1,560 亿元</strong>（主推送 11-24 05:21）。</li>
+<li><strong>本窗口读法（沿用 11-24 早报点评原文）</strong>：「A 股这轮反弹靠<strong>政策 + 外部催化 + 超跌</strong>三股合力，<strong>两融降杠杆只是把弹药放进枪膛，缺的还是需求</strong>。」→ 保证金比例 11-30 才生效，<strong>「政策预期」与「外围情绪」的对撞日还在后面</strong>。</li>
+</ul>
+<h3>④ A 股两个交易日的口径账：普涨 → 高开低走，量能连续放量但性质相反</h3>
+<p>| 交易日 | 读数来源 | 指数 | 量能 | 个股结构 |</p>
+<p>|---|---|---|---|---|</p>
+<p>| <strong>11-23 收盘</strong> | daily-brief 11-24（06:21 落盘） | 沪指 3538.95 <strong>+0.15%</strong>、深成指 10454.37 <strong>+1.93%</strong>、创业板 2280.20 <strong>+3.08%</strong> | 1.55 万亿，<strong>放量 1307 亿</strong> | <strong>超 4600 只上涨、151 只涨停</strong>；人形机器人掀涨停潮（宇树科技、上纬新材等超 50 股涨停）；保险、银行、煤炭逆市下跌 |</p>
+<p>| <strong>11-24 收盘</strong> | 韭研公社 18:32（当日） | 沪指 <strong>+0.27%</strong>、深成指 <strong>-0.29%</strong>、创业板 <strong>-0.05%</strong>（<strong>盘中一度涨超 4%</strong>）、科创 50 <strong>+1.81%</strong> | 1.66 万亿，<strong>放量 1022 亿</strong> | <strong>超 3400 只下跌</strong>、55 涨停 / 2 跌停、连板 30 家、<strong>破板率 55.28%</strong>；隔夜英伟达 +31.48%、纳指 +6.51% → <strong>A 股高开低走</strong> |</p>
+<ul>
+<li><strong>口径判定（规则第 12 次细化）</strong>：两个读数<strong>相差一个交易日 → 伪冲突，并存不替换</strong>（与 11-18 的「+0.09% vs -0.50%」、11-23 的「-1.23% vs +0.15%」同型）。</li>
+<li><strong>量能必须分开记账（连续第 4 个窗口）</strong>：11-19 缩量 645.56 亿至 13051.47 亿（<strong>创 2026 年最低成交 = 冰点</strong>）→ 11-20 放量 1171 亿至 1.42 万亿（<strong>承接不足</strong>）→ 11-23 放量 1307 亿至 1.55 万亿（<strong>普涨</strong>）→ 11-24 放量 1022 亿至 1.66 万亿（<strong>高开低走 + 个股普跌</strong>）。<strong>连续两日放量、方向相同，但行情性质完全相反</strong> → 「量能方向」不能单独作为判据，必须与「涨跌家数 + 破板率」并置。</li>
+<li><strong>11-24 是「政策三箭 + 外围暴涨」双重催化下的高开低走</strong>：盘中创业板一度涨超 4% 后收 -0.05%、超 3400 只下跌、破板率 55.28% → <strong>利好兑现即出货</strong>，与本档案 11-18 定案的「政策利好在缩量市场里不构成上涨理由，只构成叙事」形成<strong>放量版的同一条结论</strong>。</li>
+<li><strong>强势主线切换</strong>：11-23 涨的是人形机器人 + AI 漫剧 + PCB/CPO；11-24 强势板块仍是<strong>人形机器人（12/1—12/2 硅谷人形机器人峰会 Optimus 确认参展）、AI 漫剧、消费电子</strong>，而<strong>贵金属、PCB 高开低走</strong>（赤峰黄金、紫金矿业回落）。</li>
+</ul>
+<h3>⑤ 上游材料缺口的量化账本（「买的是环节不是板块」第 6 次验证）</h3>
+<ul>
+<li><strong>PCB（本窗口最硬的一组数字）</strong>：全球电子协会 IPC 11-18 发布全行业缺货警报 —— 截至今年 9 月<strong>近 12 个月 PCB 订单同比 +56.1%、出货量 +13.3%，缺口 42.8 个百分点</strong>；<strong>高多层板当前交货周期 16—20 周甚至更长</strong>；瓶颈集中在<strong>上游玻纤布、电子纱、铜箔和高端织机</strong>（daily-brief 11-24 要闻 7）。短缺或持续至 <strong>2028 年年中</strong>（daily-brief 11-21 要闻 10）。</li>
+<li><strong>晶圆代工调价</strong>：调价通知涨幅 <strong>10%—逾 20%</strong>，明年台积电等合作厂跟进（韭研 11-24 舆情①）。</li>
+<li><strong>光刻胶</strong>：美方强硬路线延续、<strong>MATCH 案落地预期增强</strong>，台积电/三星暂停对华交付后代工封测通道进一步收紧，<strong>光刻胶是晶圆制造刚需卡脖子耗材</strong>；关注江化微（湿电子化学品 + 配套）、容大感光（PCB/显示/半导体多线批量供货）、光华科技（韭研 11-24 题材 4）。</li>
+<li><strong>管制执行面</strong>：台积电、三星 <strong>11/19 起向美国商务部申请出口许可</strong>，BIS 同步收紧代工与独立封测合规 → 推演四大连锁反应：国产 GPU 供给、晶圆制造、半导体设备、先进封装迎新一轮战略重估，<strong>昇腾生态受益</strong>（韭研 11-24 资讯 3）。按既有记录，在途货物可按旧规出货至 <strong>12-21</strong>。</li>
+<li><strong>读法</strong>：受益环节全部在<strong>上游材料侧</strong>，而当日 PCB 概念高开低走 → <strong>「资金流进了哪个环节、板块指数是否同步」仍是 A 股分析的默认三问句</strong>（第 6 次验证）。</li>
+</ul>
+<h3>⑥ 物理 AI / 具身智能：A 股的新主线与三个可复核催化</h3>
+<ul>
+<li><strong>A 股侧</strong>：11-23 人形机器人掀涨停潮、<strong>超 50 股涨停</strong>（宇树科技、上纬新材等）；11-24 人形机器人继续领涨（韭研复盘）。</li>
+<li><strong>三个可复核催化</strong>：</li>
+</ul>
+<p>  1. <strong>特斯拉推送 FSD V15</strong> —— 视觉编码器<strong>首次在 FSD / Robotaxi / Optimus 三线共享</strong>，安全关键场景处理能力<strong>提升 25 倍</strong>；马斯克称 <strong>1—2 个月后发布非遥操作真实演示</strong>；<strong>12/1—12/2 硅谷人形机器人峰会 Optimus 确认参展</strong>（韭研题材 5）。</p>
+<p>  2. <strong>GPT-6.2 Astra 操控双臂机器人综合成功率升至 41.2%</strong>，「家务成功率大增」引爆物理 AI 题材（韭研；daily-brief 11-24 要闻 6）。</p>
+<p>  3. <strong>华为开源昇腾原生具身世界模型 CloudRobo-WM1.2</strong> —— 具身大脑成巨头新战场，国内外巨头物理 AI 新品密集发布且集中于具身大脑方向；相关板块凡拓数创、多伦科技、福莱新材大幅走强（韭研 11-23 学习笔记）。</p>
+<ul>
+<li><strong>独立评测对照</strong>：RoboChallenge Zero 真机具身评测 —— <strong>11 款模型整体成功率 44.85%、最佳 70%</strong>，写「Z0」仅 4 次成功（主推送 11-24 10:57）→ <strong>41.2% 的双臂成功率与 44.85% 的整体成功率是两个不同口径，不可混用</strong>。</li>
+<li><strong>产业底座</strong>：工信部 —— 截至 9 月底我国<strong>智能算力规模 2592 EFLOPS，同比 +146%</strong>（韭研 11-24 复盘）。</li>
+<li><strong>并购侧</strong>：斯菱智驱拟 10.51 亿<strong>全现金</strong>收购银球科技 75.66%（微型高速轴承 + 谐波减速器卡位，标的 2025 营收 5.44 亿、归母净利 1.05 亿）；慧博云通拟收购宝德计算 65.47%（华为昇腾双钻石整机伙伴、2025 营收 109 亿）（韭研个股 4、5）。</li>
+</ul>
+<h3>⑦ 模型与开源：参数竞赛、成本分层、以及「没用英伟达」的第一次</h3>
+<ul>
+<li><strong>智谱 GLM-5.4</strong>：<strong>7500 亿参数</strong>、<strong>首款 Loop Transformer 架构旗舰</strong>、28 层共享权重循环执行两轮、参数量不变下加深推理深度，官方称对标 2—3 万亿参数模型并开启「泛 Coding」，<strong>但 750B 版本尚无独立评测</strong>（主推送 11-24 10:57）。</li>
+<li><strong>腾讯混元 Hy4 全量开源</strong>：770B / 激活 49B / 上下文超 100 万 / <strong>Apache 2.0</strong>；<strong>Hy4 flash 以单任务成本约旗舰 1/20 登顶 OpenRouter</strong>（主推送 11-24）。</li>
+<li><strong>美团 LongCat-2.5</strong>：1.6 万亿 MoE、<strong>MIT 许可</strong>、<strong>训练部署全程未用英伟达 GPU</strong>（基于 194 片昇腾 A2 部署）→ <strong>本窗口第一个「非英伟达全链路训练」的量产级样本</strong>。</li>
+<li><strong>蚂蚁百灵 Ling-3.2-air</strong>（124B / 激活 5.5B），AutomationBench-AA 从 15.7% 跃至 61%；<strong>月之暗面 Kimi K3</strong>（2.8 万亿参数开源原生多模态）；<strong>阿里 Qwen4-Max</strong>（2.4T MoE、1M 上下文）。</li>
+<li><strong>OpenAI 一次性发两个模型</strong>：<strong>GPT-6.2 Astra</strong>（GDPval v2 比上代高 6.2 分、输出 token 减少 22%、API 输入输出价降 20%、缓存输入降 60%）与 <strong>Sol</strong>（定位日常高效执行，<strong>单任务成本约为 Astra 的 15%</strong>）→ <strong>能力分层正式变成成本分层</strong>。</li>
+<li><strong>Anthropic Claude Fable 5.2</strong> 在 Remote Labor Index 以 <strong>41.3%</strong> 登顶（一年前最强仅 2.5%）。</li>
+<li><strong>Agent 侧入口</strong>：豆包「小豆」邀请制公测 + <strong>豆包购物</strong>一级入口（复用抖音电商完整履约体系：实物/团购/票务全链路，<strong>4 亿月活</strong>杀入万亿电商）；梳理标的值得买、汉得信息、环球印务、青木科技、省广集团（韭研题材 2、36氪 2）。</li>
+<li><strong>国产算力签单潮的三本账</strong>：魅视科技签下最高 <strong>11.64 亿</strong>算力服务备忘录（每月采购不低于 1392P、36 个月）、奥尼电子获华为昇腾银牌部件伙伴、江苏一次发布 5 个昇腾「词元工厂」—— <strong>核心提示：卖合同、卖资质、卖概念是三本账，中间层生意要看毛利率</strong>（韭研题材 3）。</li>
+</ul>
+<h3>⑧ 数学证明的可信度边界：Lean 有效 ≠ 命题正确 ≠ 论证正确</h3>
+<ul>
+<li><strong>anthropics/formal-math（VP ≠ VNP 全域证明）</strong>：<strong>70 页纯 Claude 撰写的论文 + Lean 4 形式化证明</strong>，声称解决 Valiant 1979 年提出的猜想（算术复杂度版 P vs NP），证明电路计算 permanent 需要超过 <code>m^(c·log(m)^(1/3))</code> 门限；<strong>通过 Lean 内核与 nanoda 两个独立 checker</strong>；HN <strong>250 分 / 220 评论</strong>。</li>
+<li><strong>两条自我限定（比结论更重要）</strong>：① <strong>Anthropic 自己承认没有任何人类数学家审阅过</strong>；② <strong>仓库明确警告「没有任何机器能验证形式化陈述是否忠实表达了论文结论」</strong> —— 机器只验推导步骤，不验命题是否被写歪。</li>
+<li><strong>黎曼猜想（14 卷 1737 万行 Lean）状态仍未升级</strong>：36氪 11-24 记「获两大数学社区认可、马斯克称令人震撼」，<strong>但状态仍是「待谨慎核验」不是「已证明」</strong>；J.L. Nielsen 的反驳论文质疑其中「空真的几何与格点见证」。</li>
+<li><strong>读法定案（本窗口第 2 次强调）</strong>：<strong>Lean 证明有效 ≠ 命题正确 ≠ 论证正确，三者之间还有裂缝</strong> —— Nielsen 那篇反驳正好证明前两者成立也未必推出第三者。对照陶哲轩同日排序：纳维-斯托克斯是「有可读论证 + Lean」，这个 GRH 是「只有 Lean」。</li>
+<li><strong>对本档案的直接含义</strong>：<strong>「AI 写出的证明」与「AI 写出的代码」是同一类供应链风险</strong> —— 上游推理底座被污染（ONNX Runtime 404 事件）时，被污染的不只有 <code>requirements.txt</code>，还可能有形式化证明本身。</li>
+</ul>
+<h3>⑨ 开放权重的存亡之争：LeCun vs Amodei，事实核查与真问题</h3>
+<ul>
+<li><strong>热度</strong>：HN <strong>1216 分 / 680 评论</strong>，今日全站讨论量最大的技术争议。</li>
+<li><strong>指控</strong>：Yann LeCun 11-22 在 X 发文（一天 <strong>97.9 万浏览</strong>）称 Amodei「从 GPT-2 时代起就在炒作危险，好让开放模型变成非法，这样他就能继续掌权」，并类比「奥斯曼帝国禁掉阿拉伯文印刷术以控制教义」。</li>
+<li><strong>事实核查结果很清楚</strong>：被疯传的视频是 <strong>Amodei 2023-07-25 参议院听证的旧片段</strong>，那次证词里他明确说过「在多数科学领域开源是好事」、<strong>并没有要求禁止</strong>；Amodei 2026-07 也公开写过「Anthropic 从未主张禁止开放权重模型」→ <strong>指控在事实层面站不住（用了 3 年前的旧证词当新证据）</strong>。</li>
+<li><strong>但评论区把真问题吵出来了</strong>：HN 一路吵到「<strong>如何禁开放模型</strong>」的技术细节 —— 有人提到「禁不了子弹就禁枪」，即要求 <strong>AMD/NVIDIA 推送微码限制消费级 GPU 跑 LLM、强制登记私有算力</strong>、甚至援引 <strong>6102 号行政令的「黄金没收」逻辑</strong>；反方主张用<strong>事后侵权责任（tort liability）替代事前审查</strong>。<strong>多位从业者确认监管圈正在讨论限制消费级算力。</strong></li>
+<li><strong>对本档案的直接含义（结论扩展）</strong>：既有结论是「装第三方 skill 前先过扫描器」（供应链）、再扩展到「依赖上游推理底座前先锁版本号」（底座）、本窗口再扩展到 —— <strong>风险面已经从「代码质量」「运行时权限与信息流」进一步扩展到「算力获取本身」</strong>。<strong>如果你依赖本地跑模型，这是必须盯的议题，不是八卦。</strong></li>
+</ul>
+<h3>⑩ 宏观：美国 CPI 超预期 + 加息定价 95.9%，中国 LPR 连续 18 个月不变</h3>
+<p><strong>美国</strong></p>
+<ul>
+<li><strong>10 月 CPI 环比 +0.4%</strong>（前值 +0.6%）、<strong>核心 CPI 环比 +0.3%</strong>（前值 +0.3%），<strong>两项均高于道琼斯调查预期</strong>（整体 +0.3%、核心 +0.2%）；居住成本环比 +0.3% 占当月涨幅 30% 以上、能源 +0.7%、食品 +0.5%。</li>
+<li><strong>因 2025 年政府停摆导致去年同期未采集物价数据，BLS 未发布 10 月 CPI 同比</strong>（整体与核心均无同比数），<strong>12 月 10 日发布的 11 月 CPI 同比将恢复正常</strong> → <strong>美银插值 3.8%/2.7% 连续第 13 个窗口不作事实采信</strong>。</li>
+<li>10 月零售和食品服务销售 <strong>+0.2% 至 7482 亿美元</strong>、同比 +6.8%；剔除汽车与加油站后 +0.5%。</li>
+<li><strong>密歇根大学 11 月消费者信心终值 51.5</strong>（初值 51.0、10 月终值 48.0）；<strong>1 年通胀预期终值 3.7%（10 月 4.7%，回落 1.0pct）</strong>、5 年 3.3%。</li>
+<li>初请失业金（截至 11-14 当周）<strong>20.3 万人</strong>（预期 19.7 万）、前值修正 20.2 万、四周均值 19.775 万；续请 176.3 万、周增 7 万。</li>
+<li><strong>10 月 GDP 修正值与 10 月核心 PCE：待公布（预计 11 月 25 日）</strong> → <strong>未来数据过滤防线第 17 天实测生效</strong>。</li>
+<li><strong>加息定价</strong>：CME 12 月加息 25bp 概率 <strong>95.9%</strong>（11-24 06:07）；<strong>沃勒主张 12 月一次加息 50 个基点</strong>、威廉姆斯反对激进收紧；<strong>财长贝森特警告若过度紧缩可能危及美国经济，并称金融体系已出现脆弱迹象</strong>（CBS，11-22）；下次议息会议 <strong>12 月 8—9 日</strong>。</li>
+<li><strong>政策分歧是今年最贵的不确定性</strong>（11-24 点评原文）。</li>
+</ul>
+<p><strong>中国</strong></p>
+<ul>
+<li><strong>11 月 LPR：1 年期 3.0%、5 年期以上 3.5%，均未调整，连续 18 个月不变</strong>（11-20 公布）。</li>
+<li><strong>10 月金融数据（11-13 公布）</strong>：新增人民币贷款 <strong>-1000 亿元</strong>（去年同期 +2200 亿）、贷款余额同比 <strong>+4.7%</strong>；新增社融 <strong>1.1429 万亿元</strong>、同比多增 3251 亿、存量 469.16 万亿 <strong>+7.2%</strong>；M2 359.06 万亿 <strong>+7.1%</strong>、<strong>M1 116.9 万亿 +4.4%</strong>、M0 +10.7%；前 10 个月贷款增加 11.42 万亿、社融增量 28.61 万亿。</li>
+<li>10 月 PMI 49.3%（-0.8pct）、CPI +0.7%、PPI +5.7%、工业增加值 +4.8%、社零 +0.4%、进出口 +31.2%、失业率 5.1%、1—10 月固投 -8.1%（房地产 -21.6%、民间 -11.4%）—— <strong>延续读数（与 11-16→11-21 各窗口同一组数字），不重复计为新证据</strong>。</li>
+<li><strong>11 月 PMI：待公布（预计 11 月 30 日）</strong>。</li>
+<li><strong>关税</strong>：国务院关税税则委员会公告（税委会公告 2026 年第 6 号）—— 自 <strong>2026-11-10 13:01 起 2 个月内继续暂停实施 24% 的对美加征关税税率、保留 10%</strong>；并表示注意到美方多次表示拟通过 <strong>301 关税替代已被判决失效的 IEEPA</strong> 项下关税，将视情适时调整相关关税反制措施。</li>
+</ul>
+<h3>⑪ 金油第五次形态转换：反向分裂回归（金涨油跌）</h3>
+<ul>
+<li><strong>11-23 纽约尾盘</strong>：现货黄金 <strong>+2.66% 报 3632.53 美元/盎司</strong>；<strong>WTI 1 月原油期货 −3.88% 报 80.17 美元/桶（三个月低点）</strong>；布伦特 1 月 <strong>−3.46% 报 89.37</strong>；<strong>ICE 美元指数 +0.49% 报 104.31（去年 3 月以来最高）</strong>；在岸人民币收报 <strong>6.6667</strong>；<strong>10 年期美债 +5.2BP 至 4.964%、2 年期 +7.4BP 至 4.687%</strong>。</li>
+<li><strong>形态序列（第 5 次转换）</strong>：反向分裂（11-12 / 11-17）→ 同跌（11-19）→ 伪冲突（11-21）→ 油撑金沉（11-21 读数，11-23 早报窗口记）→ <strong>金涨油跌（11-23 纽约尾盘）＝ 反向分裂回归</strong>。</li>
+<li><strong>两个驱动在同一天给出相反方向（这是本条最有价值的地方）</strong>：</li>
+</ul>
+<p>  - <strong>油</strong>：伊朗海军称<strong>三艘违规油轮在霍尔木兹海峡撞上水雷爆炸起火（事发时处于美军空中掩护下）</strong>、伊朗议长称「有打破封锁的军事手段」、美国官员称随时准备对伊朗发动大规模打击 —— <strong>但 WTI 一度跌破 80 美元（8 月以来首次），市场押注特朗普为外交斡旋留出时间</strong>（主推送 11-24 05:21）。<strong>地缘升级与价格下跌同时出现 = 定价的是「斡旋预期」不是「冲突本身」</strong>（本档案 11-07 已定案的「一级结果 ≠ 资产方向」第 4 次验证）。</p>
+<p>  - <strong>金</strong>：在隔夜美股暴涨 + 加息定价 95.9% 的组合下出现 +2.66% 的反弹 —— <strong>「地缘推升避险」与「加息压无息资产」两个解释同日给出相反答案</strong>。</p>
+<ul>
+<li><strong>建议 daily-brief 新增字段</strong>：<code>金 / 油分别由哪个驱动主导（地缘溢价 / 加息折现 / 库存与斡旋预期）</code> —— 单一「金油形态」字段已经解释不了 5 次转换。</li>
+</ul>
+<h3>⑫ 链路诊断：本窗口最大的结构变化发生在档案链路自己身上</h3>
+<p>#### ✅ A. 架构缺陷已修复：「推送失败连带素材丢失」当日实测生效 3 次</p>
+<ul>
+<li><strong><code>daily_digest.py</code> 于 2026-11-23 23:53—23:54 被修改</strong>（备份 <code>daily_digest.py.bak-20261123</code>，26,667 B；改后 27,968 B），改成<strong>先写盘、后推送</strong>。</li>
+<li><strong>11-24 三个时段推送全部失败，但三份 digest 全部落盘</strong>：</li>
+</ul>
+<p>  <code>`</code></p>
+<p>  [07:40:56] 早间汇总: 2 段, 条目 41 → 去重后 34 (剔除 7 条重复), 正文 3622 字</p>
+<p>  [07:41:00] 早间汇总: 推送失败 -> hermes send: Weixin send failed: RuntimeError via http://192.168.10.1:7890（已存档 2026-11-24_digest_morning.md, 内容未丢失, 待补推）</p>
+<p>  [12:40:36] 午间汇总: 3 段, 条目 25 → 去重后 22 (剔除 3 条重复), 正文 3508 字</p>
+<p>  [12:40:38] 午间汇总: 推送失败 -> …（已存档 2026-11-24_digest_midday.md, 内容未丢失, 待补推）</p>
+<p>  [19:40:17] 晚间汇总: 1 段, 条目 19 → 去重后 17 (剔除 2 条重复), 正文 2044 字</p>
+<p>  [19:40:19] 晚间汇总: 推送失败 -> …（已存档 2026-11-24_digest_evening.md, 内容未丢失, 待补推）</p>
+<p>  <code>`</code></p>
+<ul>
+<li><strong>从 11-19 起挂了 5 天、被本档案连续 4 个窗口标记为「最高优先级」的架构性缺陷，本窗口已修复并当日实测生效 3 次</strong>（11-19 晚间 / 11-20 早间 / 11-21 午间三次事故的同型场景，今天三次都没再丢内容）。</li>
+<li>⚠️ <strong>但「待补推」的补推仍未发生</strong> —— 三条汇总推送仍排在队列里，而兜底任务看不到它们（见 D）。</li>
+</ul>
+<p>#### ✅ B. 历史丢失回填：<code>recover_lost_digests.py</code> 一次性补齐 8 个时段</p>
+<ul>
+<li>脚本 <code>recover_lost_digests.py</code>（<strong>mtime 2026-11-24 00:01:10</strong>）<strong>在 11-24 00:01 运行</strong>，实测 <strong>9 个 digest 文件 mtime = 11-24 00:01</strong>：</li>
+</ul>
+<p>  <code>2026-11-19_digest_evening / _night</code>、<code>2026-11-20_digest_morning</code>、<code>2026-11-21_digest_midday / _night</code>、<code>2026-11-23_digest_morning / _midday / _evening / _night</code>（11-23 四段属幂等重写）。</p>
+<ul>
+<li>脚本 docstring 明确「<strong>8 slots were lost across 11-19..11-23</strong>」，并把三条工程教训直接写进代码注释：</li>
+</ul>
+<p>  1. <code>dd.archive()</code> 用 <code>datetime.now()</code> 打文件名，<strong>不可能写出过去日期的文件</strong> → 必须显式指定文件名；</p>
+<p>  2. <code>collect_for_slot()</code> 返回窗口开始后的<strong>所有</strong>源响应、<strong>没有日期过滤</strong> → 今天跑 11-19 槽位会拿到 11-23 的简报 → 必须按源自身的运行时间戳过滤；</p>
+<p>  3. <strong>源的权威日期是 <code>executions.db</code> 的 <code>started_at</code></strong>，不是输出文件名、也不是正文里的日期串；正文日期只作交叉校验，<strong>标题声明的日期与运行日期不一致就整段丢弃</strong>。</p>
+<ul>
+<li>→ 这三条是<strong>可以直接复用到所有「按日归档」脚本的通用教训</strong>，建议写进 skill。</li>
+</ul>
+<p>#### ✅ C. <code>daily-news-push</code> 窗口覆盖首次做到 7/7</p>
+<p>| 日期 | 时段数 | 明细 |</p>
+<p>|---|---|---|</p>
+<p>| 11-18 | <strong>4</strong> | morning / midday / evening / night |</p>
+<p>| 11-19 | <strong>4</strong> | morning / midday / evening / night（<strong>后两段为 00:01 回填</strong>） |</p>
+<p>| 11-20 | <strong>4</strong> | morning（<strong>回填</strong>）/ midday / evening / night |</p>
+<p>| 11-21 | <strong>3</strong> | morning / midday（<strong>回填</strong>）/ night（<strong>回填</strong>）；晚间因周末韭研无源而「没有产出内容, 跳过」 |</p>
+<p>| 11-22 | <strong>3</strong> | morning / midday / night；晚间同上（周末规则限制） |</p>
+<p>| 11-23 | <strong>4</strong> | morning / midday / evening / night（<strong>四段 mtime 均被 00:01 幂等重写</strong>） |</p>
+<p>| 11-24 | <strong>3</strong> | morning / midday / evening（<strong>三段均推送失败但已存档</strong>）；night 23:40 未到点 |</p>
+<p>| <strong>合计</strong> | <strong>25 份 / 144,920 字节</strong> | 与 11-20 窗口的「仅 2/7 天」形成彻底反转 |</p>
+<ul>
+<li><strong>去重逻辑持续生效</strong>（窗口内可读到的 17 次汇总）：早间 62→43 / 57→35 / 42→18 / 73→57 / 41→34；午间 24→23 / 14→13 / 11→10 / 19→15 / 25→22；晚间 20→19 / 21→21 / 19→17；夜间 11→9 / 11→10 / 8→7 / 9→7。<strong>剔重率最高达 43%（早间 42→18）。</strong></li>
+</ul>
+<p>#### 🔴 D. 投递形态第八种：suppressed 日里唯一被测的那条 failed（与 11-20/21 同型，间隔 3 天复发）</p>
+<ul>
+<li><strong><code>deliveries.db</code> 11-24 仅 1 条记录</strong>：<code>09:00:42 edeedc6bbb9e（cron 体检）status=failed</code>，error = <code>iLink sendmessage session not ready: ret=-2 … the user must send the bot a message first (or re-pair)</code>。</li>
+<li><strong><code>executions.db</code> 11-24 共 157 条</strong>：<code>155 条 completed+suppressed</code> + <code>1 条 failed</code>（就是上面那条 cron 体检）+ <code>1 条 running</code>（本任务 22:20）。</li>
+<li><strong>投递形态序列（本窗口收束）</strong>：11-15/16 连续两天全天零成功 = 窗口从未打开 → 11-17 隔条失败 = 半开不稳定 → 11-18 仅 1 条 delivered 其余 suppressed = 通道未被测试 → <strong>11-20/21 连续两天仅 1 条且 failed = 通道确认关闭</strong> → 11-22 两条 delivered 零 failed = 通道恢复 → 11-23 三条 delivered 零 failed = 持续可用 → <strong>11-24 仅 1 条且 failed = 通道确认关闭（第 8 种，与 11-20/21 同型，间隔 3 天复发）</strong>。</li>
+<li>⚠️ <strong>今日推送失败是「双因叠加」，这是本窗口的新发现</strong>：</li>
+</ul>
+<p>  | 失败方 | 错误 | 性质 |</p>
+<p>  |---|---|---|</p>
+<p>  | 09:00 cron 体检（走 cron delivery 通道） | <code>iLink sendmessage session not ready: ret=-2 … prepare failed</code> | <strong>iLink 会话窗口关</strong>（老问题） |</p>
+<p>  | 早/午/晚三个汇总脚本（直接调 <code>hermes send</code>） | <code>Weixin send failed: RuntimeError via http://192.168.10.1:7890</code> | <strong>代理 / 网络层失败，与 iLink 无关</strong> |</p>
+<p>  → <strong>修 iLink 会话修不好汇总推送，反之亦然；两条线必须分开诊断。</strong>（192.168.10.1:7890 是本机代理端口 → 与本档案已记录的「境外站 TLS 掐断 / mihomo DNS 死锁」属同一类网络层问题。）</p>
+<ul>
+<li>⚠️ <strong>老板实际收到的很可能是 0 条</strong>（唯一被测条目本身 failed，主推送与宏观早报两条均 suppressed）。</li>
+</ul>
+<p>#### ⚠️ E. 兜底任务覆盖盲区第 6 次确认</p>
+<ul>
+<li><code>0a6cebbf1418</code>（每日推送重试兜底，<code>17 <em>/2 </em> <em> </em></code>）11-24 全天 <strong>12 次</strong>运行，最新 <strong>22:17:17 输出「没有待补推的失败投递, 退出」</strong>。</li>
+<li>但当日<strong>至少 4 条失败</strong>（1 条 cron 体检进 <code>deliveries.db</code>、3 条汇总脚本不进队列）→ <strong>盲区连续第 6 次确认</strong>：汇总脚本的推送失败不进入 <code>deliveries.db</code> 队列，兜底看不到；<strong>而 09:00 那条已入队的 failed 也没被认领</strong>（这条是新现象，值得单独查）。</li>
+</ul>
+<p>#### 🆕 F. jobs.json 由 17 个任务增至 20 个，统计口径必须改</p>
+<ul>
+<li><strong>11-18 记录的是 17 个任务，本窗口实测 20 个</strong>，新增：</li>
+</ul>
+<p>  1. <strong><code>1e8a0b36502e</code> Emby解封监控（interval 每 10 分钟）</strong> —— <strong>11-24 单日执行 122 次，占当日 executions 总数 157 的 78%</strong>；</p>
+<p>  2. <strong><code>7dc0dca56484</code> 豆豆龙-周报兜底（<code>50 22 <em> </em> *</code>，22:50）</strong> —— 即本任务的兜底，窗口内 6 份 / 1,896 B；</p>
+<p>  3. <strong>Hunter 取证两个任务</strong>：<code>abdbeb8256c2</code> 定时抓取（360m，窗口内 9 份 / 41,232 B）与 <code>35802ada6231</code> 新文通知（480m，8 份 / 21,071 B）。</p>
+<ul>
+<li>⚠️ <strong>统计口径警告（重要）</strong>：<strong>以后必须按 job_id 分组统计，不能看 executions 总量</strong> —— 一个每 10 分钟的监控任务会把总量稀释到毫无意义。</li>
+</ul>
+<p>#### ✅ G. 采集侧与各任务健康度（连续第 17 天）</p>
+<ul>
+<li>✅ <strong>采集侧连续第 17 天完全健康</strong>：17 个内容/监控任务全部正常调度（05:20 主推送 / 06:20 宏观早报 / 07:40 早间汇总 / 09:00 cron 体检 / 09:10 SuperAgent 体检 / 11:10 36氪 / 11:40 GitHub 热榜 / 12:10 上海天气 / 12:40 午间汇总 / 18:20 韭研公社 / 19:40 晚间汇总 / 23:40 夜间未到点 / 23:05 博客同步未到点），<code>daily-brief/2026-11-24.md</code> <strong>正常落盘 11,016 字节</strong>，<strong>11-07 的 26900 秒集体超时连续 17 天未复发、未改动任何 cron 配置</strong>。</li>
+<li>✅ <strong>宏观早报连续第 17 天产出 + 未来数据过滤防线连续第 17 天实测生效</strong>：明确写「10 月 GDP 修正值与 10 月核心 PCE：<strong>待公布（预计 11 月 25 日）</strong>」「11 月 PMI：<strong>待公布（预计 11 月 30 日）</strong>」「11 月 CPI 同比将于 <strong>12 月 10 日</strong>恢复正常」「<strong>BLS 未发布 10 月 CPI 同比</strong>」→ <strong>本周报采信时无需剔除任何一行</strong>。</li>
+<li>✅ <strong>韭研公社 11-24 18:32:31 正常产出 7,454 字节</strong>（含 11-24 当日收盘）→ <strong>11-12→11-24 连续第 12 天</strong>；cron <code>20 18 <em> </em> 1-5</code>，周二属调度范围（判定规则：先比 cron 表达式 + 当日星期）。</li>
+<li>✅ <strong>GitHub 热榜 11-24 11:41 恢复产出 9,627 字节</strong> → 11-22 的 <code>interrupted</code> 单点失败后连续第 2 天正常（再次确认 <code>interrupted</code> 是间歇性模型响应中断，不是配置问题）；⚠️ <strong>「失败时回退到前一交易日存档并在周报标注」的指令仍未落地（11-22 提出）</strong>。</li>
+<li>✅ <strong>36氪 11:10 产出 3,343 字节</strong>、<strong>上海天气 12:10 产出 2,662 字节</strong>、<strong>cron 体检 09:00「cron体检通过。」</strong>、<strong>SuperAgent 体检 09:10 正常</strong>。</li>
+<li>🆕 <strong>保活脚本 silent 连续第 15 天一致</strong>（11-24 四次 03:32 / 09:33 / 15:34 / 21:35 全部空输出）→ 结论不变：<strong>silent 既不能证明保活成功也不能证明通道健康，唯一判据是 <code>deliveries.db</code></strong>；<strong>今日通道关闭与保活 silent 无因果关系</strong>。</li>
+<li>⚠️ <strong>36氪 11-24 输出自我重复</strong>：同一段摘要在「已收集」之后<strong>原样再打印一遍</strong>（3,343 字节中约一半是重复）→ 该任务有重复输出缺陷，<strong>建议给它补「同一次运行只输出一遍」的断言</strong>。</li>
+<li>⚠️ <strong>主推送 11-24 跑了两次</strong>：05:21（8,118 B）与 <strong>10:57（8,379 B，编号列表 + 条目更完整）</strong> → 同日两版<strong>择新</strong>（10:57 版），与 11-10「08:40 版更完整」同型。</li>
+<li>⚠️ <strong>36氪 / GitHub 热榜 / 韭研公社 / 上海天气四任务产出仍只存在于 cron 输出存档、不直接落盘至原始素材</strong>（本窗口已全部补录）；<strong>四时段汇总 job 已把其中三段落盘进 <code>daily-news-push/</code>，落盘缺口正被新链路覆盖</strong>。</li>
+<li>⚠️ <strong>本轮运行时尚未到点的三个任务</strong>：<strong>夜间汇总 23:40</strong>、<strong>博客同步 23:05</strong>、<strong>周报兜底 22:50</strong> → <strong>本期 weekly 产出后，23:05 的 <code>blog_sync.py</code> 会自动补上这一期</strong>（脚本在当日 weekly 未生成时按 7 天回退发最近一期）。</li>
+<li>⚠️ <strong>素材缺口</strong>：<code>daily-brief</code> 覆盖 <strong>7/7 —— 连续第 9 个完整 7 日窗口</strong>，累计历史空档仍 <strong>19 天</strong>（10-07→10-24 共 18 天 + 11-07 共 1 天）。</li>
+</ul>
+<hr>
+<h2>主题关联</h2>
+<p><code>`</code></p>
+<p>            ┌──────────────────────────────────────────────────────────┐</p>
+<p>            │  ①治理可逆性 ←→ ②判据表自我修正（第6条 vs 第8条）        │</p>
+<p>            │   黄仁勋12天闭环      同一批业绩两个方向                   │</p>
+<p>            └──────────────┬───────────────────────┬──────────────────┘</p>
+<p>                           │                       │</p>
+<p>        定价权被「事件开合」主导          业绩/回报门槛退居次席</p>
+<p>                           │                       │</p>
+<p>            ┌──────────────▼───────┐   ┌───────────▼──────────────────┐</p>
+<p>            │ ③中国政策三箭        │   │ ⑩宏观：CPI超预期+加息95.9%    │</p>
+<p>            │  两融100%→80%(11-30) │   │  vs 中国LPR连续18月不变       │</p>
+<p>            └──────────┬───────────┘   └───────────┬──────────────────┘</p>
+<p>                       │ 中美「一个放杠杆、一个加利率」</p>
+<p>            ┌──────────▼───────────────────────────▼──────────────────┐</p>
+<p>            │ ④A股两日口径：11-23普涨(+3.08%/151涨停)                 │</p>
+<p>            │            → 11-24高开低走(-0.05%/超3400跌/破板率55.28%) │</p>
+<p>            │   量能连续两日放量，性质完全相反 → 必须与涨跌家数并置      │</p>
+<p>            └──────┬─────────────────────────────┬────────────────────┘</p>
+<p>                   │ 资金去哪                   │ 催化是什么</p>
+<p>        ┌──────────▼──────────────┐   ┌──────────▼────────────────────┐</p>
+<p>        │ ⑤上游材料缺口(量化)      │   │ ⑥物理AI/具身智能 = A股新主线   │</p>
+<p>        │ PCB订单+56.1%vs出货+13.3%│   │ FSD V15三线共享 / Astra 41.2% │</p>
+<p>        │ 代工调价10%-20% / 光刻胶 │   │ 华为CloudRobo-WM1.2 / 12·1峰会 │</p>
+<p>        │ →「买的是环节不是板块」⑥ │   │ → 智能算力2592 EFLOPS(+146%)  │</p>
+<p>        └──────────┬──────────────┘   └──────────┬────────────────────┘</p>
+<p>                   │                             │</p>
+<p>                   └──────────┬──────────────────┘</p>
+<p>                              ▼</p>
+<p>        ┌─────────────────────────────────────────────────────────────┐</p>
+<p>        │ ⑦模型与开源：GLM-5.4 / Hy4开源 / LongCat-2.5「没用英伟达」    │</p>
+<p>        │   GPT-6.2 Astra + Sol（成本分层：Sol≈Astra的15%）             │</p>
+<p>        │        │                                                   │</p>
+<p>        │        ├─→ ⑧数学证明可信度（formal-math：Lean有效≠论证正确） │</p>
+<p>        │        └─→ ⑨开放权重存亡（LeCun vs Amodei：算力获取本身被管） │</p>
+<p>        │   ↑ ⑧⑨共同指向：「上游可信度」从代码 → 底座 → 算力获取        │</p>
+<p>        └─────────────────────────────────────────────────────────────┘</p>
+<p>                              │</p>
+<p>                              ▼</p>
+<p>        ┌─────────────────────────────────────────────────────────────┐</p>
+<p>        │ ⑫链路诊断（本窗口结构变化最大）                               │</p>
+<p>        │  A 架构修复：先写盘后推送 → 当日实测生效3次（丢内容缺陷关闭）  │</p>
+<p>        │  B 历史回填：recover_lost_digests 补齐8时段（9文件 mtime 00:01）│</p>
+<p>        │  C 覆盖反转：daily-news-push 窗口 7/7（25份/144,920字节）      │</p>
+<p>        │  D 形态第8种：11-24 仅1条且failed=通道关闭，且是「双因叠加」    │</p>
+<p>        │  E 兜底盲区第6次（09:00已入队的failed也未被认领 = 新现象）      │</p>
+<p>        │  F jobs 17→20，Emby监控占当日执行78% → 统计必须按job_id分组    │</p>
+<p>        │  G 采集侧连续17天健康 / 宏观早报未来数据过滤第17天生效          │</p>
+<p>        └─────────────────────────────────────────────────────────────┘</p>
+<p><code>`</code></p>
+<p><strong>三条跨主题主线：</strong></p>
+<p>1. <strong>「上游可信度」三级递进</strong> —— ⑤（上游<strong>材料</strong>缺不缺）→ ⑦/⑧（上游<strong>模型与证明</strong>可不可信）→ ⑨（上游<strong>算力获取</strong>会不会被合法限制）。<strong>本档案的供应链审查结论从「装 skill 前过扫描器」一路扩展到「算力本身是被管制对象」</strong>，这是本窗口最值得长期跟踪的一条线。</p>
+<p>2. <strong>「事件开合」压倒「基本面定价」</strong> —— ①②④⑩ 同时指向一件事：<strong>本周决定价格的是治理决议（+31.48%）与政策发布（三箭），不是业绩（+103% 已连续 5 天无法解释方向）</strong>。→ daily-brief 必须有「主导判据」字段，否则每个窗口都要重新推导。</p>
+<p>3. <strong>档案链路从「会丢内容」走到「不丢内容、但可能送不出去」</strong> —— ⑫A/B/C 关闭了<strong>数据丢失</strong>这一类，剩下的是<strong>投递</strong>这一类（D/E）。<strong>丢失已修、送达未修，两者现在是完全独立的两个问题</strong>（本窗口用双因错误样本首次干净分离）。</p>
+<hr>
+<h2>数据源</h2>
+<h3>1. 落盘素材（<code>~/openclaw-kb/原始素材/</code>，7 日窗口 2026-11-18 → 2026-11-24）</h3>
+<p>| 类别 | 份数 | 字节 | 说明 |</p>
+<p>|---|---|---|---|</p>
+<p>| <code>daily-brief/</code> | <strong>7</strong> | <strong>108,875</strong> | 11-24 11,016 + 11-23 18,441 + 11-22 15,310 + 11-21 20,811 + 11-20 14,312 + 11-19 15,551 + 11-18 13,434；<strong>覆盖 7/7，连续第 9 个完整 7 日窗口</strong>；要闻条目 7 × 10 = <strong>70 条</strong> |</p>
+<p>| <code>daily-news-push/</code> | <strong>25</strong> | <strong>144,920</strong> | 11-18×4、11-19×4、11-20×4、11-21×3、11-22×3、11-23×4、11-24×3（其中 <strong>9 个文件由 <code>recover_lost_digests.py</code> 于 11-24 00:01 回填/幂等重写</strong>） |</p>
+<p>| <strong>落盘合计</strong> | <strong>32</strong> | <strong>253,795</strong> | |</p>
+<h3>2. cron 输出存档补录（<code>~/.hermes/profiles/writer/cron/output/</code>，窗口内 247 份 / 541,643 字节）</h3>
+<p><strong>内容类补录 12 类 / 82 份 / 399,792 字节：</strong></p>
+<p>| job_id | 任务 | 份数 | 字节 |</p>
+<p>|---|---|---|---|</p>
+<p>| <code>c29f80fe0f7f</code> | 宏观经济早报 | 7 | 172,171 |</p>
+<p>| <code>f0c7de023e77</code> | 每日新闻 + AI 要闻（11-24 跑了两次） | 8 | 63,541 |</p>
+<p>| <code>68f676cab791</code> | GitHub 热榜 | 7 | 54,077 |</p>
+<p>| <code>3d2341b0ab37</code> | 韭研公社今日热门（仅工作日，窗口内 5 次） | 5 | 46,318 |</p>
+<p>| <code>85bab5f7e08a</code> | 36 氪信息收集助手 | 7 | 20,456 |</p>
+<p>| <code>30fcd05af8da</code> | 上海天气预报 | 7 | 17,627 |</p>
+<p>| <code>edeedc6bbb9e</code> | cron 体检 | 7 | 13,945 |</p>
+<p>| <code>2225da48d1ed</code> / <code>d0604b227fa6</code> / <code>6fe19f605da5</code> / <code>55ed4082e67f</code> | 四时段汇总（早/午/晚/夜） | 27 | 10,460 |</p>
+<p>| <code>3ba027383afb</code> | SuperAgent 观察期体检 | 7 | 1,197 |</p>
+<p><strong>非内容类（不计入素材）</strong>：<code>1e8a0b36502e</code> Emby 监控 50 份 / 7,550、<code>0a6cebbf1418</code> 兜底 50 份 / 10,100、<code>2587c202fe16</code> 保活 28 份 / 4,536、<code>89ea7e1938d3</code> 本任务 7 份 / 33,478、<code>7dc0dca56484</code> 周报兜底 6 份 / 1,896；另 <code>87e87d02ec8d</code> 博客同步 7 份 / 21,988、<code>abdbeb8256c2</code>+<code>35802ada6231</code> Hunter 取证 17 份 / 62,303（与本档案素材无直接关系，仅记录）。</p>
+<h3>3. 链路状态数据源</h3>
+<ul>
+<li><strong>投递</strong>：<code>~/.hermes/profiles/writer/cron/deliveries.db</code> 表 <code>deliveries</code>（11-24 仅 1 条，<code>failed</code>，<code>iLink … ret=-2</code>）。</li>
+<li><strong>执行</strong>：<code>~/.hermes/profiles/writer/cron/executions.db</code> 表 <code>executions</code>（11-24 共 157 条：155 <code>completed+suppressed</code> / 1 <code>failed</code> / 1 <code>running</code>）。</li>
+<li><strong>任务表</strong>：<code>~/.hermes/profiles/writer/cron/jobs.json</code>（<code>jobs</code> 列表 <strong>20 个</strong>）。</li>
+<li><strong>脚本改动</strong>：<code>scripts/daily_digest.py</code>（mtime 11-23 23:54，备份 <code>.bak-20261123</code>）、<code>scripts/recover_lost_digests.py</code>（mtime 11-24 00:01）。</li>
+<li><strong>汇总去重口径</strong>：四时段汇总 stdout 的「条目 N → 去重后 M（剔除 K 条重复）」。</li>
+</ul>
+<h3>4. 口径与采信声明</h3>
+<ul>
+<li><strong>伪冲突（并存不替换）</strong>：11-24 早报记 <strong>11-23 收盘</strong>（沪指 +0.15% / 创业板 +3.08%）vs 韭研 18:32 记 <strong>11-24 收盘</strong>（沪指 +0.27% / 创业板 -0.05%）→ <strong>相差一个交易日，规则第 12 次细化</strong>。</li>
+<li><strong>延续读数（不重复计为新证据）</strong>：中国 10 月 PMI 49.3% / CPI +0.7% / PPI +5.7% / 工业增加值 +4.8% / 社零 +0.4% / 固投 -8.1% / 10 月贷款 -1000 亿 / M1 +4.4% / LPR 连续 18 个月不变 —— 与 11-16→11-21 各窗口同一组数字。</li>
+<li><strong>不采信</strong>：美国 10 月 CPI <strong>同比</strong>因 2025-10 停摆基期缺失、BLS 明确不发布，<strong>美银插值 3.8%/2.7% 属模型推演，连续第 13 个窗口未作事实采信</strong>。</li>
+<li><strong>未发布数据（已按「发布日 > 运行日」核对，无需剔除任何一行）</strong>：10 月 GDP 修正值与核心 PCE（11-25）、11 月 PMI（11-30）、11 月 CPI 同比（12-10 恢复正常）。</li>
+<li><strong>41.2% vs 44.85%</strong>：GPT-6.2 Astra 双臂操作成功率与 RoboChallenge Zero 整体成功率<strong>口径不同，不可混用</strong>。</li>
+</ul>
+<h3>5. 前序版本</h3>
+<ul>
+<li><code>weekly-2026-11-23.md</code> / <code>_beta1.0.md</code> / <code>_beta1.0_copy.md</code>（46,296 字节，md5 <code>1dfd1d682aaff55f9423af24396b61da</code>）及其之前各期<strong>保留作对照，本文件不覆盖任何既有文件</strong>。</li>
+<li>本文件同时生成 <code>weekly-2026-11-24_beta1.0.md</code> 与 <code>weekly-2026-11-24_beta1.0_copy.md</code>（同内容）。</li>
+</ul>
+</body>
+</html>
