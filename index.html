@@ -703,7 +703,7 @@ footer .sep{margin:0 8px;color:var(--line-2)}
   if (hl) {
     const ICON = { ok: '🟢', warn: '🟡', crit: '🔴' };
     const NAME = { ok: '链路正常', warn: '链路有告警', crit: '链路异常' };
-    $('health').textContent = ' · ' + (ICON[hl.level] || '⚪') + (NAME[hl.level] || '链路状态未知') +
+    $('health').textContent = ' · ' + (ICON[hl.level] || '⚪') + ' ' + (NAME[hl.level] || '链路状态未知') +
       (hl.stale ? '（快照过期）' : '');
     if (hl.findings && hl.findings.length) {
       $('health').title = hl.findings.map(f => f.text).join('\n');
