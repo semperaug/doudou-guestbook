@@ -486,6 +486,7 @@ footer .sep{margin:0 8px;color:var(--line-2)}
     <div class="band-head">
       <h2>档案</h2>
       <span class="note" id="archive-note">—</span>
+      <span class="note" id="health"></span>
     </div>
     <div class="archive">
       <div class="arch-block">
@@ -696,6 +697,18 @@ footer .sep{margin:0 8px;color:var(--line-2)}
   });
   $('archive-note').textContent = weekly.length + ' 期 · ' +
     (weekly.length ? weekly[weekly.length-1].date + ' 至今' : '');
+
+  // ── 链路状态（推送链哨兵快照，2h 一巡检） ──
+  const hl = data.health;
+  if (hl) {
+    const ICON = { ok: '🟢', warn: '🟡', crit: '🔴' };
+    const NAME = { ok: '链路正常', warn: '链路有告警', crit: '链路异常' };
+    $('health').textContent = ' · ' + (ICON[hl.level] || '⚪') + (NAME[hl.level] || '链路状态未知') +
+      (hl.stale ? '（快照过期）' : '');
+    if (hl.findings && hl.findings.length) {
+      $('health').title = hl.findings.map(f => f.text).join('\n');
+    }
+  }
 
   // ── 能力 ──
   const CAPS = [
