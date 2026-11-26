@@ -1,22 +1,22 @@
 {
-  "updated_at": "2026-11-26T15:51:06.321095",
-  "updated_at_human": "2026-11-26 15:51 CST",
+  "updated_at": "2026-11-26T23:05:10.466016",
+  "updated_at_human": "2026-11-26 23:05 CST",
   "weekly": [
     {
       "date": "2026-11-26",
-      "title": "周报汇总 · 2026-11-26",
-      "one_line": "本日报共 0 条新闻. 详细摘要见下方. - `~/openclaw-kb/原始素材/daily-brief/2026-11-26.md` --- *自动生成时间: 2026-11-26 15:49:12* --- | 指标 | 本窗口 | 上窗口 | Δ | |---|---|---|---| | 归档条目 | 25 篇 / 128KB | 20 篇 / 149KB | ▲ +5 篇 | | 早报覆盖 | 7/7 天 | 7/7 天 | 持平 | | digest 槽位 | 81%（21/26） | 38%（10/26） | ▲ +42pt | | c",
+      "title": "📈 AI 趋势周报 · 2026-11-26（7 日窗口版：2026-11-20 → 2026-11-26）",
+      "one_line": "AI 的账本在本窗口被三拨人同时对账且三线全部指向「回报门槛」：信用端 CoreWeave/英伟达/甲骨文 CDS 集体刷新纪录、五大科技巨头前 9 个月自由现金流 2011 年以来首次转负（腾讯单季 FCF -691 亿、阿里 -344.72 亿并同日确认资本开支高峰在 2027—2028 上半年）、阿波罗测算 2028 年需约 2 万亿美元年化收入才能覆盖 AI 基建成本——而治理端给出的是完全不可对账的另一套账：黄仁勋 11-23 全票复职一夜把英伟达抬升约 9520 亿美元（+31.48%）、两天回吐（11-24 -5.86%）、11-26 标普把英伟达列入负面观察（90 天内或下调 AA，穆迪同日维持不变），「复职非调查结论」（12-01 众议院闭门问询、12-03 参议院作证、SEC 会计调查均未了）；Anthropic 走完整个「史上最大 IPO」剧本——11-19 挂牌 +",
       "themes": [
-        "📊 一句话总结",
-        "📋 今日条目",
-        "🔗 数据源",
-        "📈 同龄复盘（自动 · 窗口 2026-11-20 → 2026-11-26 vs 2026-11-13 → 2026-11-19）"
+        "一句话总结",
+        "主题分组",
+        "主题关联",
+        "🔗 数据源"
       ],
-      "section_count": 0,
-      "size": 1128,
+      "section_count": 8,
+      "size": 20831,
       "url": "./weekly-2026-11-26.html",
-      "beta": false,
-      "version": null
+      "beta": true,
+      "version": "1.0"
     },
     {
       "date": "2026-11-25",
@@ -421,6 +421,14 @@
       "file": "2026-11-26_digest_midday.md"
     },
     {
+      "section": "韭研公社热门",
+      "title": "北纬科技：10748 倍 PE 的\"物理AI连接器\"，跌停被资金硬拉红",
+      "url": "",
+      "summary": "",
+      "date": "2026-11-26",
+      "file": "2026-11-26_digest_evening.md"
+    },
+    {
       "section": "GitHub 热榜",
       "title": "Claude-BugHunter（Claude漏洞猎手技能包）",
       "url": "https://github.com/elementalsouls/Claude-BugHunter",
@@ -513,14 +521,6 @@
       "title": "jingyaogong/minimind（两小时从零训练 64M 大模型）",
       "url": "https://github.com/jingyaogong/minimind",
       "summary": "值得关注，对你尤其合适——你已经在折腾本地 LLM 部署（llama.cpp、Hindsight、edge-tts 那些），这条正好补上\"训练侧\"的知识缺口。64M 规模 CPU 就能跑，不会烧显卡。推荐花一个周末读一遍源码。",
-      "date": "2026-11-24",
-      "file": "2026-11-24_digest_midday.md"
-    },
-    {
-      "section": "GitHub 热榜",
-      "title": "NariQ + nari-llama.cpp（3 比特量化跑出 BF16 水平）",
-      "url": "https://github.com/nari-labs/nari-llama.cpp",
-      "summary": "值得关注。3bit 这一档对本地跑模型是真实用——53.8 GB 的 BF16 变 10 GB，24GB 显卡能塞 135K 上下文。但有两个硬门槛：必须用它自己的 llama.cpp fork（原版 llama.cpp / Ollama / LM Studio 都读不了这个张量格式），且目前只调优了 SM120（RTX PRO 6000）架构，Ampere/Ada/Apple M 系列明显更慢（M3 Pro 上只有 3.8 tok/s）。除非你正好是 Blackwell 卡 + NVIDIA，否则先观望。论文方法论本身值得读。",
       "date": "2026-11-24",
       "file": "2026-11-24_digest_midday.md"
     }
@@ -707,7 +707,7 @@
         "name": "豆豆龙-档案管理助手",
         "schedule": "20 22 * * *",
         "deliver": "local",
-        "last_run": "2026-11-25T22:40:02.667750+08:00",
+        "last_run": "2026-11-26T22:25:25.417460+08:00",
         "last_status": "ok"
       },
       {
@@ -739,7 +739,7 @@
         "name": "豆豆龙-韭研公社今日热门",
         "schedule": "20 18 * * 1-5",
         "deliver": "local",
-        "last_run": "2026-11-25T18:21:45.016295+08:00",
+        "last_run": "2026-11-26T18:20:20.401797+08:00",
         "last_status": "ok"
       },
       {
@@ -747,7 +747,7 @@
         "name": "豆豆龙-周报兜底",
         "schedule": "50 22 * * *",
         "deliver": "local",
-        "last_run": "2026-11-25T22:50:55.807236+08:00",
+        "last_run": "2026-11-26T22:50:07.836601+08:00",
         "last_status": "ok"
       },
       {
@@ -755,7 +755,7 @@
         "name": "豆豆龙-每日推送重试兜底",
         "schedule": "17 */2 * * *",
         "deliver": "local",
-        "last_run": "2026-11-26T14:17:07.369772+08:00",
+        "last_run": "2026-11-26T22:17:07.605430+08:00",
         "last_status": "ok"
       },
       {
@@ -763,7 +763,7 @@
         "name": "豆豆龙-微信token保活",
         "schedule": "every 360m",
         "deliver": "local",
-        "last_run": "2026-11-26T15:41:07.560751+08:00",
+        "last_run": "2026-11-26T21:42:07.568954+08:00",
         "last_status": "ok"
       },
       {
@@ -803,7 +803,7 @@
         "name": "豆豆龙-每日汇总-晚间",
         "schedule": "40 19 * * *",
         "deliver": "local",
-        "last_run": "2026-11-25T19:40:59.970263+08:00",
+        "last_run": "2026-11-26T19:40:09.569533+08:00",
         "last_status": "ok"
       },
       {
@@ -827,7 +827,7 @@
         "name": "Emby解封监控",
         "schedule": "every 10m",
         "deliver": "origin",
-        "last_run": "2026-11-26T15:42:08.300867+08:00",
+        "last_run": "2026-11-26T23:02:08.298484+08:00",
         "last_status": "ok"
       },
       {
@@ -835,7 +835,7 @@
         "name": "Hunter取证 新文通知",
         "schedule": "every 480m",
         "deliver": "origin",
-        "last_run": "2026-11-26T08:11:07.724531+08:00",
+        "last_run": "2026-11-26T16:12:07.344475+08:00",
         "last_status": "ok"
       },
       {
@@ -843,7 +843,7 @@
         "name": "Hunter取证 定时抓取",
         "schedule": "every 360m",
         "deliver": "local",
-        "last_run": "2026-11-26T13:35:21.650536+08:00",
+        "last_run": "2026-11-26T20:19:23.902873+08:00",
         "last_status": "ok"
       },
       {
@@ -851,7 +851,7 @@
         "name": "mimocode记忆同步到NAS共享库",
         "schedule": "every 360m",
         "deliver": "local",
-        "last_run": "2026-11-26T13:22:07.189937+08:00",
+        "last_run": "2026-11-26T19:23:07.166516+08:00",
         "last_status": "ok"
       },
       {
@@ -859,7 +859,7 @@
         "name": "豆豆龙-推送链哨兵",
         "schedule": "47 */2 * * *",
         "deliver": "origin",
-        "last_run": "2026-11-26T14:47:12.197954+08:00",
+        "last_run": "2026-11-26T22:47:09.660276+08:00",
         "last_status": "ok"
       }
     ],
@@ -868,12 +868,18 @@
     "failed_count": 0,
     "weixin_count": 1,
     "local_count": 17,
-    "last_collected_at": "2026-11-26T15:51:07.005758"
+    "last_collected_at": "2026-11-26T23:05:11.218250"
   },
   "health": {
-    "updated_at": "2026-11-26T15:48:16.556128",
-    "level": "ok",
-    "findings": [],
+    "updated_at": "2026-11-26T22:47:08.558596",
+    "level": "warn",
+    "findings": [
+      {
+        "level": "WARN",
+        "key": "ilink-stale",
+        "text": "iLink token 已 25.2h 无入站续命(>24h 会被拒)，下条微信推送大概率失败"
+      }
+    ],
     "stale": false
   }
 }
